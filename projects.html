@@ -323,15 +323,32 @@
       font-weight:600;
     }
 
+    .featured-project-link,
     .featured-project-status{
-      color:var(--slate);
-      font-size:.88rem;
       font-weight:700;
     }
 
+    .featured-project-link{
+      color:var(--blue);
+      text-decoration:none;
+      text-underline-offset:5px;
+    }
+
+    .featured-project-link:hover,
+    .featured-project-link:focus-visible{
+      text-decoration:underline;
+    }
+
+    .featured-project-status{
+      color:var(--slate);
+      font-size:.88rem;
+    }
+
+
+
 
     /* ==========================================================
-       EXPAND BUTTON
+       EXPANDED FEATURED PROJECT
        ========================================================== */
 
     .project-expand-button{
@@ -356,15 +373,10 @@
       outline-offset:5px;
     }
 
-
-    /* ==========================================================
-       SHORT PROJECT EXPANSION
-       ========================================================== */
-
     .project-expanded{
       grid-column:1 / -1;
       margin:46px -42px -42px;
-      padding:0 42px 52px;
+      padding:0 42px 54px;
       border-top:1px solid var(--line);
       background:var(--cream);
     }
@@ -429,7 +441,7 @@
       background:var(--white);
     }
 
-    .project-summary-points span{
+    .project-summary-points article > span{
       display:block;
       margin-bottom:28px;
       font-family:"Playfair Display",Georgia,serif;
@@ -448,64 +460,175 @@
       margin:13px 0 0;
     }
 
-
     /* ==========================================================
-       FULL REPORT CTA
+       REPORTS
        ========================================================== */
 
-    .report-cta{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) auto;
-      gap:30px;
-      align-items:center;
+    .project-reports{
       max-width:1120px;
-      margin:52px auto 0;
-      padding:34px;
-      background:var(--blue);
-      color:#fff;
+      margin:54px auto 0;
+      padding-top:48px;
+      border-top:1px solid var(--line);
     }
 
-    .report-cta .eyebrow{
-      color:#fff;
-      opacity:.76;
+    .project-reports-heading{
+      display:grid;
+      grid-template-columns:minmax(170px,.28fr) minmax(0,1fr);
+      gap:34px;
+      align-items:start;
     }
 
-    .report-cta h3{
+    .project-reports-heading h3{
       margin:0;
-      max-width:760px;
+      max-width:780px;
       font-family:"Playfair Display",Georgia,serif;
-      font-size:clamp(2rem,3.5vw,3.6rem);
-      line-height:1;
+      font-size:clamp(2.1rem,3.6vw,3.8rem);
+      line-height:.98;
       letter-spacing:-.035em;
     }
 
-    .report-cta p{
-      max-width:720px;
+    .project-reports-heading p{
+      max-width:760px;
       margin:16px 0 0;
-      color:rgba(255,255,255,.88);
     }
 
-    .report-link{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-width:190px;
-      padding:14px 20px;
-      border:1px solid #fff;
-      border-radius:999px;
-      background:#fff;
+    .report-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:30px;
+    }
+
+    .report-card{
+      display:flex;
+      flex-direction:column;
+      min-height:250px;
+      padding:28px;
+      border:1px solid var(--line);
+      background:var(--white);
+    }
+
+    .report-card .report-number{
+      display:block;
+      margin-bottom:34px;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:2rem;
+      color:var(--slate);
+    }
+
+    .report-card h4{
+      margin:0;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.7rem,2.5vw,2.5rem);
+      line-height:1.02;
+    }
+
+    .report-card p{
+      margin:14px 0 24px;
+    }
+
+    .report-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 18px;
+      margin-top:auto;
+      padding-top:20px;
+      border-top:1px solid var(--line);
+    }
+
+    .report-actions a{
       color:var(--blue);
       font-weight:700;
       text-decoration:none;
-      white-space:nowrap;
+      text-underline-offset:5px;
+    }
+
+    .report-actions a:hover,
+    .report-actions a:focus-visible{
+      text-decoration:underline;
+    }
+
+    /* ==========================================================
+       RELATED INSIGHTS
+       ========================================================== */
+
+    .related-insights{
+      max-width:1120px;
+      margin:54px auto 0;
+      padding-top:48px;
+      border-top:1px solid var(--line);
+    }
+
+    .related-insights-heading{
+      display:grid;
+      grid-template-columns:minmax(170px,.28fr) minmax(0,1fr);
+      gap:34px;
+      align-items:start;
+      margin-bottom:28px;
+    }
+
+    .related-insights-heading h3{
+      margin:0;
+      max-width:800px;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(2.1rem,3.6vw,3.8rem);
+      line-height:.98;
+      letter-spacing:-.035em;
+    }
+
+    .related-insights-heading p{
+      max-width:720px;
+      margin:16px 0 0;
+    }
+
+    .insight-group{
+      border-top:1px solid var(--line);
+    }
+
+    .insight-group:last-child{
+      border-bottom:1px solid var(--line);
+    }
+
+    .insight-group-label{
+      margin:0;
+      padding:22px 0 10px;
+      font-size:.76rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:var(--slate);
+    }
+
+    .related-insight-link{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:24px;
+      align-items:center;
+      padding:16px 0 20px;
+      color:var(--ink);
+      text-decoration:none;
+    }
+
+    .related-insight-link + .related-insight-link{
+      border-top:1px solid rgba(23,23,28,.08);
+    }
+
+    .related-insight-link span:first-child{
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.3rem,2vw,1.9rem);
+      line-height:1.08;
+      font-weight:700;
+    }
+
+    .related-insight-link .related-arrow{
+      font-size:1.4rem;
       transition:transform .18s ease;
     }
 
-    .report-link:hover,
-    .report-link:focus-visible{
-      transform:translateY(-2px);
+    .related-insight-link:hover .related-arrow,
+    .related-insight-link:focus-visible .related-arrow{
+      transform:translateX(4px);
     }
-
 
     /* ==========================================================
        ARCHIVE
@@ -593,6 +716,11 @@
       transform:translateX(4px);
     }
 
+
+    /* ==========================================================
+       EMPTY ARCHIVE STATE
+       ========================================================== */
+
     .archive-empty{
       padding:34px 0;
       border-bottom:1px solid var(--line);
@@ -611,6 +739,29 @@
 
     @media(max-width:800px){
 
+      .project-expanded{
+        margin:40px -26px -30px;
+        padding:0 26px 40px;
+      }
+
+      .project-summary-points{
+        grid-template-columns:1fr;
+      }
+
+      .project-at-a-glance{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .project-reports-heading,
+      .related-insights-heading{
+        grid-template-columns:1fr;
+        gap:12px;
+      }
+
+      .report-grid{
+        grid-template-columns:1fr;
+      }
+
       .projects-section-heading,
       .archive-heading{
         grid-template-columns:1fr;
@@ -626,27 +777,6 @@
 
       .featured-project-number{
         font-size:2.5rem;
-      }
-
-      .project-expanded{
-        margin:40px -26px -30px;
-        padding:0 26px 40px;
-      }
-
-      .project-at-a-glance{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
-      .project-summary-points{
-        grid-template-columns:1fr;
-      }
-
-      .report-cta{
-        grid-template-columns:1fr;
-      }
-
-      .report-link{
-        justify-self:start;
       }
 
       .archive-item{
@@ -666,6 +796,23 @@
 
 
     @media(max-width:620px){
+
+      .project-expanded{
+        margin:36px -22px -26px;
+        padding:0 22px 32px;
+      }
+
+      .project-summary{
+        padding-top:48px;
+      }
+
+      .project-at-a-glance{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .related-insight-link{
+        gap:16px;
+      }
 
       .site-header .brand{
         gap:7px;
@@ -692,23 +839,6 @@
       .featured-project-footer{
         align-items:flex-start;
         flex-direction:column;
-      }
-
-      .project-expanded{
-        margin:36px -22px -26px;
-        padding:0 22px 32px;
-      }
-
-      .project-summary{
-        padding-top:48px;
-      }
-
-      .project-at-a-glance{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .report-cta{
-        padding:26px 22px;
       }
 
       .archive-item{
@@ -907,8 +1037,6 @@
 
         </div>
 
-
-        <!-- SHORT EXPANSION -->
         <div
           class="project-expanded"
           id="project-01-details"
@@ -922,17 +1050,16 @@
             </p>
 
             <h3>
-              From audience research to a testable marketing strategy.
+              From audience research to a strategy designed to be tested.
             </h3>
 
             <p>
-              The project studied how a relationship-led audience uses
-              social platforms, streaming, websites, entertainment,
-              sports, and other media, then translated those patterns
-              into practical decisions for content, channels, search,
-              and measurement.
+              The study examined how a relationship-led audience uses social platforms,
+              streaming, websites, entertainment, sports, and other media. The findings
+              were translated into practical direction for content, channels, search,
+              lifecycle activity, and measurement, then compared with subsequent
+              real-world performance.
             </p>
-
 
             <div class="project-at-a-glance">
 
@@ -947,68 +1074,44 @@
               </div>
 
               <div>
-                <strong>2025</strong>
-                <span>research period</span>
+                <strong>4</strong>
+                <span>research volumes</span>
               </div>
 
               <div>
-                <strong>2026</strong>
+                <strong>11 mo.</strong>
                 <span>performance lookback</span>
               </div>
 
             </div>
 
-
             <div class="project-summary-points">
 
               <article>
-
                 <span>01</span>
-
-                <h4>
-                  Study the audience without overstating the sample.
-                </h4>
-
+                <h4>Start with what the research can actually support.</h4>
                 <p>
-                  The survey was recruited through existing relationship
-                  networks, so findings were used to understand this
-                  audience rather than claim statewide representation.
+                  The network-based sample was used to understand the recruited audience,
+                  not to claim statewide representation.
                 </p>
-
               </article>
 
-
               <article>
-
                 <span>02</span>
-
-                <h4>
-                  Look for patterns that could change a decision.
-                </h4>
-
+                <h4>Turn patterns into decisions and tests.</h4>
                 <p>
-                  Platform overlap, content affinities, local media use,
-                  and other relationships were analyzed to distinguish
-                  useful strategic signals from simple popularity.
+                  Audience overlap, content affinities, local context, and media habits
+                  informed content, channel, search, and measurement choices.
                 </p>
-
               </article>
-
 
               <article>
-
                 <span>03</span>
-
-                <h4>
-                  Let performance challenge the research.
-                </h4>
-
+                <h4>Let performance revise the strategy.</h4>
                 <p>
-                  The recommendations were later compared with actual
-                  marketing performance so assumptions could be retained,
-                  revised, or tested again.
+                  Eleven months of subsequent evidence were used to identify which claims
+                  were affirmed, challenged, mixed, or still untested.
                 </p>
-
               </article>
 
             </div>
@@ -1016,38 +1119,203 @@
           </div>
 
 
-          <!-- FULL REPORT CTA -->
-          <div class="report-cta">
+          <section class="project-reports" aria-labelledby="project-01-reports-title">
 
-            <div>
+            <div class="project-reports-heading">
 
-              <p class="eyebrow">
-                Full Research
-              </p>
+              <div>
+                <p class="eyebrow">Read the Research</p>
+              </div>
 
-              <h3>
-                Want the methodology, analysis, and complete findings?
-              </h3>
+              <div>
+                <h3 id="project-01-reports-title">
+                  Go deeper into the evidence.
+                </h3>
 
-              <p>
-                Read the full anonymized research report for the survey
-                design, descriptive results, statistical analysis,
-                interpretation, strategy recommendations, limitations,
-                and supporting detail.
-              </p>
+                <p>
+                  The portfolio summary is intentionally brief. The two anonymized reports
+                  contain the methodology, analysis, recommendations, limitations, and the
+                  later performance review.
+                </p>
+              </div>
 
             </div>
 
-            <a
-              class="report-link"
-              href="assets/projects/market-research-word-of-mouth-strategy/market-research-report.pdf"
-              target="_blank"
-              rel="noopener"
-            >
-              Read full report ↗
-            </a>
+            <div class="report-grid">
 
-          </div>
+              <article class="report-card">
+                <span class="report-number">01</span>
+
+                <h4>Audience Research Compendium</h4>
+
+                <p>
+                  The four-volume foundation study covering the audience, connections,
+                  strategic direction, testing framework, and appendices.
+                </p>
+
+                <div class="report-actions">
+                  <a
+                    href="assets/projects/market-research-word-of-mouth-strategy/audience-research-compendium.pdf"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Read report ↗
+                  </a>
+
+                  <a
+                    href="assets/projects/market-research-word-of-mouth-strategy/audience-research-compendium.pdf"
+                    download
+                  >
+                    Download PDF ↓
+                  </a>
+                </div>
+              </article>
+
+
+              <article class="report-card">
+                <span class="report-number">02</span>
+
+                <h4>2026 Performance Lookback</h4>
+
+                <p>
+                  The follow-up review testing the original research against subsequent
+                  search, social, email, paid media, website, and operational performance.
+                </p>
+
+                <div class="report-actions">
+                  <a
+                    href="assets/projects/market-research-word-of-mouth-strategy/2026-performance-lookback.pdf"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Read report ↗
+                  </a>
+
+                  <a
+                    href="assets/projects/market-research-word-of-mouth-strategy/2026-performance-lookback.pdf"
+                    download
+                  >
+                    Download PDF ↓
+                  </a>
+                </div>
+              </article>
+
+            </div>
+
+          </section>
+
+
+          <section class="related-insights" aria-labelledby="project-01-insights-title">
+
+            <div class="related-insights-heading">
+
+              <div>
+                <p class="eyebrow">Related Thinking</p>
+              </div>
+
+              <div>
+                <h3 id="project-01-insights-title">
+                  Insights connected to the study.
+                </h3>
+
+                <p>
+                  Related essays are grouped using the same categories used in the
+                  Insights library.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="insight-group">
+              <p class="insight-group-label">Brand</p>
+
+              <a
+                class="related-insight-link"
+                href="insights/why-a-template-is-not-a-brand.html"
+              >
+                <span>Why a template is not a brand</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+
+            <div class="insight-group">
+              <p class="insight-group-label">Lifecycle</p>
+
+              <a
+                class="related-insight-link"
+                href="insights/why-the-lead-is-not-the-conversion.html"
+              >
+                <span>Why the lead is not the conversion</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a
+                class="related-insight-link"
+                href="insights/why-the-best-call-to-action-depends-on-where-the-customer-is-in-the-journey.html"
+              >
+                <span>Why the best call to action depends on where the customer is in the journey</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+
+            <div class="insight-group">
+              <p class="insight-group-label">Content</p>
+
+              <a
+                class="related-insight-link"
+                href="insights/when-more-content-is-not-the-answer.html"
+              >
+                <span>When more content is not the answer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+
+            <div class="insight-group">
+              <p class="insight-group-label">Channels</p>
+
+              <a
+                class="related-insight-link"
+                href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html"
+              >
+                <span>Why being on every channel is not a channel strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+
+            <div class="insight-group">
+              <p class="insight-group-label">Search</p>
+
+              <a
+                class="related-insight-link"
+                href="insights/why-ranking-is-no-longer-the-whole-search-strategy.html"
+              >
+                <span>Why ranking is no longer the whole search strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a
+                class="related-insight-link"
+                href="insights/why-search-intent-matters-more-than-keyword-volume-alone.html"
+              >
+                <span>Why search intent matters more than keyword volume alone</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a
+                class="related-insight-link"
+                href="insights/when-search-becomes-the-verification-layer.html"
+              >
+                <span>When search becomes the verification layer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          </section>
 
         </div>
 
@@ -1111,6 +1379,18 @@
               Full project page coming next
             </span>
 
+            <!--
+            Replace the status above with this link when the individual
+            project page is live:
+
+            <a
+              class="featured-project-link"
+              href="projects/organic-search-opportunity-analysis.html"
+            >
+              View project →
+            </a>
+            -->
+
           </div>
 
         </div>
@@ -1123,6 +1403,59 @@
            FEATURED PROJECT 03
 
            Add the third selected featured project here.
+
+           Keep this structure:
+
+           <article class="featured-project">
+
+             <div class="featured-project-number">
+               03
+             </div>
+
+             <div class="featured-project-body">
+
+               <div class="featured-project-meta">
+                 <span>YEAR</span>
+                 <span>CATEGORY</span>
+                 <span>CATEGORY</span>
+               </div>
+
+               <h2>
+                 Project Title
+               </h2>
+
+               <p class="featured-project-description">
+                 Project overview.
+               </p>
+
+               <p class="featured-project-insight">
+                 Strongest strategic takeaway, outcome, or result.
+               </p>
+
+               <div class="featured-project-tags">
+                 <span>Skill</span>
+                 <span>Skill</span>
+                 <span>Skill</span>
+               </div>
+
+               <div class="featured-project-footer">
+
+                 <p class="featured-project-role">
+                   Your role
+                 </p>
+
+                 <a
+                   class="featured-project-link"
+                   href="projects/project-slug.html"
+                 >
+                   View project →
+                 </a>
+
+               </div>
+
+             </div>
+
+           </article>
            ==================================================== -->
 
 
@@ -1130,7 +1463,8 @@
       <!-- ====================================================
            FEATURED PROJECT 04
 
-           Add the fourth selected featured project here.
+           Duplicate the Featured Project 03 template here
+           once the fourth project is selected.
            ==================================================== -->
 
 
@@ -1138,7 +1472,8 @@
       <!-- ====================================================
            FEATURED PROJECT 05
 
-           Add the fifth selected featured project here.
+           Duplicate the Featured Project 03 template here
+           once the fifth project is selected.
            ==================================================== -->
 
 
@@ -1157,11 +1492,9 @@
     <div class="archive-heading">
 
       <div>
-
         <p class="eyebrow">
           Project Archive
         </p>
-
       </div>
 
       <div>
@@ -1183,13 +1516,15 @@
     <div class="archive-list">
 
       <!--
-      Archive item example:
+      When you have archived projects, remove the archive-empty block
+      below and add one archive-item for each project.
+
+      Example:
 
       <a
         class="archive-item"
         href="projects/project-slug.html"
       >
-
         <span class="archive-year">
           2026
         </span>
@@ -1208,7 +1543,6 @@
         >
           →
         </span>
-
       </a>
       -->
 
@@ -1242,50 +1576,30 @@
 </footer>
 
 
+
 <script>
   (() => {
-
-    const button =
-      document.querySelector(".project-expand-button");
-
-    const details =
-      document.getElementById("project-01-details");
+    const button = document.querySelector(".project-expand-button");
+    const details = document.getElementById("project-01-details");
 
     if (!button || !details) return;
 
-
     button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
 
-      const isOpen =
-        button.getAttribute("aria-expanded") === "true";
-
-      button.setAttribute(
-        "aria-expanded",
-        String(!isOpen)
-      );
-
+      button.setAttribute("aria-expanded", String(!isOpen));
       details.hidden = isOpen;
-
-      button.textContent =
-        isOpen
-          ? "Explore project ↓"
-          : "Close project ↑";
-
+      button.textContent = isOpen ? "Explore project ↓" : "Close project ↑";
 
       if (isOpen) {
-
         button.scrollIntoView({
           behavior:"smooth",
           block:"center"
         });
-
       }
-
     });
-
   })();
 </script>
-
 
 <script src="main.js"></script>
 
