@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Explore selected projects by Neri across audience research, marketing strategy, search, measurement, campaigns, systems, content, and creative execution."
+    content="Explore selected projects by Neri across research, strategy, search, content, channels, lifecycle, operations, and measurement."
   >
 
   <link
@@ -38,7 +38,7 @@
 
   <meta
     property="og:description"
-    content="Selected projects across audience research, marketing strategy, search, measurement, campaigns, systems, content, and creative execution."
+    content="Selected projects across research, strategy, search, content, channels, lifecycle, operations, and measurement."
   >
 
   <meta property="og:type" content="website">
@@ -69,7 +69,7 @@
 
   <meta
     name="twitter:description"
-    content="Selected projects across audience research, marketing strategy, search, measurement, campaigns, systems, content, and creative execution."
+    content="Selected projects across research, strategy, search, content, channels, lifecycle, operations, and measurement."
   >
 
   <meta
@@ -87,7 +87,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Projects",
-    "description": "Selected projects by Neri across audience research, marketing strategy, search, measurement, campaigns, systems, content, and creative execution.",
+    "description": "Selected projects by Neri across research, strategy, search, content, channels, lifecycle, operations, and measurement.",
     "url": "https://labandlorebyneri.github.io/theloomroom/projects.html",
     "isPartOf": {
       "@type": "WebSite",
@@ -152,7 +152,7 @@
 
 
     /* ==========================================================
-       SECTION HEADINGS
+       SECTION HEADING
        ========================================================== */
 
     .projects-section-heading{
@@ -180,11 +180,14 @@
 
     /* ==========================================================
        FEATURED PROJECTS
+       Shared shape:
+       square top corners
+       rounded bottom corners
        ========================================================== */
 
     .featured-projects{
       display:grid;
-      gap:26px;
+      gap:34px;
     }
 
     .featured-project{
@@ -193,8 +196,9 @@
       grid-template-columns:120px minmax(0,1fr);
       gap:42px;
       min-height:430px;
-      padding:76px 42px 42px;
+      padding:78px 42px 42px;
       border:1px solid var(--line);
+      border-radius:0 0 26px 26px;
       background:var(--white);
       overflow:hidden;
     }
@@ -202,7 +206,7 @@
     .featured-project::before{
       content:"";
       position:absolute;
-      top:0;
+      top:22px;
       left:0;
       width:100%;
       height:18px;
@@ -425,6 +429,7 @@
       min-height:285px;
       padding:28px;
       border:1px solid var(--line);
+      border-radius:0 0 22px 22px;
       background:var(--white);
     }
 
@@ -503,6 +508,7 @@
     .findings-card{
       padding:30px;
       border:1px solid var(--line);
+      border-radius:0 0 22px 22px;
       background:var(--white);
     }
 
@@ -550,7 +556,7 @@
 
 
     /* ==========================================================
-       REPORT REQUEST
+       FULL STUDY REQUEST
        ========================================================== */
 
     .report-request{
@@ -564,6 +570,7 @@
       gap:40px;
       align-items:center;
       padding:38px 40px;
+      border-radius:0 0 26px 26px;
       background:var(--blue);
       color:#fff;
     }
@@ -612,6 +619,8 @@
 
     /* ==========================================================
        RELATED INSIGHTS
+       Insights remain fully rounded in their own library.
+       Here they are shown as horizontal related-thinking rows.
        ========================================================== */
 
     .related-insights{
@@ -727,6 +736,58 @@
       border-top:1px solid var(--line);
     }
 
+    .archive-item{
+      display:grid;
+      grid-template-columns:110px minmax(0,1.5fr) minmax(190px,.8fr) auto;
+      gap:28px;
+      align-items:center;
+      min-height:112px;
+      padding:22px 4px;
+      border-bottom:1px solid var(--line);
+      color:var(--ink);
+      text-decoration:none;
+      transition:
+        background .18s ease,
+        padding-left .18s ease,
+        padding-right .18s ease;
+    }
+
+    .archive-item:hover,
+    .archive-item:focus-visible{
+      padding-left:18px;
+      padding-right:18px;
+      background:var(--white);
+    }
+
+    .archive-year{
+      font-weight:700;
+      color:var(--slate);
+    }
+
+    .archive-title{
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.55rem,2.5vw,2.4rem);
+      line-height:1;
+      font-weight:700;
+    }
+
+    .archive-discipline{
+      font-size:.82rem;
+      font-weight:700;
+      color:var(--slate);
+    }
+
+    .archive-arrow{
+      font-size:1.7rem;
+      line-height:1;
+      transition:transform .18s ease;
+    }
+
+    .archive-item:hover .archive-arrow,
+    .archive-item:focus-visible .archive-arrow{
+      transform:translateX(4px);
+    }
+
     .archive-empty{
       padding:34px 0;
       border-bottom:1px solid var(--line);
@@ -783,11 +844,25 @@
         grid-template-columns:1fr;
         gap:22px;
         min-height:0;
-        padding:66px 26px 30px;
+        padding:74px 26px 30px;
       }
 
       .featured-project-number{
         font-size:2.5rem;
+      }
+
+      .archive-item{
+        grid-template-columns:80px minmax(0,1fr) auto;
+        gap:18px;
+      }
+
+      .archive-discipline{
+        grid-column:2;
+      }
+
+      .archive-arrow{
+        grid-column:3;
+        grid-row:1 / span 2;
       }
     }
 
@@ -825,7 +900,7 @@
       }
 
       .featured-project{
-        padding:62px 22px 26px;
+        padding:72px 22px 26px;
       }
 
       .featured-project-meta{
@@ -841,11 +916,41 @@
         align-items:flex-start;
         flex-direction:column;
       }
+
+      .archive-item{
+        grid-template-columns:1fr auto;
+        min-height:0;
+        padding:24px 0;
+      }
+
+      .archive-year{
+        grid-column:1 / -1;
+      }
+
+      .archive-title{
+        grid-column:1;
+      }
+
+      .archive-discipline{
+        grid-column:1;
+      }
+
+      .archive-arrow{
+        grid-column:2;
+        grid-row:2 / span 2;
+      }
+
+      .archive-item:hover,
+      .archive-item:focus-visible{
+        padding-left:12px;
+        padding-right:12px;
+      }
     }
 
   </style>
 
 </head>
+
 
 <body>
 
@@ -888,6 +993,11 @@
 
 <main class="page-shell">
 
+
+  <!-- ========================================================
+       INTRO
+       ======================================================== -->
+
   <section class="page-intro projects-intro">
 
     <p class="eyebrow">
@@ -907,15 +1017,23 @@
   </section>
 
 
+
+  <!-- ========================================================
+       FEATURED WORK
+       ======================================================== -->
+
   <section>
 
     <div class="projects-section-heading">
 
       <div>
+
         <p class="eyebrow">
           Featured Work
         </p>
+
       </div>
+
 
       <div>
 
@@ -946,7 +1064,9 @@
           01
         </div>
 
+
         <div class="featured-project-body">
+
 
           <div class="featured-project-meta">
             <span>2025–2026</span>
@@ -955,9 +1075,11 @@
             <span>Measurement</span>
           </div>
 
+
           <h2>
             Market Research for Word-of-Mouth Strategy
           </h2>
+
 
           <p class="featured-project-description">
             A multi-volume market research and marketing strategy project
@@ -967,6 +1089,7 @@
             channels, search, and measurement.
           </p>
 
+
           <p class="featured-project-insight">
             Research was treated as the beginning of the decision process,
             not the end. Subsequent performance was used to test and refine
@@ -974,7 +1097,6 @@
           </p>
 
 
-          <!-- INSIGHTS TAXONOMY -->
           <div class="featured-project-tags">
             <span>Content</span>
             <span>Channels</span>
@@ -990,6 +1112,7 @@
               Research · Analysis · Strategy · Measurement
             </p>
 
+
             <button
               class="project-expand-button"
               type="button"
@@ -1004,25 +1127,34 @@
         </div>
 
 
+
+        <!-- ====================================================
+             EXPANDED PROJECT 01
+             ==================================================== -->
+
         <div
           class="project-expanded"
           id="project-01-details"
           hidden
         >
 
-          <!-- ====================================================
+
+          <!-- ==================================================
                RESEARCH DESIGN
-               ==================================================== -->
+               ================================================== -->
 
           <section class="project-summary">
+
 
             <p class="eyebrow">
               Research Design
             </p>
 
+
             <h3>
               A research-to-validation framework for a relationship-led growth strategy.
             </h3>
+
 
             <p>
               The objective was to understand how an existing relationship-led audience
@@ -1034,29 +1166,36 @@
             </p>
 
 
+
             <div class="project-at-a-glance">
+
 
               <div>
                 <strong>163</strong>
                 <span>valid responses</span>
               </div>
 
+
               <div>
                 <strong>50</strong>
                 <span>reported ZIP codes</span>
               </div>
+
 
               <div>
                 <strong>Nov–Dec</strong>
                 <span>2025 field period</span>
               </div>
 
+
               <div>
                 <strong>11 mo.</strong>
                 <span>performance validation</span>
               </div>
 
+
             </div>
+
 
 
             <div class="research-method-grid">
@@ -1086,6 +1225,7 @@
               </article>
 
 
+
               <article class="research-method-card">
 
                 <span class="research-method-number">
@@ -1108,6 +1248,7 @@
                 </span>
 
               </article>
+
 
 
               <article class="research-method-card">
@@ -1134,6 +1275,7 @@
               </article>
 
 
+
               <article class="research-method-card">
 
                 <span class="research-method-number">
@@ -1158,21 +1300,25 @@
 
               </article>
 
+
             </div>
 
           </section>
 
 
-          <!-- ====================================================
+
+          <!-- ==================================================
                SELECTED FINDINGS
-               ==================================================== -->
+               ================================================== -->
 
           <section
             class="project-findings"
             aria-labelledby="project-01-findings-title"
           >
 
+
             <div class="project-findings-heading">
+
 
               <div>
 
@@ -1181,6 +1327,7 @@
                 </p>
 
               </div>
+
 
               <div>
 
@@ -1196,13 +1343,16 @@
 
               </div>
 
+
             </div>
+
 
 
             <div class="findings-grid">
 
 
               <!-- FOUNDATION RESEARCH -->
+
               <article class="findings-card">
 
                 <span class="findings-number">
@@ -1257,7 +1407,9 @@
               </article>
 
 
+
               <!-- PERFORMANCE VALIDATION -->
+
               <article class="findings-card">
 
                 <span class="findings-number">
@@ -1310,21 +1462,25 @@
 
               </article>
 
+
             </div>
 
           </section>
 
 
-          <!-- ====================================================
+
+          <!-- ==================================================
                FULL STUDY BY REQUEST
-               ==================================================== -->
+               ================================================== -->
 
           <section
             class="report-request"
             aria-labelledby="project-01-report-request-title"
           >
 
+
             <div class="report-request-inner">
+
 
               <div>
 
@@ -1353,21 +1509,25 @@
                 Contact me →
               </a>
 
+
             </div>
 
           </section>
 
 
-          <!-- ====================================================
-               RELATED INSIGHTS
-               ==================================================== -->
+
+          <!-- ==================================================
+               RELATED THINKING
+               ================================================== -->
 
           <section
             class="related-insights"
             aria-labelledby="project-01-insights-title"
           >
 
+
             <div class="related-insights-heading">
+
 
               <div>
 
@@ -1376,6 +1536,7 @@
                 </p>
 
               </div>
+
 
               <div>
 
@@ -1390,8 +1551,12 @@
 
               </div>
 
+
             </div>
 
+
+
+            <!-- BRAND -->
 
             <div class="insight-group">
 
@@ -1408,7 +1573,10 @@
                   Why a template is not a brand
                 </span>
 
-                <span class="related-arrow" aria-hidden="true">
+                <span
+                  class="related-arrow"
+                  aria-hidden="true"
+                >
                   →
                 </span>
 
@@ -1416,6 +1584,9 @@
 
             </div>
 
+
+
+            <!-- LIFECYCLE -->
 
             <div class="insight-group">
 
@@ -1432,7 +1603,10 @@
                   Why the lead is not the conversion
                 </span>
 
-                <span class="related-arrow" aria-hidden="true">
+                <span
+                  class="related-arrow"
+                  aria-hidden="true"
+                >
                   →
                 </span>
 
@@ -1448,7 +1622,10 @@
                   Why the best call to action depends on where the customer is in the journey
                 </span>
 
-                <span class="related-arrow" aria-hidden="true">
+                <span
+                  class="related-arrow"
+                  aria-hidden="true"
+                >
                   →
                 </span>
 
@@ -1456,6 +1633,9 @@
 
             </div>
 
+
+
+            <!-- CONTENT -->
 
             <div class="insight-group">
 
@@ -1472,7 +1652,10 @@
                   When more content is not the answer
                 </span>
 
-                <span class="related-arrow" aria-hidden="true">
+                <span
+                  class="related-arrow"
+                  aria-hidden="true"
+                >
                   →
                 </span>
 
@@ -1480,6 +1663,9 @@
 
             </div>
 
+
+
+            <!-- CHANNELS -->
 
             <div class="insight-group">
 
@@ -1496,7 +1682,10 @@
                   Why being on every channel is not a channel strategy
                 </span>
 
-                <span class="related-arrow" aria-hidden="true">
+                <span
+                  class="related-arrow"
+                  aria-hidden="true"
+                >
                   →
                 </span>
 
@@ -1504,6 +1693,9 @@
 
             </div>
 
+
+
+            <!-- SEARCH -->
 
             <div class="insight-group">
 
@@ -1520,7 +1712,10 @@
                   Why ranking is no longer the whole search strategy
                 </span>
 
-                <span class="related-arrow" aria-hidden="true">
+                <span
+                  class="related-arrow"
+                  aria-hidden="true"
+                >
                   →
                 </span>
 
@@ -1536,7 +1731,10 @@
                   Why search intent matters more than keyword volume alone
                 </span>
 
-                <span class="related-arrow" aria-hidden="true">
+                <span
+                  class="related-arrow"
+                  aria-hidden="true"
+                >
                   →
                 </span>
 
@@ -1552,7 +1750,10 @@
                   When search becomes the verification layer
                 </span>
 
-                <span class="related-arrow" aria-hidden="true">
+                <span
+                  class="related-arrow"
+                  aria-hidden="true"
+                >
                   →
                 </span>
 
@@ -1560,9 +1761,12 @@
 
             </div>
 
+
           </section>
 
+
         </div>
+
 
       </article>
 
@@ -1578,7 +1782,9 @@
           02
         </div>
 
+
         <div class="featured-project-body">
+
 
           <div class="featured-project-meta">
             <span>2026</span>
@@ -1587,15 +1793,18 @@
             <span>Measurement</span>
           </div>
 
+
           <h2>
             Organic Search Opportunity Analysis
           </h2>
+
 
           <p class="featured-project-description">
             A 16-month Google Search Console analysis examining the gap
             between commercial search visibility and actual click capture
             for a regional multi-location service business.
           </p>
+
 
           <p class="featured-project-insight">
             The primary opportunity was not generating search demand from
@@ -1624,13 +1833,16 @@
 
           </div>
 
+
         </div>
 
       </article>
 
+
     </div>
 
   </section>
+
 
 
   <!-- ========================================================
@@ -1639,7 +1851,9 @@
 
   <section class="project-archive">
 
+
     <div class="archive-heading">
+
 
       <div>
 
@@ -1648,6 +1862,7 @@
         </p>
 
       </div>
+
 
       <div>
 
@@ -1662,7 +1877,9 @@
 
       </div>
 
+
     </div>
+
 
 
     <div class="archive-list">
@@ -1678,9 +1895,12 @@
 
     </div>
 
+
   </section>
 
+
 </main>
+
 
 
 <footer class="site-footer">
@@ -1694,6 +1914,7 @@
   </p>
 
 </footer>
+
 
 
 <script>
@@ -1713,12 +1934,15 @@
       const isOpen =
         button.getAttribute("aria-expanded") === "true";
 
+
       button.setAttribute(
         "aria-expanded",
         String(!isOpen)
       );
 
+
       details.hidden = isOpen;
+
 
       button.textContent =
         isOpen
