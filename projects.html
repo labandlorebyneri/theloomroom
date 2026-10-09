@@ -323,30 +323,15 @@
       font-weight:600;
     }
 
-    .featured-project-link,
-    .featured-project-status{
-      font-weight:700;
-    }
-
-    .featured-project-link{
-      color:var(--blue);
-      text-decoration:none;
-      text-underline-offset:5px;
-    }
-
-    .featured-project-link:hover,
-    .featured-project-link:focus-visible{
-      text-decoration:underline;
-    }
-
     .featured-project-status{
       color:var(--slate);
       font-size:.88rem;
+      font-weight:700;
     }
 
 
     /* ==========================================================
-       EXPANDED FEATURED PROJECT
+       EXPAND BUTTON
        ========================================================== */
 
     .project-expand-button{
@@ -371,134 +356,154 @@
       outline-offset:5px;
     }
 
+
+    /* ==========================================================
+       SHORT PROJECT EXPANSION
+       ========================================================== */
+
     .project-expanded{
       grid-column:1 / -1;
       margin:46px -42px -42px;
-      padding:0 42px 56px;
+      padding:0 42px 52px;
       border-top:1px solid var(--line);
       background:var(--cream);
     }
 
-    .project-detail-section{
+    .project-summary{
       max-width:1120px;
       margin:0 auto;
-      padding:70px 0;
-      border-bottom:1px solid var(--line);
+      padding:64px 0 0;
     }
 
-    .project-detail-section:last-child{
-      border-bottom:0;
-    }
-
-    .project-detail-section h3{
-      max-width:960px;
+    .project-summary h3{
+      max-width:900px;
       margin:0;
       font-family:"Playfair Display",Georgia,serif;
-      font-size:clamp(2.4rem,4.5vw,4.7rem);
+      font-size:clamp(2.3rem,4.2vw,4.5rem);
       line-height:.97;
       letter-spacing:-.04em;
     }
 
-    .project-detail-section > p:not(.eyebrow){
+    .project-summary > p:not(.eyebrow){
       max-width:820px;
       margin:22px 0 0;
     }
 
-    .project-research-facts,
-    .project-findings,
-    .project-decision-grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(0,1fr));
-      gap:14px;
-      margin-top:38px;
-    }
-
-    .project-research-facts article,
-    .project-findings article,
-    .project-decision-grid article{
-      padding:26px;
-      border:1px solid var(--line);
-      background:var(--white);
-    }
-
-    .project-research-facts article > span,
-    .project-findings article > span,
-    .project-decision-grid article > span{
-      display:block;
-      margin-bottom:36px;
-      font-family:"Playfair Display",Georgia,serif;
-      font-size:2rem;
-      color:var(--slate);
-    }
-
-    .project-research-facts h4,
-    .project-findings h4,
-    .project-decision-grid h4{
-      margin:0;
-      font-family:"Playfair Display",Georgia,serif;
-      font-size:1.7rem;
-      line-height:1.05;
-    }
-
-    .project-research-facts p,
-    .project-findings p,
-    .project-decision-grid p{
-      margin:14px 0 0;
-    }
-
-    .project-stat-band{
+    .project-at-a-glance{
       display:grid;
       grid-template-columns:repeat(4,minmax(0,1fr));
       gap:12px;
       margin-top:38px;
     }
 
-    .project-stat-band div{
-      padding:28px 22px;
+    .project-at-a-glance div{
+      padding:26px 22px;
       border:1px solid var(--line);
       background:var(--white);
     }
 
-    .project-stat-band strong{
+    .project-at-a-glance strong{
       display:block;
       font-family:"Playfair Display",Georgia,serif;
-      font-size:clamp(2.5rem,4vw,4.5rem);
+      font-size:clamp(2rem,3.5vw,3.8rem);
       line-height:1;
     }
 
-    .project-stat-band span{
+    .project-at-a-glance span{
       display:block;
-      margin-top:10px;
-      font-size:.84rem;
+      margin-top:9px;
+      font-size:.82rem;
       font-weight:700;
     }
 
-    .project-change-list{
-      margin-top:38px;
-      border-top:1px solid var(--line);
-    }
-
-    .project-change-list > div{
+    .project-summary-points{
       display:grid;
-      grid-template-columns:180px minmax(0,1fr);
-      gap:28px;
-      padding:24px 0;
-      border-bottom:1px solid var(--line);
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:14px;
+      margin-top:38px;
     }
 
-    .project-change-list strong{
-      font-size:.82rem;
-      text-transform:uppercase;
-      letter-spacing:.1em;
+    .project-summary-points article{
+      padding:26px;
+      border:1px solid var(--line);
+      background:var(--white);
     }
 
-    .project-change-list p{
-      max-width:760px;
+    .project-summary-points span{
+      display:block;
+      margin-bottom:28px;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:1.9rem;
+      color:var(--slate);
+    }
+
+    .project-summary-points h4{
       margin:0;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:1.6rem;
+      line-height:1.05;
     }
 
-    .project-closing{
-      padding-bottom:20px;
+    .project-summary-points p{
+      margin:13px 0 0;
+    }
+
+
+    /* ==========================================================
+       FULL REPORT CTA
+       ========================================================== */
+
+    .report-cta{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:30px;
+      align-items:center;
+      max-width:1120px;
+      margin:52px auto 0;
+      padding:34px;
+      background:var(--blue);
+      color:#fff;
+    }
+
+    .report-cta .eyebrow{
+      color:#fff;
+      opacity:.76;
+    }
+
+    .report-cta h3{
+      margin:0;
+      max-width:760px;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(2rem,3.5vw,3.6rem);
+      line-height:1;
+      letter-spacing:-.035em;
+    }
+
+    .report-cta p{
+      max-width:720px;
+      margin:16px 0 0;
+      color:rgba(255,255,255,.88);
+    }
+
+    .report-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:190px;
+      padding:14px 20px;
+      border:1px solid #fff;
+      border-radius:999px;
+      background:#fff;
+      color:var(--blue);
+      font-weight:700;
+      text-decoration:none;
+      white-space:nowrap;
+      transition:transform .18s ease;
+    }
+
+    .report-link:hover,
+    .report-link:focus-visible{
+      transform:translateY(-2px);
     }
 
 
@@ -588,11 +593,6 @@
       transform:translateX(4px);
     }
 
-
-    /* ==========================================================
-       EMPTY ARCHIVE STATE
-       ========================================================== */
-
     .archive-empty{
       padding:34px 0;
       border-bottom:1px solid var(--line);
@@ -611,21 +611,6 @@
 
     @media(max-width:800px){
 
-      .project-expanded{
-        margin:40px -26px -30px;
-        padding:0 26px 40px;
-      }
-
-      .project-research-facts,
-      .project-findings,
-      .project-decision-grid{
-        grid-template-columns:1fr;
-      }
-
-      .project-stat-band{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-
       .projects-section-heading,
       .archive-heading{
         grid-template-columns:1fr;
@@ -641,6 +626,27 @@
 
       .featured-project-number{
         font-size:2.5rem;
+      }
+
+      .project-expanded{
+        margin:40px -26px -30px;
+        padding:0 26px 40px;
+      }
+
+      .project-at-a-glance{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+
+      .project-summary-points{
+        grid-template-columns:1fr;
+      }
+
+      .report-cta{
+        grid-template-columns:1fr;
+      }
+
+      .report-link{
+        justify-self:start;
       }
 
       .archive-item{
@@ -660,24 +666,6 @@
 
 
     @media(max-width:620px){
-
-      .project-expanded{
-        margin:36px -22px -26px;
-        padding:0 22px 32px;
-      }
-
-      .project-detail-section{
-        padding:52px 0;
-      }
-
-      .project-stat-band{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .project-change-list > div{
-        grid-template-columns:1fr;
-        gap:8px;
-      }
 
       .site-header .brand{
         gap:7px;
@@ -704,6 +692,23 @@
       .featured-project-footer{
         align-items:flex-start;
         flex-direction:column;
+      }
+
+      .project-expanded{
+        margin:36px -22px -26px;
+        padding:0 22px 32px;
+      }
+
+      .project-summary{
+        padding-top:48px;
+      }
+
+      .project-at-a-glance{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .report-cta{
+        padding:26px 22px;
       }
 
       .archive-item{
@@ -869,9 +874,8 @@
 
           <p class="featured-project-insight">
             Research was treated as the beginning of the decision process,
-            not the end. Eleven months of actual performance were later used
-            to determine which recommendations held, which changed, and
-            which still needed testing.
+            not the end. Subsequent performance was used to test and refine
+            the original strategic recommendations.
           </p>
 
           <div class="featured-project-tags">
@@ -903,356 +907,147 @@
 
         </div>
 
+
+        <!-- SHORT EXPANSION -->
         <div
           class="project-expanded"
           id="project-01-details"
           hidden
         >
 
-          <section class="project-detail-section">
+          <div class="project-summary">
 
             <p class="eyebrow">
-              The Challenge
+              Project Overview
             </p>
 
             <h3>
-              Turn relationship-led growth into something marketing could study, test, and improve.
+              From audience research to a testable marketing strategy.
             </h3>
 
             <p>
-              The project began with a practical question: what does an existing relationship-led
-              audience actually watch, read, use, and follow, and which of those patterns are strong
-              enough to influence marketing decisions? The aim was not to manufacture a generic
-              audience persona. It was to build a more disciplined basis for word-of-mouth growth,
-              content, media, search, and measurement.
+              The project studied how a relationship-led audience uses
+              social platforms, streaming, websites, entertainment,
+              sports, and other media, then translated those patterns
+              into practical decisions for content, channels, search,
+              and measurement.
             </p>
 
-          </section>
+
+            <div class="project-at-a-glance">
+
+              <div>
+                <strong>163</strong>
+                <span>valid responses</span>
+              </div>
+
+              <div>
+                <strong>50</strong>
+                <span>reported ZIP codes</span>
+              </div>
+
+              <div>
+                <strong>2025</strong>
+                <span>research period</span>
+              </div>
+
+              <div>
+                <strong>2026</strong>
+                <span>performance lookback</span>
+              </div>
+
+            </div>
 
 
-          <section class="project-detail-section">
-
-            <p class="eyebrow">
-              The Research
-            </p>
-
-            <h3>
-              163 valid responses became the starting point, not the conclusion.
-            </h3>
-
-            <p>
-              The survey ran from November 2 to December 3, 2025 and was distributed through
-              established relationship networks. Respondents reported social-platform use, daily
-              social time, streaming behavior, show preferences, sports interests, website categories,
-              and other media habits.
-            </p>
-
-            <p>
-              Because the sample was relationship-based rather than a random statewide sample,
-              findings were interpreted as evidence about the recruited audience, not as statewide
-              population estimates.
-            </p>
-
-            <div class="project-research-facts">
+            <div class="project-summary-points">
 
               <article>
+
                 <span>01</span>
-                <h4>163 valid responses</h4>
+
+                <h4>
+                  Study the audience without overstating the sample.
+                </h4>
+
                 <p>
-                  Every descriptive percentage and later analytical test began with the same
-                  anonymized response set.
+                  The survey was recruited through existing relationship
+                  networks, so findings were used to understand this
+                  audience rather than claim statewide representation.
                 </p>
+
               </article>
 
+
               <article>
+
                 <span>02</span>
-                <h4>50 reported ZIP codes</h4>
+
+                <h4>
+                  Look for patterns that could change a decision.
+                </h4>
+
                 <p>
-                  Geography described where the recruited responses came from, not market
-                  penetration or statewide demand.
+                  Platform overlap, content affinities, local media use,
+                  and other relationships were analyzed to distinguish
+                  useful strategic signals from simple popularity.
                 </p>
+
               </article>
 
+
               <article>
+
                 <span>03</span>
-                <h4>Multi-select behavior mattered</h4>
-                <p>
-                  People could select several platforms, genres, teams, and website categories,
-                  so overlapping audiences could not be treated as separate people.
-                </p>
-              </article>
 
-              <article>
-                <span>04</span>
-                <h4>Association was not treated as causation</h4>
+                <h4>
+                  Let performance challenge the research.
+                </h4>
+
                 <p>
-                  Co-selection patterns were used to generate testable creative and channel
-                  hypotheses, not claims about what would automatically perform.
+                  The recommendations were later compared with actual
+                  marketing performance so assumptions could be retained,
+                  revised, or tested again.
                 </p>
+
               </article>
 
             </div>
 
-          </section>
+          </div>
 
 
-          <section class="project-detail-section">
+          <!-- FULL REPORT CTA -->
+          <div class="report-cta">
 
-            <p class="eyebrow">
-              Selected Findings
-            </p>
+            <div>
 
-            <h3>
-              The useful signal was often in the overlap, not the ranking.
-            </h3>
+              <p class="eyebrow">
+                Full Research
+              </p>
 
-            <div class="project-stat-band">
+              <h3>
+                Want the methodology, analysis, and complete findings?
+              </h3>
 
-              <div>
-                <strong>85.3%</strong>
-                <span>selected Facebook</span>
-              </div>
-
-              <div>
-                <strong>66.3%</strong>
-                <span>used free ad-supported streaming</span>
-              </div>
-
-              <div>
-                <strong>77.3%</strong>
-                <span>selected Netflix</span>
-              </div>
-
-              <div>
-                <strong>50.9%</strong>
-                <span>selected local news websites</span>
-              </div>
+              <p>
+                Read the full anonymized research report for the survey
+                design, descriptive results, statistical analysis,
+                interpretation, strategy recommendations, limitations,
+                and supporting detail.
+              </p>
 
             </div>
 
-            <div class="project-findings">
+            <a
+              class="report-link"
+              href="assets/projects/market-research-word-of-mouth-strategy/market-research-report.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              Read full report ↗
+            </a>
 
-              <article>
-                <span>01</span>
-                <h4>Facebook provided broad coverage inside the recruited audience.</h4>
-                <p>
-                  139 of 163 respondents selected Facebook. Instagram, TikTok, and YouTube
-                  added additional users, but substantial overlap meant platform counts could not
-                  simply be added together as unique reach.
-                </p>
-              </article>
-
-              <article>
-                <span>02</span>
-                <h4>Heavy social use was common enough to complicate platform interpretation.</h4>
-                <p>
-                  The study separated general media intensity from genuine platform preference so
-                  highly active respondents would not create false channel-specific conclusions.
-                </p>
-              </article>
-
-              <article>
-                <span>03</span>
-                <h4>Local information remained part of the audience's media environment.</h4>
-                <p>
-                  Local news websites were selected by 83 respondents, providing a useful signal
-                  that local context could matter alongside social and entertainment media.
-                </p>
-              </article>
-
-              <article>
-                <span>04</span>
-                <h4>Content affinities were more useful than simple popularity lists.</h4>
-                <p>
-                  Supported genre relationships included reality with lifestyle, sports with news,
-                  family with lifestyle, and comedy with drama. These became creative hypotheses
-                  rather than fixed audience labels.
-                </p>
-              </article>
-
-              <article>
-                <span>05</span>
-                <h4>Sports affinity needed careful interpretation.</h4>
-                <p>
-                  LSU and Saints following were widespread, while the NFL-to-sports-programming
-                  relationship was the team-to-genre pairing that remained supported after correction.
-                </p>
-              </article>
-
-              <article>
-                <span>06</span>
-                <h4>Media use did not automatically equal purchasable advertising reach.</h4>
-                <p>
-                  Service use, show preference, and self-reported timing were kept separate from
-                  measured ad delivery, performance, and conversion outcomes.
-                </p>
-              </article>
-
-            </div>
-
-          </section>
-
-
-          <section class="project-detail-section">
-
-            <p class="eyebrow">
-              From Research to Strategy
-            </p>
-
-            <h3>
-              Convert findings into decisions without pretending the survey could answer everything.
-            </h3>
-
-            <p>
-              The strategic output was designed around what the research could responsibly support.
-              Audience evidence shaped content directions, channel roles, local context, search
-              questions, and a measurement approach, while uncertain areas were deliberately turned
-              into tests rather than declarations.
-            </p>
-
-            <div class="project-decision-grid">
-
-              <article>
-                <span>01</span>
-                <h4>Use one core strategy across channels</h4>
-                <p>
-                  Adapt format and execution to the platform without fragmenting the brand into
-                  unrelated content systems.
-                </p>
-              </article>
-
-              <article>
-                <span>02</span>
-                <h4>Build around useful audience moments</h4>
-                <p>
-                  Translate interests into recognizable situations and practical content jobs rather
-                  than treating a favorite show or team as the strategy itself.
-                </p>
-              </article>
-
-              <article>
-                <span>03</span>
-                <h4>Keep local context meaningful</h4>
-                <p>
-                  Use community familiarity where it improves relevance, not as decoration added
-                  after the message is already finished.
-                </p>
-              </article>
-
-              <article>
-                <span>04</span>
-                <h4>Separate audience habits from performance</h4>
-                <p>
-                  Survey timing and media use informed hypotheses, but live platform data still had
-                  to determine when and where content actually performed.
-                </p>
-              </article>
-
-              <article>
-                <span>05</span>
-                <h4>Measure progressively stronger outcomes</h4>
-                <p>
-                  Attention and engagement were treated as earlier signals, while downstream
-                  response and business outcomes remained the stronger tests of marketing value.
-                </p>
-              </article>
-
-              <article>
-                <span>06</span>
-                <h4>Design the strategy to be revisable</h4>
-                <p>
-                  Every important recommendation needed a path to later evidence so the strategy
-                  could improve rather than harden into an untested rule.
-                </p>
-              </article>
-
-            </div>
-
-          </section>
-
-
-          <section class="project-detail-section">
-
-            <p class="eyebrow">
-              The Lookback
-            </p>
-
-            <h3>
-              Eleven months later, the original strategy was put back under review.
-            </h3>
-
-            <p>
-              The research was not treated as complete once the recommendations were delivered.
-              Search, website content, social, paid media, email, CRM, and related execution were
-              later reviewed against the original strategic assumptions. The purpose was to identify
-              what real behavior affirmed, challenged, complicated, or had not yet tested.
-            </p>
-
-            <div class="project-change-list">
-
-              <div>
-                <strong>Research</strong>
-                <p>
-                  Established the audience evidence and the limits of what could responsibly be
-                  inferred from a relationship-based survey.
-                </p>
-              </div>
-
-              <div>
-                <strong>Strategy</strong>
-                <p>
-                  Converted observed patterns into content, channel, search, and measurement
-                  hypotheses.
-                </p>
-              </div>
-
-              <div>
-                <strong>Execution</strong>
-                <p>
-                  Put those hypotheses into actual marketing work rather than leaving them inside a
-                  research deck.
-                </p>
-              </div>
-
-              <div>
-                <strong>Lookback</strong>
-                <p>
-                  Used subsequent performance evidence to determine which recommendations should
-                  remain, change, or receive a better test.
-                </p>
-              </div>
-
-              <div>
-                <strong>Next cycle</strong>
-                <p>
-                  Turned disagreements between the survey and observed performance into revised
-                  hypotheses instead of treating them as research failure.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-
-          <section class="project-detail-section project-closing">
-
-            <p class="eyebrow">
-              The Lesson
-            </p>
-
-            <h3>
-              A strategy should be allowed to prove itself wrong.
-            </h3>
-
-            <p>
-              The strongest outcome of the project was not a permanent list of recommendations.
-              It was a repeatable research-to-execution loop: audience evidence creates a hypothesis,
-              execution exposes it to reality, observed behavior changes the decision, and the next
-              test becomes more precise.
-            </p>
-
-          </section>
+          </div>
 
         </div>
 
@@ -1316,18 +1111,6 @@
               Full project page coming next
             </span>
 
-            <!--
-            Replace the status above with this link when the individual
-            project page is live:
-
-            <a
-              class="featured-project-link"
-              href="projects/organic-search-opportunity-analysis.html"
-            >
-              View project →
-            </a>
-            -->
-
           </div>
 
         </div>
@@ -1340,59 +1123,6 @@
            FEATURED PROJECT 03
 
            Add the third selected featured project here.
-
-           Keep this structure:
-
-           <article class="featured-project">
-
-             <div class="featured-project-number">
-               03
-             </div>
-
-             <div class="featured-project-body">
-
-               <div class="featured-project-meta">
-                 <span>YEAR</span>
-                 <span>CATEGORY</span>
-                 <span>CATEGORY</span>
-               </div>
-
-               <h2>
-                 Project Title
-               </h2>
-
-               <p class="featured-project-description">
-                 Project overview.
-               </p>
-
-               <p class="featured-project-insight">
-                 Strongest strategic takeaway, outcome, or result.
-               </p>
-
-               <div class="featured-project-tags">
-                 <span>Skill</span>
-                 <span>Skill</span>
-                 <span>Skill</span>
-               </div>
-
-               <div class="featured-project-footer">
-
-                 <p class="featured-project-role">
-                   Your role
-                 </p>
-
-                 <a
-                   class="featured-project-link"
-                   href="projects/project-slug.html"
-                 >
-                   View project →
-                 </a>
-
-               </div>
-
-             </div>
-
-           </article>
            ==================================================== -->
 
 
@@ -1400,8 +1130,7 @@
       <!-- ====================================================
            FEATURED PROJECT 04
 
-           Duplicate the Featured Project 03 template here
-           once the fourth project is selected.
+           Add the fourth selected featured project here.
            ==================================================== -->
 
 
@@ -1409,8 +1138,7 @@
       <!-- ====================================================
            FEATURED PROJECT 05
 
-           Duplicate the Featured Project 03 template here
-           once the fifth project is selected.
+           Add the fifth selected featured project here.
            ==================================================== -->
 
 
@@ -1429,9 +1157,11 @@
     <div class="archive-heading">
 
       <div>
+
         <p class="eyebrow">
           Project Archive
         </p>
+
       </div>
 
       <div>
@@ -1453,15 +1183,13 @@
     <div class="archive-list">
 
       <!--
-      When you have archived projects, remove the archive-empty block
-      below and add one archive-item for each project.
-
-      Example:
+      Archive item example:
 
       <a
         class="archive-item"
         href="projects/project-slug.html"
       >
+
         <span class="archive-year">
           2026
         </span>
@@ -1480,6 +1208,7 @@
         >
           →
         </span>
+
       </a>
       -->
 
@@ -1515,27 +1244,48 @@
 
 <script>
   (() => {
-    const button = document.querySelector(".project-expand-button");
-    const details = document.getElementById("project-01-details");
+
+    const button =
+      document.querySelector(".project-expand-button");
+
+    const details =
+      document.getElementById("project-01-details");
 
     if (!button || !details) return;
 
-    button.addEventListener("click", () => {
-      const isOpen = button.getAttribute("aria-expanded") === "true";
 
-      button.setAttribute("aria-expanded", String(!isOpen));
+    button.addEventListener("click", () => {
+
+      const isOpen =
+        button.getAttribute("aria-expanded") === "true";
+
+      button.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
+
       details.hidden = isOpen;
-      button.textContent = isOpen ? "Explore project ↓" : "Close project ↑";
+
+      button.textContent =
+        isOpen
+          ? "Explore project ↓"
+          : "Close project ↑";
+
 
       if (isOpen) {
+
         button.scrollIntoView({
           behavior:"smooth",
           block:"center"
         });
+
       }
+
     });
+
   })();
 </script>
+
 
 <script src="main.js"></script>
 
