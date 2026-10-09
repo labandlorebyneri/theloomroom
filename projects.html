@@ -462,24 +462,24 @@
 
 
     /* ==========================================================
-       REPORTS AND FINDINGS
+       SELECTED FINDINGS
        ========================================================== */
 
-    .project-reports{
+    .project-findings{
       max-width:1120px;
       margin:58px auto 0;
       padding-top:52px;
       border-top:1px solid var(--line);
     }
 
-    .project-reports-heading{
+    .project-findings-heading{
       display:grid;
       grid-template-columns:minmax(170px,.28fr) minmax(0,1fr);
       gap:34px;
       align-items:start;
     }
 
-    .project-reports-heading h3{
+    .project-findings-heading h3{
       margin:0;
       max-width:780px;
       font-family:"Playfair Display",Georgia,serif;
@@ -488,28 +488,25 @@
       letter-spacing:-.035em;
     }
 
-    .project-reports-heading p{
+    .project-findings-heading p{
       max-width:760px;
       margin:16px 0 0;
     }
 
-    .report-grid{
+    .findings-grid{
       display:grid;
       grid-template-columns:repeat(2,minmax(0,1fr));
       gap:14px;
       margin-top:30px;
     }
 
-    .report-card{
-      display:flex;
-      flex-direction:column;
-      min-height:100%;
+    .findings-card{
       padding:30px;
       border:1px solid var(--line);
       background:var(--white);
     }
 
-    .report-card .report-number{
+    .findings-number{
       display:block;
       margin-bottom:34px;
       font-family:"Playfair Display",Georgia,serif;
@@ -517,18 +514,18 @@
       color:var(--slate);
     }
 
-    .report-card h4{
+    .findings-card h4{
       margin:0;
       font-family:"Playfair Display",Georgia,serif;
       font-size:clamp(1.7rem,2.5vw,2.5rem);
       line-height:1.02;
     }
 
-    .report-card > p{
+    .findings-card > p{
       margin:14px 0 22px;
     }
 
-    .report-findings-label{
+    .findings-label{
       display:block;
       margin:4px 0 12px;
       font-size:.72rem;
@@ -538,35 +535,78 @@
       color:var(--slate);
     }
 
-    .report-summary-list{
-      margin:0 0 28px;
+    .findings-list{
+      margin:0;
       padding-left:1.15rem;
     }
 
-    .report-summary-list li{
+    .findings-list li{
       padding-left:.25rem;
     }
 
-    .report-summary-list li + li{
+    .findings-list li + li{
       margin-top:11px;
     }
 
-    .report-action{
-      margin-top:auto;
-      padding-top:20px;
-      border-top:1px solid var(--line);
+
+    /* ==========================================================
+       REPORT REQUEST
+       ========================================================== */
+
+    .report-request{
+      max-width:1120px;
+      margin:54px auto 0;
     }
 
-    .report-action a{
+    .report-request-inner{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:40px;
+      align-items:center;
+      padding:38px 40px;
+      background:var(--blue);
+      color:#fff;
+    }
+
+    .report-request .eyebrow{
+      color:#fff;
+      opacity:.75;
+    }
+
+    .report-request h3{
+      max-width:760px;
+      margin:0;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(2.1rem,3.8vw,4rem);
+      line-height:.98;
+      letter-spacing:-.04em;
+    }
+
+    .report-request p:not(.eyebrow){
+      max-width:760px;
+      margin:18px 0 0;
+      color:rgba(255,255,255,.88);
+    }
+
+    .report-request-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:150px;
+      padding:14px 20px;
+      border:1px solid #fff;
+      border-radius:999px;
+      background:#fff;
       color:var(--blue);
       font-weight:700;
       text-decoration:none;
-      text-underline-offset:5px;
+      white-space:nowrap;
+      transition:transform .18s ease;
     }
 
-    .report-action a:hover,
-    .report-action a:focus-visible{
-      text-decoration:underline;
+    .report-request-button:hover,
+    .report-request-button:focus-visible{
+      transform:translateY(-2px);
     }
 
 
@@ -687,58 +727,6 @@
       border-top:1px solid var(--line);
     }
 
-    .archive-item{
-      display:grid;
-      grid-template-columns:110px minmax(0,1.5fr) minmax(190px,.8fr) auto;
-      gap:28px;
-      align-items:center;
-      min-height:112px;
-      padding:22px 4px;
-      border-bottom:1px solid var(--line);
-      color:var(--ink);
-      text-decoration:none;
-      transition:
-        background .18s ease,
-        padding-left .18s ease,
-        padding-right .18s ease;
-    }
-
-    .archive-item:hover,
-    .archive-item:focus-visible{
-      padding-left:18px;
-      padding-right:18px;
-      background:var(--white);
-    }
-
-    .archive-year{
-      font-weight:700;
-      color:var(--slate);
-    }
-
-    .archive-title{
-      font-family:"Playfair Display",Georgia,serif;
-      font-size:clamp(1.55rem,2.5vw,2.4rem);
-      line-height:1;
-      font-weight:700;
-    }
-
-    .archive-discipline{
-      font-size:.82rem;
-      font-weight:700;
-      color:var(--slate);
-    }
-
-    .archive-arrow{
-      font-size:1.7rem;
-      line-height:1;
-      transition:transform .18s ease;
-    }
-
-    .archive-item:hover .archive-arrow,
-    .archive-item:focus-visible .archive-arrow{
-      transform:translateX(4px);
-    }
-
     .archive-empty{
       padding:34px 0;
       border-bottom:1px solid var(--line);
@@ -766,18 +754,23 @@
         grid-template-columns:repeat(2,minmax(0,1fr));
       }
 
-      .research-method-grid{
+      .research-method-grid,
+      .findings-grid{
         grid-template-columns:1fr;
       }
 
-      .project-reports-heading,
+      .project-findings-heading,
       .related-insights-heading{
         grid-template-columns:1fr;
         gap:12px;
       }
 
-      .report-grid{
+      .report-request-inner{
         grid-template-columns:1fr;
+      }
+
+      .report-request-button{
+        justify-self:start;
       }
 
       .projects-section-heading,
@@ -796,20 +789,6 @@
       .featured-project-number{
         font-size:2.5rem;
       }
-
-      .archive-item{
-        grid-template-columns:80px minmax(0,1fr) auto;
-        gap:18px;
-      }
-
-      .archive-discipline{
-        grid-column:2;
-      }
-
-      .archive-arrow{
-        grid-column:3;
-        grid-row:1 / span 2;
-      }
     }
 
 
@@ -826,6 +805,10 @@
 
       .project-at-a-glance{
         grid-template-columns:1fr 1fr;
+      }
+
+      .report-request-inner{
+        padding:30px 24px;
       }
 
       .related-insight-link{
@@ -857,35 +840,6 @@
       .featured-project-footer{
         align-items:flex-start;
         flex-direction:column;
-      }
-
-      .archive-item{
-        grid-template-columns:1fr auto;
-        min-height:0;
-        padding:24px 0;
-      }
-
-      .archive-year{
-        grid-column:1 / -1;
-      }
-
-      .archive-title{
-        grid-column:1;
-      }
-
-      .archive-discipline{
-        grid-column:1;
-      }
-
-      .archive-arrow{
-        grid-column:2;
-        grid-row:2 / span 2;
-      }
-
-      .archive-item:hover,
-      .archive-item:focus-visible{
-        padding-left:12px;
-        padding-right:12px;
       }
     }
 
@@ -983,7 +937,7 @@
 
 
       <!-- ====================================================
-           FEATURED PROJECT 01
+           PROJECT 01
            ==================================================== -->
 
       <article class="featured-project">
@@ -1019,15 +973,16 @@
             the original strategic recommendations.
           </p>
 
+
+          <!-- INSIGHTS TAXONOMY -->
           <div class="featured-project-tags">
-            <span>Audience Research</span>
-            <span>Statistical Analysis</span>
-            <span>Content Strategy</span>
-            <span>Channel Strategy</span>
-            <span>Search Strategy</span>
-            <span>Lifecycle Marketing</span>
-            <span>Measurement</span>
+            <span>Content</span>
+            <span>Channels</span>
+            <span>Lifecycle</span>
+            <span>Operations</span>
+            <span>Search</span>
           </div>
+
 
           <div class="featured-project-footer">
 
@@ -1056,7 +1011,7 @@
         >
 
           <!-- ====================================================
-               OBJECTIVE + METHODOLOGY
+               RESEARCH DESIGN
                ==================================================== -->
 
           <section class="project-summary">
@@ -1203,6 +1158,157 @@
 
               </article>
 
+            </div>
+
+          </section>
+
+
+          <!-- ====================================================
+               SELECTED FINDINGS
+               ==================================================== -->
+
+          <section
+            class="project-findings"
+            aria-labelledby="project-01-findings-title"
+          >
+
+            <div class="project-findings-heading">
+
+              <div>
+
+                <p class="eyebrow">
+                  Selected Findings
+                </p>
+
+              </div>
+
+              <div>
+
+                <h3 id="project-01-findings-title">
+                  Go deeper into the evidence.
+                </h3>
+
+                <p>
+                  These selected findings show how the research moved from
+                  audience observation to strategic testing, and how later
+                  performance evidence challenged or reinforced the original direction.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="findings-grid">
+
+
+              <!-- FOUNDATION RESEARCH -->
+              <article class="findings-card">
+
+                <span class="findings-number">
+                  01
+                </span>
+
+                <h4>
+                  Audience Research
+                </h4>
+
+                <p>
+                  The foundation study examined audience behavior, media overlap,
+                  content affinity, and the strategic questions those patterns created.
+                </p>
+
+                <span class="findings-label">
+                  Selected findings
+                </span>
+
+                <ul class="findings-list">
+
+                  <li>
+                    Facebook was selected by 85.3% of respondents, but substantial
+                    platform overlap meant those percentages could not be treated as
+                    separate pools of unique reach.
+                  </li>
+
+                  <li>
+                    66.3% reported using free ad-supported streaming services,
+                    creating a media-testing opportunity without proving actual
+                    advertising exposure.
+                  </li>
+
+                  <li>
+                    Sports programming and sports websites produced the strongest
+                    measured show-to-website association in the study.
+                  </li>
+
+                  <li>
+                    Several content relationships survived multiple-testing correction,
+                    while other high-count combinations did not, reinforcing the
+                    distinction between popularity and meaningful association.
+                  </li>
+
+                  <li>
+                    The survey did not establish a content-specific best posting hour,
+                    so timing remained a hypothesis to test rather than a permanent rule.
+                  </li>
+
+                </ul>
+
+              </article>
+
+
+              <!-- PERFORMANCE VALIDATION -->
+              <article class="findings-card">
+
+                <span class="findings-number">
+                  02
+                </span>
+
+                <h4>
+                  Performance Lookback
+                </h4>
+
+                <p>
+                  Eleven months of subsequent marketing performance were used to
+                  test the assumptions that came out of the original research.
+                </p>
+
+                <span class="findings-label">
+                  Selected findings
+                </span>
+
+                <ul class="findings-list">
+
+                  <li>
+                    Search visibility was already substantial, but high-intent
+                    commercial pages captured only a small share of available clicks.
+                  </li>
+
+                  <li>
+                    Social impressions remained comparatively resilient despite
+                    substantially lower posting volume, while engagement and click
+                    behavior weakened.
+                  </li>
+
+                  <li>
+                    Paid-social web conversions increased from 22 to 99 while
+                    overall spending remained broadly similar.
+                  </li>
+
+                  <li>
+                    Actual content performance challenged the original timing
+                    hypothesis, with stronger observed results later in the
+                    afternoon and evening.
+                  </li>
+
+                  <li>
+                    Of 19 strategic claims reviewed, 8 were affirmed, 5 challenged,
+                    2 produced mixed evidence, and 4 were not yet testable.
+                  </li>
+
+                </ul>
+
+              </article>
 
             </div>
 
@@ -1210,180 +1316,42 @@
 
 
           <!-- ====================================================
-               REPORTS + FINDINGS
+               FULL STUDY BY REQUEST
                ==================================================== -->
 
           <section
-            class="project-reports"
-            aria-labelledby="project-01-reports-title"
+            class="report-request"
+            aria-labelledby="project-01-report-request-title"
           >
 
-            <div class="project-reports-heading">
+            <div class="report-request-inner">
 
               <div>
 
                 <p class="eyebrow">
-                  Read the Research
+                  Full Study Available by Request
                 </p>
 
-              </div>
-
-              <div>
-
-                <h3 id="project-01-reports-title">
-                  Go deeper into the evidence.
+                <h3 id="project-01-report-request-title">
+                  Interested in the complete research?
                 </h3>
 
                 <p>
-                  The full reports contain the methodology, tables, statistical tests,
-                  limitations, strategic recommendations, and the later performance
-                  review. Below are selected findings from each stage.
+                  To protect proprietary research, analysis, and working methodology,
+                  the full study is not publicly posted. For hiring, collaboration,
+                  or professional evaluation purposes, contact me to discuss access
+                  to the complete anonymized research.
                 </p>
 
               </div>
 
-            </div>
 
-
-            <div class="report-grid">
-
-
-              <!-- REPORT 01 -->
-              <article class="report-card">
-
-                <span class="report-number">
-                  01
-                </span>
-
-                <h4>
-                  Audience Research Compendium
-                </h4>
-
-                <p>
-                  The foundation research examining audience behavior, media overlap,
-                  content affinity, and the strategic questions those patterns created.
-                </p>
-
-                <span class="report-findings-label">
-                  Selected findings
-                </span>
-
-                <ul class="report-summary-list">
-
-                  <li>
-                    Facebook was selected by 85.3% of respondents, but substantial
-                    cross-platform overlap meant platform percentages could not be
-                    treated as separate pools of unique reach.
-                  </li>
-
-                  <li>
-                    66.3% reported using free ad-supported streaming apps, creating
-                    a media-testing opportunity without establishing service-specific
-                    ad exposure.
-                  </li>
-
-                  <li>
-                    Sports programming and sports websites produced the strongest
-                    measured show-to-website association, with a phi of approximately
-                    +0.497 and a lift of about 2.02 times.
-                  </li>
-
-                  <li>
-                    Several content affinities survived multiple-testing correction,
-                    but popularity alone was not treated as evidence of a meaningful
-                    audience relationship.
-                  </li>
-
-                  <li>
-                    The study did not establish a content-specific best posting hour,
-                    so timing remained a controlled test condition rather than a
-                    permanent scheduling rule.
-                  </li>
-
-                </ul>
-
-                <div class="report-action">
-
-                  <a
-                    href="assets/projects/market-research-word-of-mouth-strategy/audience-research-compendium.pdf"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Read report ↗
-                  </a>
-
-                </div>
-
-              </article>
-
-
-              <!-- REPORT 02 -->
-              <article class="report-card">
-
-                <span class="report-number">
-                  02
-                </span>
-
-                <h4>
-                  2026 Performance Lookback
-                </h4>
-
-                <p>
-                  The validation stage comparing the original research and strategy
-                  with subsequent real-world marketing performance.
-                </p>
-
-                <span class="report-findings-label">
-                  Selected findings
-                </span>
-
-                <ul class="report-summary-list">
-
-                  <li>
-                    Search visibility was already substantial, but high-intent
-                    commercial pages captured only a small share of the available
-                    clicks.
-                  </li>
-
-                  <li>
-                    Social impressions remained close to the previous period despite
-                    substantially lower posting volume, while engagement and click
-                    behavior weakened.
-                  </li>
-
-                  <li>
-                    Paid-social web conversions increased from 22 to 99 while total
-                    spend remained broadly similar, showing that conversion quality
-                    and campaign structure mattered more than impression volume alone.
-                  </li>
-
-                  <li>
-                    Actual content performance challenged the survey-derived timing
-                    hypothesis, with stronger observed results appearing later in the
-                    afternoon and evening.
-                  </li>
-
-                  <li>
-                    Of 19 original strategic claims reviewed, 8 were affirmed,
-                    5 challenged, 2 produced mixed evidence, and 4 were not yet
-                    testable.
-                  </li>
-
-                </ul>
-
-                <div class="report-action">
-
-                  <a
-                    href="assets/projects/market-research-word-of-mouth-strategy/2026-performance-lookback.pdf"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    Read report ↗
-                  </a>
-
-                </div>
-
-              </article>
+              <a
+                class="report-request-button"
+                href="mailto:jncristobal.info@gmail.com?subject=Request%20to%20Review%20Market%20Research%20for%20Word-of-Mouth%20Strategy"
+              >
+                Contact me →
+              </a>
 
             </div>
 
@@ -1425,7 +1393,6 @@
             </div>
 
 
-            <!-- BRAND -->
             <div class="insight-group">
 
               <p class="insight-group-label">
@@ -1441,10 +1408,7 @@
                   Why a template is not a brand
                 </span>
 
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
+                <span class="related-arrow" aria-hidden="true">
                   →
                 </span>
 
@@ -1453,7 +1417,6 @@
             </div>
 
 
-            <!-- LIFECYCLE -->
             <div class="insight-group">
 
               <p class="insight-group-label">
@@ -1469,10 +1432,7 @@
                   Why the lead is not the conversion
                 </span>
 
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
+                <span class="related-arrow" aria-hidden="true">
                   →
                 </span>
 
@@ -1488,10 +1448,7 @@
                   Why the best call to action depends on where the customer is in the journey
                 </span>
 
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
+                <span class="related-arrow" aria-hidden="true">
                   →
                 </span>
 
@@ -1500,7 +1457,6 @@
             </div>
 
 
-            <!-- CONTENT -->
             <div class="insight-group">
 
               <p class="insight-group-label">
@@ -1516,10 +1472,7 @@
                   When more content is not the answer
                 </span>
 
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
+                <span class="related-arrow" aria-hidden="true">
                   →
                 </span>
 
@@ -1528,7 +1481,6 @@
             </div>
 
 
-            <!-- CHANNELS -->
             <div class="insight-group">
 
               <p class="insight-group-label">
@@ -1544,10 +1496,7 @@
                   Why being on every channel is not a channel strategy
                 </span>
 
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
+                <span class="related-arrow" aria-hidden="true">
                   →
                 </span>
 
@@ -1556,7 +1505,6 @@
             </div>
 
 
-            <!-- SEARCH -->
             <div class="insight-group">
 
               <p class="insight-group-label">
@@ -1572,10 +1520,7 @@
                   Why ranking is no longer the whole search strategy
                 </span>
 
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
+                <span class="related-arrow" aria-hidden="true">
                   →
                 </span>
 
@@ -1591,10 +1536,7 @@
                   Why search intent matters more than keyword volume alone
                 </span>
 
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
+                <span class="related-arrow" aria-hidden="true">
                   →
                 </span>
 
@@ -1610,10 +1552,7 @@
                   When search becomes the verification layer
                 </span>
 
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
+                <span class="related-arrow" aria-hidden="true">
                   →
                 </span>
 
@@ -1630,7 +1569,7 @@
 
 
       <!-- ====================================================
-           FEATURED PROJECT 02
+           PROJECT 02
            ==================================================== -->
 
       <article class="featured-project">
@@ -1665,15 +1604,13 @@
             business outcomes.
           </p>
 
+
           <div class="featured-project-tags">
-            <span>SEO Strategy</span>
-            <span>Google Search Console</span>
-            <span>Search Intent</span>
-            <span>CTR Analysis</span>
-            <span>Internal Linking</span>
-            <span>Information Architecture</span>
-            <span>Measurement</span>
+            <span>Content</span>
+            <span>Operations</span>
+            <span>Search</span>
           </div>
+
 
           <div class="featured-project-footer">
 
