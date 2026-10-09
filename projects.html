@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Explore selected projects by Neri across audience research, marketing strategy, search, measurement, creative execution, campaigns, content, and design."
+    content="Explore selected projects by Neri across audience research, marketing strategy, search, measurement, campaigns, systems, content, and creative execution."
   >
 
   <link
@@ -31,12 +31,16 @@
 
   <meta name="theme-color" content="#3155FF">
 
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Projects | The Loom Room by Neri">
+  <meta
+    property="og:title"
+    content="Projects | The Loom Room by Neri"
+  >
 
   <meta
     property="og:description"
-    content="Selected projects across audience research, marketing strategy, search, measurement, creative execution, campaigns, content, and design."
+    content="Selected projects across audience research, marketing strategy, search, measurement, campaigns, systems, content, and creative execution."
   >
 
   <meta property="og:type" content="website">
@@ -58,6 +62,7 @@
     content="The Loom Room by Neri marketing strategy portfolio social preview"
   >
 
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
 
@@ -68,7 +73,7 @@
 
   <meta
     name="twitter:description"
-    content="Selected projects across audience research, marketing strategy, search, measurement, creative execution, campaigns, content, and design."
+    content="Selected projects across audience research, marketing strategy, search, measurement, campaigns, systems, content, and creative execution."
   >
 
   <meta
@@ -81,13 +86,14 @@
     content="The Loom Room by Neri marketing strategy portfolio social preview"
   >
 
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "Projects",
-    "description": "Selected projects by Neri across audience research, marketing strategy, search, measurement, creative execution, campaigns, content, and design.",
+    "description": "Selected projects by Neri across audience research, marketing strategy, search, measurement, campaigns, systems, content, and creative execution.",
     "url": "https://labandlorebyneri.github.io/theloomroom/projects.html",
     "isPartOf": {
       "@type": "WebSite",
@@ -97,68 +103,17 @@
     "author": {
       "@type": "Person",
       "name": "Neri",
-      "url": "https://labandlorebyneri.github.io/theloomroom/experience.html"
+      "url": "https://labandlorebyneri.github.io/theloomroom/"
     }
   }
   </script>
 
+
   <style>
-    .project-intro{
-      max-width:880px;
-      margin:0 0 28px;
-    }
 
-    .project-block{
-      max-width:900px;
-      margin-top:30px;
-    }
-
-    .project-block h3{
-      margin:0 0 10px;
-      font-family:"DM Sans",sans-serif;
-      font-size:.82rem;
-      font-weight:700;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .project-block p{
-      margin:0;
-      max-width:860px;
-    }
-
-    .project-block p + p{
-      margin-top:12px;
-    }
-
-    .project-applied{
-      margin-top:34px;
-    }
-
-    .project-applied .eyebrow{
-      margin-bottom:12px;
-    }
-
-    .project-note{
-      max-width:880px;
-      margin-top:30px;
-      padding:20px 22px;
-      border-left:4px solid var(--blue);
-      background:rgba(49,85,255,.06);
-      border-radius:0 12px 12px 0;
-    }
-
-    .project-note p{
-      margin:0;
-      font-weight:700;
-    }
-
-    .project-status{
-      margin-top:28px;
-      font-size:.82rem;
-      font-weight:700;
-      color:var(--blue);
-    }
+    /* ==========================================================
+       HEADER BRAND
+       ========================================================== */
 
     .site-header .brand{
       display:inline-flex;
@@ -179,7 +134,7 @@
       justify-content:center;
       padding:6px 10px;
       border-radius:6px;
-      background:var(--blue,#3155FF);
+      background:var(--blue, #3155FF);
       color:#fff;
       font-family:"DM Sans",sans-serif;
       font-size:.68rem;
@@ -189,13 +144,351 @@
       white-space:nowrap;
     }
 
-    @media(max-width:740px){
-      .project-block{
-        margin-top:24px;
+
+    /* ==========================================================
+       PROJECT PAGE INTRO
+       ========================================================== */
+
+    .projects-intro{
+      max-width:1150px;
+    }
+
+    .projects-intro .lead{
+      max-width:820px;
+    }
+
+
+    /* ==========================================================
+       SECTION HEADINGS
+       ========================================================== */
+
+    .projects-section-heading{
+      display:grid;
+      grid-template-columns:minmax(170px,.28fr) minmax(0,1fr);
+      gap:45px;
+      align-items:start;
+      margin-bottom:34px;
+    }
+
+    .projects-section-heading h2{
+      margin:0;
+      max-width:900px;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(2.8rem,5.5vw,5.8rem);
+      line-height:.95;
+      letter-spacing:-.045em;
+    }
+
+    .projects-section-heading p{
+      max-width:760px;
+      margin:20px 0 0;
+    }
+
+
+    /* ==========================================================
+       FEATURED PROJECTS
+       ========================================================== */
+
+    .featured-projects{
+      display:grid;
+      gap:26px;
+    }
+
+    .featured-project{
+      position:relative;
+      display:grid;
+      grid-template-columns:120px minmax(0,1fr);
+      gap:42px;
+      min-height:430px;
+      padding:76px 42px 42px;
+      border:1px solid var(--line);
+      background:var(--white);
+      overflow:hidden;
+    }
+
+    .featured-project::before{
+      content:"";
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:18px;
+      background:var(--blue);
+    }
+
+    .featured-project:nth-child(2)::before{
+      background:var(--coral);
+    }
+
+    .featured-project:nth-child(3)::before{
+      background:var(--mint);
+    }
+
+    .featured-project:nth-child(4)::before{
+      background:var(--yellow);
+    }
+
+    .featured-project:nth-child(5)::before{
+      background:var(--pink);
+    }
+
+    .featured-project-number{
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(2.8rem,4vw,4.7rem);
+      line-height:1;
+      color:var(--slate);
+    }
+
+    .featured-project-body{
+      min-width:0;
+    }
+
+    .featured-project-meta{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:10px 18px;
+      margin-bottom:20px;
+      font-size:.76rem;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+    }
+
+    .featured-project-meta span + span::before{
+      content:"·";
+      margin-right:18px;
+      color:var(--slate);
+    }
+
+    .featured-project h2{
+      max-width:980px;
+      margin:0;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(2.7rem,5.3vw,5.6rem);
+      line-height:.94;
+      letter-spacing:-.045em;
+    }
+
+    .featured-project-description{
+      max-width:820px;
+      margin:24px 0 0;
+      font-size:1.05rem;
+    }
+
+    .featured-project-insight{
+      max-width:820px;
+      margin:28px 0 0;
+      padding:18px 20px;
+      border-left:4px solid var(--blue);
+      background:rgba(49,85,255,.055);
+      font-weight:600;
+    }
+
+    .featured-project:nth-child(2) .featured-project-insight{
+      border-left-color:var(--coral);
+      background:rgba(255,107,94,.055);
+    }
+
+    .featured-project-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:28px;
+    }
+
+    .featured-project-tags span{
+      padding:7px 11px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:.78rem;
+      font-weight:700;
+    }
+
+    .featured-project-footer{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:18px;
+      margin-top:38px;
+      padding-top:24px;
+      border-top:1px solid var(--line);
+    }
+
+    .featured-project-role{
+      margin:0;
+      color:var(--slate);
+      font-size:.9rem;
+      font-weight:600;
+    }
+
+    .featured-project-link,
+    .featured-project-status{
+      font-weight:700;
+    }
+
+    .featured-project-link{
+      color:var(--blue);
+      text-decoration:none;
+      text-underline-offset:5px;
+    }
+
+    .featured-project-link:hover,
+    .featured-project-link:focus-visible{
+      text-decoration:underline;
+    }
+
+    .featured-project-status{
+      color:var(--slate);
+      font-size:.88rem;
+    }
+
+
+    /* ==========================================================
+       ARCHIVE
+       ========================================================== */
+
+    .project-archive{
+      margin-top:clamp(90px,12vw,150px);
+      padding-top:70px;
+      border-top:1px solid var(--line);
+    }
+
+    .archive-heading{
+      display:grid;
+      grid-template-columns:minmax(170px,.28fr) minmax(0,1fr);
+      gap:45px;
+      margin-bottom:34px;
+    }
+
+    .archive-heading h2{
+      margin:0;
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(2.8rem,5vw,5.4rem);
+      line-height:.96;
+      letter-spacing:-.04em;
+    }
+
+    .archive-heading p{
+      max-width:720px;
+      margin:18px 0 0;
+    }
+
+    .archive-list{
+      border-top:1px solid var(--line);
+    }
+
+    .archive-item{
+      display:grid;
+      grid-template-columns:110px minmax(0,1.5fr) minmax(190px,.8fr) auto;
+      gap:28px;
+      align-items:center;
+      min-height:112px;
+      padding:22px 4px;
+      border-bottom:1px solid var(--line);
+      color:var(--ink);
+      text-decoration:none;
+      transition:
+        background .18s ease,
+        padding-left .18s ease,
+        padding-right .18s ease;
+    }
+
+    .archive-item:hover,
+    .archive-item:focus-visible{
+      padding-left:18px;
+      padding-right:18px;
+      background:var(--white);
+    }
+
+    .archive-year{
+      font-weight:700;
+      color:var(--slate);
+    }
+
+    .archive-title{
+      font-family:"Playfair Display",Georgia,serif;
+      font-size:clamp(1.55rem,2.5vw,2.4rem);
+      line-height:1;
+      font-weight:700;
+    }
+
+    .archive-discipline{
+      font-size:.82rem;
+      font-weight:700;
+      color:var(--slate);
+    }
+
+    .archive-arrow{
+      font-size:1.7rem;
+      line-height:1;
+      transition:transform .18s ease;
+    }
+
+    .archive-item:hover .archive-arrow,
+    .archive-item:focus-visible .archive-arrow{
+      transform:translateX(4px);
+    }
+
+
+    /* ==========================================================
+       EMPTY ARCHIVE STATE
+       ========================================================== */
+
+    .archive-empty{
+      padding:34px 0;
+      border-bottom:1px solid var(--line);
+      color:var(--slate);
+    }
+
+    .archive-empty p{
+      max-width:700px;
+      margin:0;
+    }
+
+
+    /* ==========================================================
+       RESPONSIVE
+       ========================================================== */
+
+    @media(max-width:800px){
+
+      .projects-section-heading,
+      .archive-heading{
+        grid-template-columns:1fr;
+        gap:12px;
+      }
+
+      .featured-project{
+        grid-template-columns:1fr;
+        gap:22px;
+        min-height:0;
+        padding:66px 26px 30px;
+      }
+
+      .featured-project-number{
+        font-size:2.5rem;
+      }
+
+      .archive-item{
+        grid-template-columns:80px minmax(0,1fr) auto;
+        gap:18px;
+      }
+
+      .archive-discipline{
+        grid-column:2;
+      }
+
+      .archive-arrow{
+        grid-column:3;
+        grid-row:1 / span 2;
       }
     }
 
+
     @media(max-width:620px){
+
       .site-header .brand{
         gap:7px;
       }
@@ -204,10 +497,59 @@
         padding:5px 8px;
         font-size:.61rem;
       }
+
+      .featured-project{
+        padding:62px 22px 26px;
+      }
+
+      .featured-project-meta{
+        display:grid;
+        gap:4px;
+      }
+
+      .featured-project-meta span + span::before{
+        content:none;
+      }
+
+      .featured-project-footer{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .archive-item{
+        grid-template-columns:1fr auto;
+        min-height:0;
+        padding:24px 0;
+      }
+
+      .archive-year{
+        grid-column:1 / -1;
+      }
+
+      .archive-title{
+        grid-column:1;
+      }
+
+      .archive-discipline{
+        grid-column:1;
+      }
+
+      .archive-arrow{
+        grid-column:2;
+        grid-row:2 / span 2;
+      }
+
+      .archive-item:hover,
+      .archive-item:focus-visible{
+        padding-left:12px;
+        padding-right:12px;
+      }
     }
+
   </style>
 
 </head>
+
 
 <body>
 
@@ -236,6 +578,7 @@
     <a href="projects.html" aria-current="page">Projects</a>
     <a href="insights.html">Insights</a>
     <a href="contact.html">Contact</a>
+
     <a
       class="external-link"
       href="https://labandlorebyneri.github.io/"
@@ -249,7 +592,11 @@
 
 <main class="page-shell">
 
-  <section class="page-intro">
+  <!-- ========================================================
+       INTRO
+       ======================================================== -->
+
+  <section class="page-intro projects-intro">
 
     <p class="eyebrow">
       03 / Projects
@@ -260,347 +607,357 @@
     </h1>
 
     <p class="lead">
-      Selected research, strategy, systems, campaigns, and creative
-      work showing how I move from a problem or brief to evidence,
-      direction, execution, and the next decision.
+      Selected research, strategy, systems, campaigns, and creative work
+      showing how I move from a problem or brief to evidence, direction,
+      execution, and the next decision.
     </p>
 
   </section>
 
 
-  <section class="timeline">
+  <!-- ========================================================
+       FEATURED WORK
+       ======================================================== -->
 
+  <section>
 
-    <!-- PROJECT 01 -->
-    <article class="timeline-entry">
+    <div class="projects-section-heading">
 
-      <div class="timeline-date">
-        2025–2026
+      <div>
+        <p class="eyebrow">
+          Featured Work
+        </p>
       </div>
 
-      <div class="timeline-body">
-
-        <p class="eyebrow">
-          Audience Research · Strategy · Measurement
-        </p>
-
+      <div>
         <h2>
-          Market Research for Word-of-Mouth Strategy
+          Selected projects in depth.
         </h2>
 
-        <p class="project-intro">
-          A multi-volume market research and marketing strategy project
-          for a regional multi-location service business, examining how
-          an existing relationship-led audience consumes media and how
-          those patterns could inform word-of-mouth growth, content,
-          channels, search, and measurement.
+        <p>
+          These projects represent work where the problem, reasoning,
+          execution, and learning are best understood together.
         </p>
+      </div>
+
+    </div>
 
 
-        <div class="project-block">
+    <div class="featured-projects">
 
-          <h3>The brief</h3>
 
-          <p>
-            Understand how the organization’s existing audience uses
-            social platforms, websites, streaming services, audio,
-            entertainment, and local cultural references, then turn
-            those findings into practical marketing direction.
-          </p>
+      <!-- ====================================================
+           FEATURED PROJECT 01
+           ==================================================== -->
 
+      <article class="featured-project">
+
+        <div class="featured-project-number">
+          01
         </div>
 
+        <div class="featured-project-body">
 
-        <div class="project-block">
+          <div class="featured-project-meta">
+            <span>2025–2026</span>
+            <span>Audience Research</span>
+            <span>Strategy</span>
+            <span>Measurement</span>
+          </div>
 
-          <h3>The research</h3>
+          <h2>
+            Market Research for Word-of-Mouth Strategy
+          </h2>
 
-          <p>
-            The study examined which platforms, services, websites,
-            show categories, sports interests, and media habits were
-            common within the audience.
+          <p class="featured-project-description">
+            A multi-volume market research and marketing strategy project
+            for a regional multi-location service business, examining how
+            an existing relationship-led audience consumes media and how
+            those patterns could inform word-of-mouth growth, content,
+            channels, search, and measurement.
           </p>
 
-          <p>
-            The analysis went beyond simple percentages by testing
-            which interests actually traveled together, accounting for
-            people who selected many options, examining audience
-            groupings, and identifying where the evidence was strong
-            enough to guide a marketing decision.
+          <p class="featured-project-insight">
+            Research was treated as the beginning of the decision process,
+            not the end. Eleven months of actual performance were later used
+            to determine which recommendations held, which changed, and
+            which still needed testing.
           </p>
 
-        </div>
-
-
-        <div class="project-block">
-
-          <h3>The strategy</h3>
-
-          <p>
-            Findings were translated into content pillars, channel
-            roles, local-market direction, search priorities,
-            distinctive brand assets, media-buying questions,
-            measurement principles, and a portfolio of tests.
-          </p>
-
-        </div>
-
-
-        <div class="project-block">
-
-          <h3>The lookback</h3>
-
-          <p>
-            Eleven months of search, social, paid media, website,
-            email, CRM, and content performance were later compared
-            against the original recommendations.
-          </p>
-
-          <p>
-            Each major claim was classified as affirmed, challenged,
-            mixed, or not yet testable, with challenged findings turned
-            into revised hypotheses and new tests.
-          </p>
-
-        </div>
-
-
-        <div class="project-note">
-
-          <p>
-            Research was treated as the beginning of the decision
-            process, not the end. The recommendations remained open
-            to revision when actual audience behavior disagreed.
-          </p>
-
-        </div>
-
-
-        <div class="project-applied">
-
-          <p class="eyebrow">
-            Work included
-          </p>
-
-          <p class="tags">
+          <div class="featured-project-tags">
             <span>Audience Research</span>
             <span>Statistical Analysis</span>
             <span>Content Strategy</span>
             <span>Channel Strategy</span>
             <span>Search Strategy</span>
             <span>Lifecycle Marketing</span>
-            <span>Campaign Measurement</span>
-            <span>Marketing Operations</span>
-            <span>Strategic Synthesis</span>
-            <span>Reporting</span>
-          </p>
+            <span>Measurement</span>
+          </div>
+
+          <div class="featured-project-footer">
+
+            <p class="featured-project-role">
+              Research · Analysis · Strategy · Measurement
+            </p>
+
+            <span class="featured-project-status">
+              Full project page coming next
+            </span>
+
+            <!--
+            Replace the status above with this link when the individual
+            project page is live:
+
+            <a
+              class="featured-project-link"
+              href="projects/market-research-word-of-mouth-strategy.html"
+            >
+              View project →
+            </a>
+            -->
+
+          </div>
 
         </div>
 
-        <p class="project-status">
-          Full case study coming next.
-        </p>
-
-      </div>
-
-    </article>
+      </article>
 
 
 
-    <!-- PROJECT 02 -->
-    <article class="timeline-entry">
+      <!-- ====================================================
+           FEATURED PROJECT 02
+           ==================================================== -->
 
-      <div class="timeline-date">
-        2026
-      </div>
+      <article class="featured-project">
 
-      <div class="timeline-body">
-
-        <p class="eyebrow">
-          Search · Strategy · Commercial Opportunity
-        </p>
-
-        <h2>
-          Organic Search Opportunity Analysis
-        </h2>
-
-        <p class="project-intro">
-          A 16-month Google Search Console analysis examining the gap
-          between commercial search visibility and actual click capture
-          for a regional multi-location service business.
-        </p>
-
-
-        <div class="project-block">
-
-          <h3>The problem</h3>
-
-          <p>
-            The site was already receiving meaningful visibility for
-            commercially valuable searches, particularly queries
-            associated with high-intent service needs.
-          </p>
-
-          <p>
-            The problem was that pages most closely connected to
-            qualified leads and signed business were capturing only a
-            small portion of that visibility as traffic.
-          </p>
-
+        <div class="featured-project-number">
+          02
         </div>
 
+        <div class="featured-project-body">
 
-        <div class="project-block">
+          <div class="featured-project-meta">
+            <span>2026</span>
+            <span>Search</span>
+            <span>Commercial Strategy</span>
+            <span>Measurement</span>
+          </div>
 
-          <h3>The diagnosis</h3>
+          <h2>
+            Organic Search Opportunity Analysis
+          </h2>
 
-          <p>
-            The analysis separated visibility from performance and
-            identified several different issues operating at the same
-            time: weak click capture, overlapping URLs, inconsistent
-            intent ownership, uneven commercial messaging, geographic
-            targeting questions, and limited internal support for
-            priority service pages.
+          <p class="featured-project-description">
+            A 16-month Google Search Console analysis examining the gap
+            between commercial search visibility and actual click capture
+            for a regional multi-location service business.
           </p>
 
-        </div>
-
-
-        <div class="project-block">
-
-          <h3>The action plan</h3>
-
-          <p>
-            Recommendations prioritized search-result messaging,
-            above-the-fold commercial relevance, geographic signals,
-            internal linking, URL ownership, and clearer separation
-            between local and statewide search intent.
+          <p class="featured-project-insight">
+            The primary opportunity was not generating search demand from
+            zero. It was converting more of the high-intent visibility
+            already available into qualified organic visits and downstream
+            business outcomes.
           </p>
 
-          <p>
-            The plan also separated SEO leading indicators from
-            downstream business outcomes so search improvements could
-            be evaluated both technically and commercially.
-          </p>
-
-        </div>
-
-
-        <div class="project-note">
-
-          <p>
-            The immediate opportunity was not creating search demand
-            from zero. It was capturing more value from commercial
-            visibility the site already had.
-          </p>
-
-        </div>
-
-
-        <div class="project-applied">
-
-          <p class="eyebrow">
-            Work included
-          </p>
-
-          <p class="tags">
+          <div class="featured-project-tags">
             <span>SEO Strategy</span>
             <span>Google Search Console</span>
             <span>Search Intent</span>
             <span>CTR Analysis</span>
             <span>Internal Linking</span>
             <span>Information Architecture</span>
-            <span>Commercial Search</span>
-            <span>Measurement Framework</span>
-            <span>Action Planning</span>
-          </p>
+            <span>Measurement</span>
+          </div>
+
+          <div class="featured-project-footer">
+
+            <p class="featured-project-role">
+              Analysis · Diagnosis · Prioritization · Action Planning
+            </p>
+
+            <span class="featured-project-status">
+              Full project page coming next
+            </span>
+
+            <!--
+            Replace the status above with this link when the individual
+            project page is live:
+
+            <a
+              class="featured-project-link"
+              href="projects/organic-search-opportunity-analysis.html"
+            >
+              View project →
+            </a>
+            -->
+
+          </div>
 
         </div>
 
-        <p class="project-status">
-          Full case study coming next.
-        </p>
+      </article>
 
-      </div>
 
-    </article>
+
+      <!-- ====================================================
+           FEATURED PROJECT 03
+
+           Add the third selected featured project here.
+
+           Keep this structure:
+
+           <article class="featured-project">
+
+             <div class="featured-project-number">
+               03
+             </div>
+
+             <div class="featured-project-body">
+
+               <div class="featured-project-meta">
+                 <span>YEAR</span>
+                 <span>CATEGORY</span>
+                 <span>CATEGORY</span>
+               </div>
+
+               <h2>
+                 Project Title
+               </h2>
+
+               <p class="featured-project-description">
+                 Project overview.
+               </p>
+
+               <p class="featured-project-insight">
+                 Strongest strategic takeaway, outcome, or result.
+               </p>
+
+               <div class="featured-project-tags">
+                 <span>Skill</span>
+                 <span>Skill</span>
+                 <span>Skill</span>
+               </div>
+
+               <div class="featured-project-footer">
+
+                 <p class="featured-project-role">
+                   Your role
+                 </p>
+
+                 <a
+                   class="featured-project-link"
+                   href="projects/project-slug.html"
+                 >
+                   View project →
+                 </a>
+
+               </div>
+
+             </div>
+
+           </article>
+           ==================================================== -->
+
+
+
+      <!-- ====================================================
+           FEATURED PROJECT 04
+
+           Duplicate the Featured Project 03 template here
+           once the fourth project is selected.
+           ==================================================== -->
+
+
+
+      <!-- ====================================================
+           FEATURED PROJECT 05
+
+           Duplicate the Featured Project 03 template here
+           once the fifth project is selected.
+           ==================================================== -->
+
+
+    </div>
 
   </section>
 
 
 
-  <!-- CREATIVE WORK -->
-  <section class="resume-extras">
+  <!-- ========================================================
+       PROJECT ARCHIVE
+       ======================================================== -->
 
-    <article>
+  <section class="project-archive">
 
-      <p class="eyebrow">
-        Creative Work
-      </p>
+    <div class="archive-heading">
 
-      <h2>
-        Design &amp; visual execution
-      </h2>
+      <div>
+        <p class="eyebrow">
+          Project Archive
+        </p>
+      </div>
 
-      <p>
-        Campaign graphics, social assets, report design,
-        presentations, print materials, brand applications,
-        event collateral, and other visual work will live here
-        when the design itself forms an important part of the
-        communication solution.
-      </p>
+      <div>
 
-      <p>
-        Each project will show the selected work alongside the
-        brief, my role, and the reasoning behind the execution.
-      </p>
-
-    </article>
-
-
-    <article>
-
-      <p class="eyebrow">
-        The distinction
-      </p>
-
-      <h2>
-        Work, not just output.
-      </h2>
-
-      <div style="margin-top:24px;">
-
-        <h3>Experience</h3>
+        <h2>
+          More work from the weave.
+        </h2>
 
         <p>
-          Where I have worked and what I was responsible for.
+          Additional campaigns, research, systems, creative work,
+          and selected commissions from across my practice.
         </p>
 
       </div>
 
-      <div style="margin-top:24px;">
+    </div>
 
-        <h3>Projects</h3>
+
+    <div class="archive-list">
+
+      <!--
+      When you have archived projects, remove the archive-empty block
+      below and add one archive-item for each project.
+
+      Example:
+
+      <a
+        class="archive-item"
+        href="projects/project-slug.html"
+      >
+        <span class="archive-year">
+          2026
+        </span>
+
+        <span class="archive-title">
+          Project Title
+        </span>
+
+        <span class="archive-discipline">
+          Campaign · Creative · Strategy
+        </span>
+
+        <span
+          class="archive-arrow"
+          aria-hidden="true"
+        >
+          →
+        </span>
+      </a>
+      -->
+
+
+      <div class="archive-empty">
 
         <p>
-          What I researched, built, designed, produced, or helped
-          move forward.
+          Additional projects will be added here as the portfolio
+          expands.
         </p>
 
       </div>
 
-      <div style="margin-top:24px;">
-
-        <h3>Insights</h3>
-
-        <p>
-          The strategic questions, arguments, and lessons that came
-          out of doing the work.
-        </p>
-
-      </div>
-
-    </article>
+    </div>
 
   </section>
 
