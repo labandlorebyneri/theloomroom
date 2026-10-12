@@ -1284,33 +1284,21 @@ a{color:inherit}
 /* ==========================================================
    EXPERIENCE PAGE
    CREDENTIAL CARD SPACING FIX
-   ----------------------------------------------------------
-   This deliberately uses a more specific selector than the
-   page-level Experience styles so it remains authoritative.
    ========================================================== */
 
 body .resume-extras-grid .resume-extra-card{
   padding:82px 32px 34px;
 }
 
-
-/* Keep the inset colored streak aligned with the folder system */
-
 body .resume-extras-grid .resume-extra-card::before{
   top:20px;
   height:16px;
 }
 
-
-/* Maintain breathing room between streak and eyebrow */
-
 body .resume-extras-grid .resume-extra-card > .eyebrow{
   margin-top:0;
   margin-bottom:14px;
 }
-
-
-/* Mobile credential-card spacing */
 
 @media(max-width:620px){
 
@@ -1318,4 +1306,23 @@ body .resume-extras-grid .resume-extra-card > .eyebrow{
     padding:78px 24px 30px;
   }
 
+}
+
+
+/* ==========================================================
+   PROJECT 04
+   TIKTOK LAWYER PRODUCTION PHOTO
+   Preserve original group-photo composition
+   ========================================================== */
+
+#tiktok-lawyer-public-identity .brand-gallery-team .brand-gallery-image{
+  aspect-ratio:auto;
+}
+
+#tiktok-lawyer-public-identity .brand-gallery-team .brand-gallery-image img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
 }
