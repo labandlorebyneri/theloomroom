@@ -30,42 +30,16 @@
   <meta name="theme-color" content="#3155FF">
 
   <meta property="og:title" content="Projects | The Loom Room by Neri">
-
-  <meta
-    property="og:description"
-    content="Selected projects across research, brand strategy, campaigns, community engagement, creative systems, content, channels, lifecycle, operations, search, and measurement."
-  >
-
+  <meta property="og:description" content="Selected projects across research, brand strategy, campaigns, community engagement, creative systems, content, channels, lifecycle, operations, search, and measurement.">
   <meta property="og:type" content="website">
-
-  <meta
-    property="og:url"
-    content="https://labandlorebyneri.github.io/theloomroom/projects.html"
-  >
-
+  <meta property="og:url" content="https://labandlorebyneri.github.io/theloomroom/projects.html">
   <meta property="og:site_name" content="The Loom Room by Neri">
-
-  <meta
-    property="og:image"
-    content="https://labandlorebyneri.github.io/theloomroom/social-card.png"
-  >
+  <meta property="og:image" content="https://labandlorebyneri.github.io/theloomroom/social-card.png">
 
   <meta name="twitter:card" content="summary_large_image">
-
-  <meta
-    name="twitter:title"
-    content="Projects | The Loom Room by Neri"
-  >
-
-  <meta
-    name="twitter:description"
-    content="Selected projects across research, brand strategy, campaigns, community engagement, creative systems, content, channels, lifecycle, operations, search, and measurement."
-  >
-
-  <meta
-    name="twitter:image"
-    content="https://labandlorebyneri.github.io/theloomroom/social-card.png"
-  >
+  <meta name="twitter:title" content="Projects | The Loom Room by Neri">
+  <meta name="twitter:description" content="Selected projects across research, brand strategy, campaigns, community engagement, creative systems, content, channels, lifecycle, operations, search, and measurement.">
+  <meta name="twitter:image" content="https://labandlorebyneri.github.io/theloomroom/social-card.png">
 
   <script type="application/ld+json">
   {
@@ -174,25 +148,24 @@
       height:18px;
     }
 
-    /* Loom Room five-color sequence */
     .featured-project:nth-child(1)::before{
-      background:#3155FF;
+      background:var(--blue);
     }
 
     .featured-project:nth-child(2)::before{
-      background:#FF6B5E;
+      background:var(--coral);
     }
 
     .featured-project:nth-child(3)::before{
-      background:#79E6C4;
+      background:var(--mint);
     }
 
     .featured-project:nth-child(4)::before{
-      background:#FFD84E;
+      background:var(--yellow);
     }
 
     .featured-project:nth-child(5)::before{
-      background:#F43F8C;
+      background:var(--pink);
     }
 
     .featured-project-number{
@@ -243,33 +216,33 @@
       max-width:850px;
       margin:28px 0 0;
       padding:18px 20px;
-      border-left:4px solid #3155FF;
+      border-left:4px solid var(--blue);
       background:rgba(49,85,255,.055);
       font-weight:600;
     }
 
     .featured-project:nth-child(1) .featured-project-insight{
-      border-left-color:#3155FF;
+      border-left-color:var(--blue);
       background:rgba(49,85,255,.055);
     }
 
     .featured-project:nth-child(2) .featured-project-insight{
-      border-left-color:#FF6B5E;
+      border-left-color:var(--coral);
       background:rgba(255,107,94,.06);
     }
 
     .featured-project:nth-child(3) .featured-project-insight{
-      border-left-color:#79E6C4;
+      border-left-color:var(--mint);
       background:rgba(121,230,196,.10);
     }
 
     .featured-project:nth-child(4) .featured-project-insight{
-      border-left-color:#FFD84E;
-      background:rgba(255,216,78,.12);
+      border-left-color:var(--yellow);
+      background:rgba(255,216,77,.12);
     }
 
     .featured-project:nth-child(5) .featured-project-insight{
-      border-left-color:#F43F8C;
+      border-left-color:var(--pink);
       background:rgba(244,63,140,.07);
     }
 
@@ -311,7 +284,7 @@
       padding:0;
       border:0;
       background:transparent;
-      color:#3155FF;
+      color:var(--blue);
       font:inherit;
       font-weight:700;
       cursor:pointer;
@@ -319,11 +292,11 @@
     }
 
     .featured-project:nth-child(1) .project-expand-button{
-      color:#3155FF;
+      color:var(--blue);
     }
 
     .featured-project:nth-child(2) .project-expand-button{
-      color:#FF6B5E;
+      color:var(--coral);
     }
 
     .featured-project:nth-child(3) .project-expand-button{
@@ -384,6 +357,7 @@
     }
 
     .project-at-a-glance div{
+      min-width:0;
       padding:26px 22px;
       border:1px solid var(--line);
       background:var(--white);
@@ -391,8 +365,16 @@
 
     .project-at-a-glance strong{
       display:block;
+      max-width:100%;
       font-family:"Playfair Display",Georgia,serif;
-      font-size:clamp(1.75rem,3vw,3.1rem);
+      font-size:clamp(1.55rem,2.45vw,3rem);
+      line-height:.98;
+      overflow-wrap:anywhere;
+      word-break:normal;
+    }
+
+    .project-at-a-glance-long strong{
+      font-size:clamp(1.35rem,2vw,2.35rem);
       line-height:1;
     }
 
@@ -972,20 +954,12 @@
 
 <header class="site-header">
 
-  <a
-    class="brand"
-    href="./"
-    aria-label="The Loom Room by Neri"
-  >
+  <a class="brand" href="./" aria-label="The Loom Room by Neri">
     <span class="brand-name">The Loom Room</span>
     <span class="brand-author">by Neri</span>
   </a>
 
-  <button
-    class="menu-toggle"
-    aria-label="Toggle navigation"
-    aria-expanded="false"
-  >
+  <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
     Menu
   </button>
 
@@ -995,9 +969,7 @@
     <a href="projects.html" aria-current="page">Projects</a>
     <a href="insights.html">Insights</a>
     <a href="contact.html">Contact</a>
-    <a class="external-link" href="https://labandlorebyneri.github.io/">
-      Lab &amp; Lore ↗
-    </a>
+    <a class="external-link" href="https://labandlorebyneri.github.io/">Lab &amp; Lore ↗</a>
   </nav>
 
 </header>
@@ -1006,15 +978,11 @@
 <main class="page-shell">
 
   <section class="page-intro projects-intro">
-
     <p class="eyebrow">03 / Projects</p>
-
     <h1>Where the work takes shape.</h1>
-
     <p class="lead">
       Selected research, strategy, systems, campaigns, and creative work showing how I move from a problem or brief to evidence, direction, execution, and the next decision.
     </p>
-
   </section>
 
 
@@ -1028,7 +996,6 @@
 
       <div>
         <h2>Selected projects in depth.</h2>
-
         <p>
           These projects represent work where the problem, reasoning, execution, and learning are best understood together.
         </p>
@@ -1044,14 +1011,9 @@
            PROJECT 01
            ==================================================== -->
 
-      <article
-        class="featured-project"
-        id="market-research-word-of-mouth"
-      >
+      <article class="featured-project" id="market-research-word-of-mouth">
 
-        <div class="featured-project-number">
-          01
-        </div>
+        <div class="featured-project-number">01</div>
 
         <div class="featured-project-body">
 
@@ -1062,9 +1024,7 @@
             <span>Measurement</span>
           </div>
 
-          <h2>
-            Market Research for Word-of-Mouth Strategy
-          </h2>
+          <h2>Market Research for Word-of-Mouth Strategy</h2>
 
           <p class="featured-project-description">
             A multi-volume market research and marketing strategy project for a regional multi-location service business, examining how an existing relationship-led audience consumes media and how those patterns could inform word-of-mouth growth, content, channels, search, and measurement.
@@ -1083,7 +1043,6 @@
           </div>
 
           <div class="featured-project-footer">
-
             <p class="featured-project-role">
               Research · Analysis · Strategy · Measurement
             </p>
@@ -1096,23 +1055,16 @@
             >
               Explore project ↓
             </button>
-
           </div>
 
         </div>
 
 
-        <div
-          class="project-expanded"
-          id="project-01-details"
-          hidden
-        >
+        <div class="project-expanded" id="project-01-details" hidden>
 
           <section class="project-summary">
 
-            <p class="eyebrow">
-              Research Design
-            </p>
+            <p class="eyebrow">Research Design</p>
 
             <h3>
               A research-to-validation framework for a relationship-led growth strategy.
@@ -1151,14 +1103,8 @@
             <div class="research-method-grid">
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  01
-                </span>
-
-                <h4>
-                  Objective
-                </h4>
+                <span class="research-method-number">01</span>
+                <h4>Objective</h4>
 
                 <p>
                   Identify media habits, content interests, and audience overlaps that could improve a word-of-mouth-led marketing system, then translate those observations into testable decisions rather than fixed audience assumptions.
@@ -1167,19 +1113,12 @@
                 <span class="method-detail">
                   Decision areas: content · channels · search · lifecycle · measurement
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  02
-                </span>
-
-                <h4>
-                  Sampling and scope
-                </h4>
+                <span class="research-method-number">02</span>
+                <h4>Sampling and scope</h4>
 
                 <p>
                   The study used 163 voluntary responses recruited through established relationship networks. Because the sample was non-random, the findings describe the recruited audience and were not treated as representative estimates for a wider population.
@@ -1188,19 +1127,12 @@
                 <span class="method-detail">
                   Voluntary · non-random · relationship-based recruitment
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  03
-                </span>
-
-                <h4>
-                  Analytical method
-                </h4>
+                <span class="research-method-number">03</span>
+                <h4>Analytical method</h4>
 
                 <p>
                   Descriptive shares were combined with respondent-level association testing. Multi-select responses were analyzed as overlapping behaviors, with contingency tables used to distinguish high-count combinations from relationships that were stronger than expected by chance.
@@ -1209,19 +1141,12 @@
                 <span class="method-detail">
                   Phi · lift · two-sided Fisher exact tests · Benjamini-Hochberg FDR
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  04
-                </span>
-
-                <h4>
-                  Validation design
-                </h4>
+                <span class="research-method-number">04</span>
+                <h4>Validation design</h4>
 
                 <p>
                   The research produced hypotheses, not permanent rules. Subsequent marketing performance was reviewed across search, content, social, paid media, email, CRM, and related execution to determine what the original strategy got right, what changed, and what still required better evidence.
@@ -1230,7 +1155,6 @@
                 <span class="method-detail">
                   Research → hypothesis → execution → evidence → revision
                 </span>
-
               </article>
 
             </div>
@@ -1238,21 +1162,15 @@
           </section>
 
 
-          <section
-            class="project-findings"
-            aria-labelledby="project-01-findings-title"
-          >
+          <section class="project-findings" aria-labelledby="project-01-findings-title">
 
             <div class="project-findings-heading">
 
               <div>
-                <p class="eyebrow">
-                  Selected Findings
-                </p>
+                <p class="eyebrow">Selected Findings</p>
               </div>
 
               <div>
-
                 <h3 id="project-01-findings-title">
                   Go deeper into the evidence.
                 </h3>
@@ -1260,7 +1178,6 @@
                 <p>
                   These selected findings show how the research moved from audience observation to strategic testing, and how later performance evidence challenged or reinforced the original direction.
                 </p>
-
               </div>
 
             </div>
@@ -1270,13 +1187,9 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  01
-                </span>
+                <span class="findings-number">01</span>
 
-                <h4>
-                  Audience Research
-                </h4>
+                <h4>Audience Research</h4>
 
                 <p>
                   The foundation study examined audience behavior, media overlap, content affinity, and the strategic questions those patterns created.
@@ -1287,27 +1200,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Facebook was selected by 85.3% of respondents, but substantial platform overlap meant those percentages could not be treated as separate pools of unique reach.
-                  </li>
-
-                  <li>
-                    66.3% reported using free ad-supported streaming services, creating a media-testing opportunity without proving actual advertising exposure.
-                  </li>
-
-                  <li>
-                    Sports programming and sports websites produced the strongest measured show-to-website association in the study.
-                  </li>
-
-                  <li>
-                    Several content relationships survived multiple-testing correction, while other high-count combinations did not, reinforcing the distinction between popularity and meaningful association.
-                  </li>
-
-                  <li>
-                    The survey did not establish a content-specific best posting hour, so timing remained a hypothesis to test rather than a permanent rule.
-                  </li>
-
+                  <li>Facebook was selected by 85.3% of respondents, but substantial platform overlap meant those percentages could not be treated as separate pools of unique reach.</li>
+                  <li>66.3% reported using free ad-supported streaming services, creating a media-testing opportunity without proving actual advertising exposure.</li>
+                  <li>Sports programming and sports websites produced the strongest measured show-to-website association in the study.</li>
+                  <li>Several content relationships survived multiple-testing correction, while other high-count combinations did not, reinforcing the distinction between popularity and meaningful association.</li>
+                  <li>The survey did not establish a content-specific best posting hour, so timing remained a hypothesis to test rather than a permanent rule.</li>
                 </ul>
 
               </article>
@@ -1315,13 +1212,9 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  02
-                </span>
+                <span class="findings-number">02</span>
 
-                <h4>
-                  Performance Lookback
-                </h4>
+                <h4>Performance Lookback</h4>
 
                 <p>
                   Eleven months of subsequent marketing performance were used to test the assumptions that came out of the original research.
@@ -1332,27 +1225,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Search visibility was already substantial, but high-intent commercial pages captured only a small share of available clicks.
-                  </li>
-
-                  <li>
-                    Social impressions remained comparatively resilient despite substantially lower posting volume, while engagement and click behavior weakened.
-                  </li>
-
-                  <li>
-                    Paid-social web conversions increased from 22 to 99 while overall spending remained broadly similar.
-                  </li>
-
-                  <li>
-                    Actual content performance challenged the original timing hypothesis, with stronger observed results later in the afternoon and evening.
-                  </li>
-
-                  <li>
-                    Of 19 strategic claims reviewed, 8 were affirmed, 5 challenged, 2 produced mixed evidence, and 4 were not yet testable.
-                  </li>
-
+                  <li>Search visibility was already substantial, but high-intent commercial pages captured only a small share of available clicks.</li>
+                  <li>Social impressions remained comparatively resilient despite substantially lower posting volume, while engagement and click behavior weakened.</li>
+                  <li>Paid-social web conversions increased from 22 to 99 while overall spending remained broadly similar.</li>
+                  <li>Actual content performance challenged the original timing hypothesis, with stronger observed results later in the afternoon and evening.</li>
+                  <li>Of 19 strategic claims reviewed, 8 were affirmed, 5 challenged, 2 produced mixed evidence, and 4 were not yet testable.</li>
                 </ul>
 
               </article>
@@ -1362,18 +1239,12 @@
           </section>
 
 
-          <section
-            class="report-request"
-            aria-labelledby="project-01-report-request-title"
-          >
+          <section class="report-request" aria-labelledby="project-01-report-request-title">
 
             <div class="report-request-inner">
 
               <div>
-
-                <p class="eyebrow">
-                  Want to go deeper?
-                </p>
+                <p class="eyebrow">Want to go deeper?</p>
 
                 <h3 id="project-01-report-request-title">
                   Interested in the complete research?
@@ -1382,7 +1253,6 @@
                 <p>
                   To protect proprietary research, analysis, and working methodology, the full study is not publicly posted. For hiring, collaboration, or professional evaluation purposes, contact me to discuss access to the complete anonymized research.
                 </p>
-
               </div>
 
               <a
@@ -1397,21 +1267,15 @@
           </section>
 
 
-          <section
-            class="related-insights"
-            aria-labelledby="project-01-insights-title"
-          >
+          <section class="related-insights" aria-labelledby="project-01-insights-title">
 
             <div class="related-insights-heading">
 
               <div>
-                <p class="eyebrow">
-                  Related Thinking
-                </p>
+                <p class="eyebrow">Related Thinking</p>
               </div>
 
               <div>
-
                 <h3 id="project-01-insights-title">
                   Insights connected to the study.
                 </h3>
@@ -1419,7 +1283,6 @@
                 <p>
                   Related essays are grouped using the same categories used in the Insights library.
                 </p>
-
               </div>
 
             </div>
@@ -1427,24 +1290,14 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Brand
-              </p>
+              <p class="insight-group-label">Brand</p>
 
               <a
                 class="related-insight-link"
                 href="insights/why-a-template-is-not-a-brand.html"
               >
-                <span>
-                  Why a template is not a brand
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why a Template Is Not a Brand</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -1452,24 +1305,14 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Campaigns
-              </p>
+              <p class="insight-group-label">Campaigns</p>
 
               <a
                 class="related-insight-link"
                 href="insights/community-listening-is-not-the-same-as-asking-for-feedback.html"
               >
-                <span>
-                  Community Listening Is Not the Same as Asking for Feedback
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Community Listening Is Not the Same as Asking for Feedback</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -1477,40 +1320,22 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Lifecycle
-              </p>
+              <p class="insight-group-label">Lifecycle</p>
 
               <a
                 class="related-insight-link"
                 href="insights/why-the-lead-is-not-the-conversion.html"
               >
-                <span>
-                  Why the lead is not the conversion
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why the Lead Is Not the Conversion</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
               <a
                 class="related-insight-link"
                 href="insights/is-direct-marketing-irrelevant-in-the-age-of-ai.html"
               >
-                <span>
-                  Is Direct Marketing Irrelevant in the Age of AI?
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Is Direct Marketing Irrelevant in the Age of AI?</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -1518,24 +1343,14 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Content
-              </p>
+              <p class="insight-group-label">Content</p>
 
               <a
                 class="related-insight-link"
                 href="insights/when-more-content-is-not-the-answer.html"
               >
-                <span>
-                  When more content is not the answer
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>When More Content Is Not the Answer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -1543,24 +1358,14 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Channels
-              </p>
+              <p class="insight-group-label">Channels</p>
 
               <a
                 class="related-insight-link"
                 href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html"
               >
-                <span>
-                  Why being on every channel is not a channel strategy
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why Being on Every Channel Is Not a Channel Strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -1568,56 +1373,30 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Search
-              </p>
+              <p class="insight-group-label">Search</p>
 
               <a
                 class="related-insight-link"
                 href="insights/when-search-becomes-the-verification-layer.html"
               >
-                <span>
-                  When search becomes the verification layer
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>When Search Becomes the Verification Layer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
               <a
                 class="related-insight-link"
                 href="insights/why-search-intent-matters-more-than-keyword-volume-alone.html"
               >
-                <span>
-                  Why Search Intent Matters More Than Keyword Volume Alone
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why Search Intent Matters More Than Keyword Volume Alone</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
               <a
                 class="related-insight-link"
                 href="insights/why-ranking-is-no-longer-the-whole-search-strategy.html"
               >
-                <span>
-                  Why Ranking Is No Longer the Whole Search Strategy
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why Ranking Is No Longer the Whole Search Strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -1633,14 +1412,9 @@
            PROJECT 02
            ==================================================== -->
 
-      <article
-        class="featured-project"
-        id="one-brand-experience"
-      >
+      <article class="featured-project" id="one-brand-experience">
 
-        <div class="featured-project-number">
-          02
-        </div>
+        <div class="featured-project-number">02</div>
 
         <div class="featured-project-body">
 
@@ -1651,9 +1425,7 @@
             <span>Creative Operations</span>
           </div>
 
-          <h2>
-            One Brand Experience Project
-          </h2>
+          <h2>One Brand Experience Project</h2>
 
           <p class="featured-project-description">
             An ongoing brand-system and customer-experience project for Chris Corzo Injury Attorneys, moving from fragmented marketing expressions toward a connected system for how the Call Corzo identity is expressed across creative, content, communication, conversion, community, and customer touchpoints.
@@ -1692,17 +1464,11 @@
         </div>
 
 
-        <div
-          class="project-expanded"
-          id="project-02-details"
-          hidden
-        >
+        <div class="project-expanded" id="project-02-details" hidden>
 
           <section class="project-summary">
 
-            <p class="eyebrow">
-              One Brand Experience
-            </p>
+            <p class="eyebrow">One Brand Experience</p>
 
             <h3>
               From an established digital identity to one connected brand system.
@@ -1753,14 +1519,8 @@
             <div class="research-method-grid">
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  01
-                </span>
-
-                <h4>
-                  Existing identity
-                </h4>
+                <span class="research-method-number">01</span>
+                <h4>Existing identity</h4>
 
                 <p>
                   The first step was identifying the strongest recognizable characteristics already present in the firm's digital identity and established brand materials rather than assuming the brand needed to be rebuilt from zero.
@@ -1769,19 +1529,12 @@
                 <span class="method-detail">
                   Identity · positioning · visual language · service promise
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  02
-                </span>
-
-                <h4>
-                  Fragmentation diagnosis
-                </h4>
+                <span class="research-method-number">02</span>
+                <h4>Fragmentation diagnosis</h4>
 
                 <p>
                   Marketing channels were reviewed for points where visual identity, messaging, structure, or customer experience diverged from the strongest existing expression of the brand.
@@ -1790,19 +1543,12 @@
                 <span class="method-detail">
                   Website · social · email · campaigns · community · conversion
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  03
-                </span>
-
-                <h4>
-                  Brand derivatives
-                </h4>
+                <span class="research-method-number">03</span>
+                <h4>Brand derivatives</h4>
 
                 <p>
                   The parent identity began to be translated into channel-specific expressions for service-line marketing, case results, attorney and team communication, community programs, seasonal campaigns, conversion tools, and other customer-facing formats.
@@ -1811,19 +1557,12 @@
                 <span class="method-detail">
                   One identity · many expressions · channel-aware adaptation
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  04
-                </span>
-
-                <h4>
-                  Connected experience
-                </h4>
+                <span class="research-method-number">04</span>
+                <h4>Connected experience</h4>
 
                 <p>
                   The project expanded beyond graphic consistency into the wider customer journey, examining how search, web content, consultation tools, chat, follow-up communication, and other interactions could reinforce the same expectations established by the brand.
@@ -1832,7 +1571,6 @@
                 <span class="method-detail">
                   Awareness → search → website → conversion → follow-up → experience
                 </span>
-
               </article>
 
             </div>
@@ -1840,17 +1578,12 @@
           </section>
 
 
-          <section
-            class="project-findings"
-            aria-labelledby="project-02-development-title"
-          >
+          <section class="project-findings" aria-labelledby="project-02-development-title">
 
             <div class="project-findings-heading">
 
               <div>
-                <p class="eyebrow">
-                  System Development
-                </p>
+                <p class="eyebrow">System Development</p>
               </div>
 
               <div>
@@ -1872,13 +1605,9 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  01
-                </span>
+                <span class="findings-number">01</span>
 
-                <h4>
-                  Brand Derivatives
-                </h4>
+                <h4>Brand Derivatives</h4>
 
                 <p>
                   Different communication requirements are treated as related derivatives of the same identity rather than isolated creative jobs.
@@ -1889,27 +1618,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    The red, blue, navy, and white identity provides a recognizable visual foundation without requiring identical compositions.
-                  </li>
-
-                  <li>
-                    Service-line, result, authority, community, seasonal, and values-led content can use different visual intensity while remaining connected.
-                  </li>
-
-                  <li>
-                    Recurring typography, imagery, logo treatment, composition, messaging, and conversion conventions help create continuity.
-                  </li>
-
-                  <li>
-                    Successful executions can become reusable patterns rather than one-off solutions.
-                  </li>
-
-                  <li>
-                    New formats are treated as opportunities to discover which elements should remain fixed and which can adapt.
-                  </li>
-
+                  <li>The red, blue, navy, and white identity provides a recognizable visual foundation without requiring identical compositions.</li>
+                  <li>Service-line, result, authority, community, seasonal, and values-led content can use different visual intensity while remaining connected.</li>
+                  <li>Recurring typography, imagery, logo treatment, composition, messaging, and conversion conventions help create continuity.</li>
+                  <li>Successful executions can become reusable patterns rather than one-off solutions.</li>
+                  <li>New formats are treated as opportunities to discover which elements should remain fixed and which can adapt.</li>
                 </ul>
 
               </article>
@@ -1917,13 +1630,9 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  02
-                </span>
+                <span class="findings-number">02</span>
 
-                <h4>
-                  Connected Customer Experience
-                </h4>
+                <h4>Connected Customer Experience</h4>
 
                 <p>
                   The project expanded once the brand was understood as something customers experience across multiple interactions rather than only something they see in creative assets.
@@ -1934,27 +1643,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    A social interaction may become a branded search, website visit, case review, chat interaction, email, or direct conversation.
-                  </li>
-
-                  <li>
-                    Search, website content, conversion tools, and follow-up should reinforce rather than contradict the expectations created upstream.
-                  </li>
-
-                  <li>
-                    Accessibility and speed become operational brand questions when the brand explicitly promises care and responsiveness.
-                  </li>
-
-                  <li>
-                    Community initiatives and values-led communication help extend the brand beyond immediate commercial messages.
-                  </li>
-
-                  <li>
-                    The customer experiences the organization as one brand even when the underlying touchpoints are produced through different systems.
-                  </li>
-
+                  <li>A social interaction may become a branded search, website visit, case review, chat interaction, email, or direct conversation.</li>
+                  <li>Search, website content, conversion tools, and follow-up should reinforce rather than contradict the expectations created upstream.</li>
+                  <li>Accessibility and speed become operational brand questions when the brand explicitly promises care and responsiveness.</li>
+                  <li>Community initiatives and values-led communication help extend the brand beyond immediate commercial messages.</li>
+                  <li>The customer experiences the organization as one brand even when the underlying touchpoints are produced through different systems.</li>
                 </ul>
 
               </article>
@@ -1964,21 +1657,15 @@
           </section>
 
 
-          <section
-            class="brand-gallery"
-            aria-labelledby="project-02-gallery-title"
-          >
+          <section class="brand-gallery" aria-labelledby="project-02-gallery-title">
 
             <div class="brand-gallery-heading">
 
               <div>
-                <p class="eyebrow">
-                  Brand Derivatives in Practice
-                </p>
+                <p class="eyebrow">Brand Derivatives in Practice</p>
               </div>
 
               <div>
-
                 <h3 id="project-02-gallery-title">
                   One identity across different expressions.
                 </h3>
@@ -1986,7 +1673,6 @@
                 <p>
                   Selected examples show how the developing system moves across digital experience, service-line marketing, case results, out-of-home advertising, community and culture, values-led communication, conversion, and adaptive campaign work.
                 </p>
-
               </div>
 
             </div>
@@ -1995,212 +1681,172 @@
             <div class="brand-gallery-grid">
 
               <figure class="brand-gallery-item brand-gallery-wide">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/01-parent-digital-experience.webp"
                     alt="Website homepage showing the parent digital expression of the brand"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Parent Digital Experience</strong>
                   <span>Website</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/02-service-line-car-wreck.webp"
                     alt="Car wreck service-line marketing creative"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Service-Line Marketing</strong>
                   <span>Commercial creative</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/03-case-result-525k.webp"
                     alt="Case-result marketing creative using the brand system"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Performance Communication</strong>
                   <span>Case-result creative</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item brand-gallery-wide">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/04-out-of-home-billboard.webp"
                     alt="Roadside billboard extending the brand into out-of-home advertising"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Out-of-Home</strong>
                   <span>Billboard</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/05-community-sports-finals-bound.webp"
                     alt="Sports and community-oriented branded social creative"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Community &amp; Culture</strong>
                   <span>Sports content</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/06-values-dignity-in-action.webp"
                     alt="Values-led Dignity in Action branded creative"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Purpose &amp; Values</strong>
                   <span>Dignity in Action</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/07-community-corzo-cares-bingo.webp"
                     alt="Community event creative for the Corzo Cares program"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Community Programming</strong>
                   <span>Corzo Cares</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/08-conversion-quick-answers.webp"
                     alt="Case-review conversion creative inviting people to get quick answers"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Conversion Experience</strong>
                   <span>Case review</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/09-conversion-chat-chris.webp"
                     alt="Creative promoting an always-available branded chat experience"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Customer Interaction</strong>
                   <span>Chat experience</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/one-brand-experience/10-adaptive-black-friday.webp"
                     alt="Playful seasonal campaign creative adapted to the parent brand"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Adaptive Campaign</strong>
                   <span>Seasonal content</span>
                 </figcaption>
-
               </figure>
 
             </div>
@@ -2208,10 +1854,7 @@
           </section>
 
 
-          <section
-            class="report-request"
-            aria-labelledby="project-02-materials-title"
-          >
+          <section class="report-request" aria-labelledby="project-02-materials-title">
 
             <div class="report-request-inner">
 
@@ -2243,21 +1886,15 @@
           </section>
 
 
-          <section
-            class="related-insights"
-            aria-labelledby="project-02-insights-title"
-          >
+          <section class="related-insights" aria-labelledby="project-02-insights-title">
 
             <div class="related-insights-heading">
 
               <div>
-                <p class="eyebrow">
-                  Related Thinking
-                </p>
+                <p class="eyebrow">Related Thinking</p>
               </div>
 
               <div>
-
                 <h3 id="project-02-insights-title">
                   Insights connected to the project.
                 </h3>
@@ -2265,7 +1902,6 @@
                 <p>
                   Related essays extend the same questions around brand systems, creative consistency, channels, customer journeys, and the way different touchpoints reinforce one another.
                 </p>
-
               </div>
 
             </div>
@@ -2273,56 +1909,21 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Brand
-              </p>
+              <p class="insight-group-label">Brand</p>
 
-              <a
-                class="related-insight-link"
-                href="insights/why-a-template-is-not-a-brand.html"
-              >
-                <span>
-                  Why a template is not a brand
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+              <a class="related-insight-link" href="insights/why-a-template-is-not-a-brand.html">
+                <span>Why a Template Is Not a Brand</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
-              <a
-                class="related-insight-link"
-                href="insights/before-you-rebrand-diagnose-the-brand-problem.html"
-              >
-                <span>
-                  Before You Rebrand, Diagnose the Brand Problem
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+              <a class="related-insight-link" href="insights/before-you-rebrand-diagnose-the-brand-problem.html">
+                <span>Before You Rebrand, Diagnose the Brand Problem</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
-              <a
-                class="related-insight-link"
-                href="insights/what-makes-a-brand-easier-to-remember.html"
-              >
-                <span>
-                  What Makes a Brand Easier to Remember?
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+              <a class="related-insight-link" href="insights/what-makes-a-brand-easier-to-remember.html">
+                <span>What Makes a Brand Easier to Remember</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -2330,24 +1931,11 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Channels
-              </p>
+              <p class="insight-group-label">Channels</p>
 
-              <a
-                class="related-insight-link"
-                href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html"
-              >
-                <span>
-                  Why being on every channel is not a channel strategy
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+              <a class="related-insight-link" href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html">
+                <span>Why Being on Every Channel Is Not a Channel Strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -2355,40 +1943,16 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Lifecycle
-              </p>
+              <p class="insight-group-label">Lifecycle</p>
 
-              <a
-                class="related-insight-link"
-                href="insights/why-the-lead-is-not-the-conversion.html"
-              >
-                <span>
-                  Why the lead is not the conversion
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+              <a class="related-insight-link" href="insights/why-the-lead-is-not-the-conversion.html">
+                <span>Why the Lead Is Not the Conversion</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
-              <a
-                class="related-insight-link"
-                href="insights/why-the-best-call-to-action-depends-on-where-the-customer-is-in-the-journey.html"
-              >
-                <span>
-                  Why the Best Call to Action Depends on Where the Customer Is in the Journey
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+              <a class="related-insight-link" href="insights/why-the-best-call-to-action-depends-on-where-the-customer-is-in-the-journey.html">
+                <span>Why the Best Call to Action Depends on Where the Customer Is in the Journey</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -2396,24 +1960,11 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Search
-              </p>
+              <p class="insight-group-label">Search</p>
 
-              <a
-                class="related-insight-link"
-                href="insights/when-search-becomes-the-verification-layer.html"
-              >
-                <span>
-                  When search becomes the verification layer
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+              <a class="related-insight-link" href="insights/when-search-becomes-the-verification-layer.html">
+                <span>When Search Becomes the Verification Layer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -2460,14 +2011,9 @@
            PROJECT 03
            ==================================================== -->
 
-      <article
-        class="featured-project"
-        id="national-egovernment-rollout"
-      >
+      <article class="featured-project" id="national-egovernment-rollout">
 
-        <div class="featured-project-number">
-          03
-        </div>
+        <div class="featured-project-number">03</div>
 
         <div class="featured-project-body">
 
@@ -2517,11 +2063,7 @@
         </div>
 
 
-        <div
-          class="project-expanded"
-          id="project-03-details"
-          hidden
-        >
+        <div class="project-expanded" id="project-03-details" hidden>
 
           <section class="project-summary">
 
@@ -2574,10 +2116,7 @@
             <div class="research-method-grid">
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  01
-                </span>
+                <span class="research-method-number">01</span>
 
                 <h4>
                   National Program Engagement
@@ -2590,15 +2129,11 @@
                 <span class="method-detail">
                   National launch · CIO conference · program context · stakeholder engagement
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  02
-                </span>
+                <span class="research-method-number">02</span>
 
                 <h4>
                   Managed Services Review
@@ -2611,15 +2146,11 @@
                 <span class="method-detail">
                   Contract review · requirements · responsibilities · implementation dependencies
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  03
-                </span>
+                <span class="research-method-number">03</span>
 
                 <h4>
                   Regional &amp; Provincial Coordination
@@ -2632,15 +2163,11 @@
                 <span class="method-detail">
                   National office · regional DICT offices · provincial rollout · implementation support
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  04
-                </span>
+                <span class="research-method-number">04</span>
 
                 <h4>
                   Government &amp; Stakeholder Engagement
@@ -2653,7 +2180,6 @@
                 <span class="method-detail">
                   Government relations · events · stakeholder coordination · public-sector engagement
                 </span>
-
               </article>
 
             </div>
@@ -2661,21 +2187,15 @@
           </section>
 
 
-          <section
-            class="project-findings"
-            aria-labelledby="project-03-rollout-title"
-          >
+          <section class="project-findings" aria-labelledby="project-03-rollout-title">
 
             <div class="project-findings-heading">
 
               <div>
-                <p class="eyebrow">
-                  Rollout Progression
-                </p>
+                <p class="eyebrow">Rollout Progression</p>
               </div>
 
               <div>
-
                 <h3 id="project-03-rollout-title">
                   A national initiative moving through provincial implementation.
                 </h3>
@@ -2683,7 +2203,6 @@
                 <p>
                   The engagement developed over three years, beginning with national launch activities and continuing through successive provincial rollouts supported with regional and local government counterparts.
                 </p>
-
               </div>
 
             </div>
@@ -2693,9 +2212,7 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  2023
-                </span>
+                <span class="findings-number">2023</span>
 
                 <h4>
                   Launch &amp; Initial Deployment
@@ -2710,23 +2227,10 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Nationwide eLGU Kick-off Ceremony and eGovPH Launching.
-                  </li>
-
-                  <li>
-                    Participation in the Chief Information Officer Conference.
-                  </li>
-
-                  <li>
-                    Isabela became the first province to launch the system.
-                  </li>
-
-                  <li>
-                    Albay followed as the next provincial implementation.
-                  </li>
-
+                  <li>Nationwide eLGU Kick-off Ceremony and eGovPH Launching.</li>
+                  <li>Participation in the Chief Information Officer Conference.</li>
+                  <li>Isabela became the first province to launch the system.</li>
+                  <li>Albay followed as the next provincial implementation.</li>
                 </ul>
 
               </article>
@@ -2734,9 +2238,7 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  2024
-                </span>
+                <span class="findings-number">2024</span>
 
                 <h4>
                   Continued Provincial Expansion
@@ -2751,15 +2253,8 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Supported the provincial implementation in Ilocos Norte.
-                  </li>
-
-                  <li>
-                    Continued coordination across national, regional, and provincial government counterparts.
-                  </li>
-
+                  <li>Supported the provincial implementation in Ilocos Norte.</li>
+                  <li>Continued coordination across national, regional, and provincial government counterparts.</li>
                 </ul>
 
               </article>
@@ -2767,9 +2262,7 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  2025
-                </span>
+                <span class="findings-number">2025</span>
 
                 <h4>
                   Broader Provincial Support
@@ -2784,13 +2277,11 @@
                 </span>
 
                 <ul class="findings-list">
-
                   <li>Masbate</li>
                   <li>Sorsogon</li>
                   <li>Camarines Sur</li>
                   <li>Bataan</li>
                   <li>La Union</li>
-
                 </ul>
 
               </article>
@@ -2798,9 +2289,7 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  03
-                </span>
+                <span class="findings-number">03</span>
 
                 <h4>
                   Implementation Coordination
@@ -2815,27 +2304,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Reviewed the managed-services contract from an implementation and coordination perspective.
-                  </li>
-
-                  <li>
-                    Coordinated with the Office of the Undersecretary for eGovernment.
-                  </li>
-
-                  <li>
-                    Worked with DICT regional offices supporting provincial launches.
-                  </li>
-
-                  <li>
-                    Supported stakeholder alignment around implementation activities and events.
-                  </li>
-
-                  <li>
-                    Engaged public officials, dignitaries, government personnel, and public servants during rollout activities.
-                  </li>
-
+                  <li>Reviewed the managed-services contract from an implementation and coordination perspective.</li>
+                  <li>Coordinated with the Office of the Undersecretary for eGovernment.</li>
+                  <li>Worked with DICT regional offices supporting provincial launches.</li>
+                  <li>Supported stakeholder alignment around implementation activities and events.</li>
+                  <li>Engaged public officials, dignitaries, government personnel, and public servants during rollout activities.</li>
                 </ul>
 
               </article>
@@ -2845,21 +2318,15 @@
           </section>
 
 
-          <section
-            class="brand-gallery"
-            aria-labelledby="project-03-gallery-title"
-          >
+          <section class="brand-gallery" aria-labelledby="project-03-gallery-title">
 
             <div class="brand-gallery-heading">
 
               <div>
-                <p class="eyebrow">
-                  Implementation Evidence
-                </p>
+                <p class="eyebrow">Implementation Evidence</p>
               </div>
 
               <div>
-
                 <h3 id="project-03-gallery-title">
                   National launch, program coordination, and rollout activity.
                 </h3>
@@ -2867,7 +2334,6 @@
                 <p>
                   Selected photographs show the public-sector environment surrounding the program, from launch-stage events to the people and coordination involved in implementation.
                 </p>
-
               </div>
 
             </div>
@@ -2876,107 +2342,87 @@
             <div class="brand-gallery-grid">
 
               <figure class="brand-gallery-item brand-gallery-wide">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/national-egovernment-rollout/01-national-elgu-launch-venue.webp"
                     alt="eLGU national launch venue and stage"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>National Program Launch</strong>
                   <span>eLGU launch environment</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item brand-gallery-wide">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/national-egovernment-rollout/02-national-elgu-launch-stakeholders.webp"
                     alt="Government and program stakeholders gathered at an eLGU launch event"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Government Stakeholder Engagement</strong>
                   <span>Launch participants</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/national-egovernment-rollout/03-provincial-implementation-field-support.webp"
                     alt="Program implementation support during an eLGU activity"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Implementation in Practice</strong>
                   <span>Field support</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/national-egovernment-rollout/04-elgu-program-coordination.webp"
                     alt="Program coordination during an eLGU event"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Program Collaboration</strong>
                   <span>Coordination</span>
                 </figcaption>
-
               </figure>
 
 
               <figure class="brand-gallery-item brand-gallery-wide">
-
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/national-egovernment-rollout/05-regional-rollout-stakeholders.webp"
                     alt="Regional and government stakeholders during an eLGU rollout activity"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
                   <strong>Regional &amp; Provincial Rollout</strong>
                   <span>Stakeholder coordination</span>
                 </figcaption>
-
               </figure>
 
             </div>
@@ -3007,15 +2453,11 @@
           </section>
 
 
-          <section
-            class="report-request"
-            aria-labelledby="project-03-contact-title"
-          >
+          <section class="report-request" aria-labelledby="project-03-contact-title">
 
             <div class="report-request-inner">
 
               <div>
-
                 <p class="eyebrow">
                   Want to go deeper?
                 </p>
@@ -3027,7 +2469,6 @@
                 <p>
                   The public case study presents the scope and selected evidence without exposing non-public contract, technical, procurement, or implementation details. For hiring, collaboration, or professional evaluation purposes, contact me to discuss the engagement in greater depth.
                 </p>
-
               </div>
 
               <a
@@ -3042,21 +2483,15 @@
           </section>
 
 
-          <section
-            class="related-insights"
-            aria-labelledby="project-03-insights-title"
-          >
+          <section class="related-insights" aria-labelledby="project-03-insights-title">
 
             <div class="related-insights-heading">
 
               <div>
-                <p class="eyebrow">
-                  Related Thinking
-                </p>
+                <p class="eyebrow">Related Thinking</p>
               </div>
 
               <div>
-
                 <h3 id="project-03-insights-title">
                   Insights connected to the implementation work.
                 </h3>
@@ -3064,7 +2499,6 @@
                 <p>
                   Related essays extend the same questions around implementation discipline, stakeholder coordination, consultation, events, and the movement from launch activity into operating reality.
                 </p>
-
               </div>
 
             </div>
@@ -3072,24 +2506,14 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Operations
-              </p>
+              <p class="insight-group-label">Operations</p>
 
               <a
                 class="related-insight-link"
                 href="insights/a-launch-is-not-the-same-as-an-implementation.html"
               >
-                <span>
-                  A Launch Is Not the Same as an Implementation
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>A Launch Is Not the Same as an Implementation</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -3105,16 +2529,8 @@
                 class="related-insight-link"
                 href="insights/community-listening-is-not-the-same-as-asking-for-feedback.html"
               >
-                <span>
-                  Community Listening Is Not the Same as Asking for Feedback
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Community Listening Is Not the Same as Asking for Feedback</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -3130,14 +2546,9 @@
            PROJECT 04
            ==================================================== -->
 
-      <article
-        class="featured-project"
-        id="tiktok-lawyer-public-identity"
-      >
+      <article class="featured-project" id="tiktok-lawyer-public-identity">
 
-        <div class="featured-project-number">
-          04
-        </div>
+        <div class="featured-project-number">04</div>
 
         <div class="featured-project-body">
 
@@ -3189,11 +2600,7 @@
         </div>
 
 
-        <div
-          class="project-expanded"
-          id="project-04-details"
-          hidden
-        >
+        <div class="project-expanded" id="project-04-details" hidden>
 
           <section class="project-summary">
 
@@ -3230,7 +2637,7 @@
                 <span>engagement concluded</span>
               </div>
 
-              <div>
+              <div class="project-at-a-glance-long">
                 <strong>Repositioning</strong>
                 <span>platform identity to broader profile</span>
               </div>
@@ -3246,10 +2653,7 @@
             <div class="research-method-grid">
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  01
-                </span>
+                <span class="research-method-number">01</span>
 
                 <h4>
                   Starting Identity
@@ -3262,15 +2666,11 @@
                 <span class="method-detail">
                   Recognition · accessibility · legal education · existing audience
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  02
-                </span>
+                <span class="research-method-number">02</span>
 
                 <h4>
                   Repositioning
@@ -3283,15 +2683,11 @@
                 <span class="method-detail">
                   Identity diagnosis · continuity · broader positioning · message development
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  03
-                </span>
+                <span class="research-method-number">03</span>
 
                 <h4>
                   Public Introduction
@@ -3304,15 +2700,11 @@
                 <span class="method-detail">
                   Social content · PR · public-facing messaging · audience familiarity
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  04
-                </span>
+                <span class="research-method-number">04</span>
 
                 <h4>
                   Content &amp; Creative Operations
@@ -3325,7 +2717,6 @@
                 <span class="method-detail">
                   Content development · production · publishing · creative coordination · operations
                 </span>
-
               </article>
 
             </div>
@@ -3333,10 +2724,7 @@
           </section>
 
 
-          <section
-            class="project-findings"
-            aria-labelledby="project-04-development-title"
-          >
+          <section class="project-findings" aria-labelledby="project-04-development-title">
 
             <div class="project-findings-heading">
 
@@ -3347,7 +2735,6 @@
               </div>
 
               <div>
-
                 <h3 id="project-04-development-title">
                   Recognition had to transfer, not disappear.
                 </h3>
@@ -3355,7 +2742,6 @@
                 <p>
                   The strategic task was to use an existing, memorable identity as the starting point for a broader public introduction rather than treating rebranding as a visual reset.
                 </p>
-
               </div>
 
             </div>
@@ -3365,9 +2751,7 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  01
-                </span>
+                <span class="findings-number">01</span>
 
                 <h4>
                   From Persona to Person
@@ -3382,27 +2766,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Preserve the accessibility associated with the established digital persona.
-                  </li>
-
-                  <li>
-                    Introduce more dimensions of the person behind the platform identity.
-                  </li>
-
-                  <li>
-                    Use repeated public-facing communication to build familiarity beyond a single content format.
-                  </li>
-
-                  <li>
-                    Keep visual and verbal signals connected enough that the broader identity still felt recognizable.
-                  </li>
-
-                  <li>
-                    Allow the existing persona to function as an entry point rather than a limitation.
-                  </li>
-
+                  <li>Preserve the accessibility associated with the established digital persona.</li>
+                  <li>Introduce more dimensions of the person behind the platform identity.</li>
+                  <li>Use repeated public-facing communication to build familiarity beyond a single content format.</li>
+                  <li>Keep visual and verbal signals connected enough that the broader identity still felt recognizable.</li>
+                  <li>Allow the existing persona to function as an entry point rather than a limitation.</li>
                 </ul>
 
               </article>
@@ -3410,9 +2778,7 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  02
-                </span>
+                <span class="findings-number">02</span>
 
                 <h4>
                   Social Media &amp; PR as One System
@@ -3427,27 +2793,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Content development supported both regular audience engagement and broader public introduction.
-                  </li>
-
-                  <li>
-                    Creative decisions had to reinforce recognition while allowing the identity to expand.
-                  </li>
-
-                  <li>
-                    Public-facing messages needed consistency across different topics and communication moments.
-                  </li>
-
-                  <li>
-                    Production and publishing rhythms had to support sustained visibility rather than isolated bursts.
-                  </li>
-
-                  <li>
-                    The communication system worked best when brand, content, channel, and PR decisions were treated as connected work.
-                  </li>
-
+                  <li>Content development supported both regular audience engagement and broader public introduction.</li>
+                  <li>Creative decisions had to reinforce recognition while allowing the identity to expand.</li>
+                  <li>Public-facing messages needed consistency across different topics and communication moments.</li>
+                  <li>Production and publishing rhythms had to support sustained visibility rather than isolated bursts.</li>
+                  <li>The communication system worked best when brand, content, channel, and PR decisions were treated as connected work.</li>
                 </ul>
 
               </article>
@@ -3457,10 +2807,7 @@
           </section>
 
 
-          <section
-            class="brand-gallery"
-            aria-labelledby="project-04-gallery-title"
-          >
+          <section class="brand-gallery" aria-labelledby="project-04-gallery-title">
 
             <div class="brand-gallery-heading">
 
@@ -3471,7 +2818,6 @@
               </div>
 
               <div>
-
                 <h3 id="project-04-gallery-title">
                   The public-facing work depended on a production system behind it.
                 </h3>
@@ -3479,7 +2825,6 @@
                 <p>
                   This behind-the-scenes image documents the content and creative environment supporting the social media and public-relations work during the engagement.
                 </p>
-
               </div>
 
             </div>
@@ -3487,7 +2832,7 @@
 
             <div class="brand-gallery-grid">
 
-              <figure class="brand-gallery-item brand-gallery-wide">
+              <figure class="brand-gallery-item brand-gallery-wide brand-gallery-team">
 
                 <div class="brand-gallery-image">
 
@@ -3501,6 +2846,7 @@
                 </div>
 
                 <figcaption class="brand-gallery-caption">
+
                   <strong>
                     Content Production &amp; Creative Operations
                   </strong>
@@ -3508,6 +2854,7 @@
                   <span>
                     Behind the scenes
                   </span>
+
                 </figcaption>
 
               </figure>
@@ -3544,10 +2891,7 @@
           </section>
 
 
-          <section
-            class="report-request"
-            aria-labelledby="project-04-contact-title"
-          >
+          <section class="report-request" aria-labelledby="project-04-contact-title">
 
             <div class="report-request-inner">
 
@@ -3579,21 +2923,15 @@
           </section>
 
 
-          <section
-            class="related-insights"
-            aria-labelledby="project-04-insights-title"
-          >
+          <section class="related-insights" aria-labelledby="project-04-insights-title">
 
             <div class="related-insights-heading">
 
               <div>
-                <p class="eyebrow">
-                  Related Thinking
-                </p>
+                <p class="eyebrow">Related Thinking</p>
               </div>
 
               <div>
-
                 <h3 id="project-04-insights-title">
                   Insights connected to the repositioning work.
                 </h3>
@@ -3601,7 +2939,6 @@
                 <p>
                   Related essays extend the same questions around brand diagnosis, recognition, content systems, and the role of channels in building a coherent public identity.
                 </p>
-
               </div>
 
             </div>
@@ -3609,56 +2946,30 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Brand
-              </p>
+              <p class="insight-group-label">Brand</p>
 
               <a
                 class="related-insight-link"
                 href="insights/before-you-rebrand-diagnose-the-brand-problem.html"
               >
-                <span>
-                  Before You Rebrand, Diagnose the Brand Problem
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Before You Rebrand, Diagnose the Brand Problem</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
               <a
                 class="related-insight-link"
                 href="insights/what-makes-a-brand-easier-to-remember.html"
               >
-                <span>
-                  What Makes a Brand Easier to Remember
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>What Makes a Brand Easier to Remember</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
               <a
                 class="related-insight-link"
                 href="insights/why-a-template-is-not-a-brand.html"
               >
-                <span>
-                  Why a Template Is Not a Brand
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why a Template Is Not a Brand</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -3666,24 +2977,14 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Content
-              </p>
+              <p class="insight-group-label">Content</p>
 
               <a
                 class="related-insight-link"
                 href="insights/when-more-content-is-not-the-answer.html"
               >
-                <span>
-                  When More Content Is Not the Answer
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>When More Content Is Not the Answer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -3691,24 +2992,14 @@
 
             <div class="insight-group">
 
-              <p class="insight-group-label">
-                Channels
-              </p>
+              <p class="insight-group-label">Channels</p>
 
               <a
                 class="related-insight-link"
                 href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html"
               >
-                <span>
-                  Why Being on Every Channel Is Not a Channel Strategy
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why Being on Every Channel Is Not a Channel Strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -3724,14 +3015,9 @@
            PROJECT 05
            ==================================================== -->
 
-      <article
-        class="featured-project"
-        id="mayoral-campaign-community-engagement"
-      >
+      <article class="featured-project" id="mayoral-campaign-community-engagement">
 
-        <div class="featured-project-number">
-          05
-        </div>
+        <div class="featured-project-number">05</div>
 
         <div class="featured-project-body">
 
@@ -3784,11 +3070,7 @@
         </div>
 
 
-        <div
-          class="project-expanded"
-          id="project-05-details"
-          hidden
-        >
+        <div class="project-expanded" id="project-05-details" hidden>
 
           <section class="project-summary">
 
@@ -3841,10 +3123,7 @@
             <div class="research-method-grid">
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  01
-                </span>
+                <span class="research-method-number">01</span>
 
                 <h4>
                   Research &amp; Listening
@@ -3857,15 +3136,11 @@
                 <span class="method-detail">
                   Interviews · local concerns · issue identification · message inputs
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  02
-                </span>
+                <span class="research-method-number">02</span>
 
                 <h4>
                   Advocacy Development
@@ -3878,15 +3153,11 @@
                 <span class="method-detail">
                   Policy consultation · women’s consultation · advocacy priorities
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  03
-                </span>
+                <span class="research-method-number">03</span>
 
                 <h4>
                   Field Activation &amp; Logistics
@@ -3899,15 +3170,11 @@
                 <span class="method-detail">
                   46 barangays · events · medical mission · logistics · stakeholder coordination
                 </span>
-
               </article>
 
 
               <article class="research-method-card">
-
-                <span class="research-method-number">
-                  04
-                </span>
+                <span class="research-method-number">04</span>
 
                 <h4>
                   Production &amp; Post-Production
@@ -3920,7 +3187,6 @@
                 <span class="method-detail">
                   Research → concept → production → field documentation → post-production
                 </span>
-
               </article>
 
             </div>
@@ -3928,10 +3194,7 @@
           </section>
 
 
-          <section
-            class="project-findings"
-            aria-labelledby="project-05-outputs-title"
-          >
+          <section class="project-findings" aria-labelledby="project-05-outputs-title">
 
             <div class="project-findings-heading">
 
@@ -3942,7 +3205,6 @@
               </div>
 
               <div>
-
                 <h3 id="project-05-outputs-title">
                   Research translated into field and communication work.
                 </h3>
@@ -3950,7 +3212,6 @@
                 <p>
                   The campaign moved repeatedly between listening, production, activation, and documentation rather than treating those activities as separate workstreams.
                 </p>
-
               </div>
 
             </div>
@@ -3960,9 +3221,7 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  01
-                </span>
+                <span class="findings-number">01</span>
 
                 <h4>
                   Research &amp; Community Consultation
@@ -3977,27 +3236,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Constituent research and issue identification for campaign messaging.
-                  </li>
-
-                  <li>
-                    Policy consultation to surface local priorities and concerns.
-                  </li>
-
-                  <li>
-                    Women’s Group Consultation (Kababaihang ng Bataan tungo sa Kaunlaran) for Advocacy Development.
-                  </li>
-
-                  <li>
-                    Caucuses conducted across all 46 barangays of Dinalupihan, Bataan.
-                  </li>
-
-                  <li>
-                    Feedback from community engagement carried forward into subsequent communication and campaign activity.
-                  </li>
-
+                  <li>Constituent research and issue identification for campaign messaging.</li>
+                  <li>Policy consultation to surface local priorities and concerns.</li>
+                  <li>Women’s Group Consultation (Kababaihang ng Bataan tungo sa Kaunlaran) for Advocacy Development.</li>
+                  <li>Caucuses conducted across all 46 barangays of Dinalupihan, Bataan.</li>
+                  <li>Feedback from community engagement carried forward into subsequent communication and campaign activity.</li>
                 </ul>
 
               </article>
@@ -4005,9 +3248,7 @@
 
               <article class="findings-card">
 
-                <span class="findings-number">
-                  02
-                </span>
+                <span class="findings-number">02</span>
 
                 <h4>
                   Activation, Production &amp; Documentation
@@ -4022,27 +3263,11 @@
                 </span>
 
                 <ul class="findings-list">
-
-                  <li>
-                    Staging and communication support for a community medical mission.
-                  </li>
-
-                  <li>
-                    Motorcade and miting de avance event communication.
-                  </li>
-
-                  <li>
-                    Public-information and campaign materials for digital distribution.
-                  </li>
-
-                  <li>
-                    On-ground documentation of caucuses, consultations, and community activities.
-                  </li>
-
-                  <li>
-                    End-to-end production and post-production of campaign communication assets.
-                  </li>
-
+                  <li>Staging and communication support for a community medical mission.</li>
+                  <li>Motorcade and miting de avance event communication.</li>
+                  <li>Public-information and campaign materials for digital distribution.</li>
+                  <li>On-ground documentation of caucuses, consultations, and community activities.</li>
+                  <li>End-to-end production and post-production of campaign communication assets.</li>
                 </ul>
 
               </article>
@@ -4052,10 +3277,7 @@
           </section>
 
 
-          <section
-            class="brand-gallery"
-            aria-labelledby="project-05-gallery-title"
-          >
+          <section class="brand-gallery" aria-labelledby="project-05-gallery-title">
 
             <div class="brand-gallery-heading">
 
@@ -4066,7 +3288,6 @@
               </div>
 
               <div>
-
                 <h3 id="project-05-gallery-title">
                   From materials to field activity.
                 </h3>
@@ -4074,7 +3295,6 @@
                 <p>
                   Selected evidence shows the project moving between event communication, barangay-level engagement, community service activation, and public-information production.
                 </p>
-
               </div>
 
             </div>
@@ -4085,24 +3305,17 @@
               <figure class="brand-gallery-item">
 
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/mayoral-campaign-community-engagement/01-motorcade-miting-de-avance.webp"
                     alt="Motorcade and miting de avance campaign event announcement"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
-                  <strong>
-                    Campaign Event Communication
-                  </strong>
-
-                  <span>
-                    Motorcade &amp; miting de avance
-                  </span>
+                  <strong>Campaign Event Communication</strong>
+                  <span>Motorcade &amp; miting de avance</span>
                 </figcaption>
 
               </figure>
@@ -4111,24 +3324,17 @@
               <figure class="brand-gallery-item">
 
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/mayoral-campaign-community-engagement/02-barangay-caucus-community-engagement.webp"
                     alt="Barangay caucus and community engagement activity"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
-                  <strong>
-                    Community Engagement
-                  </strong>
-
-                  <span>
-                    Barangay caucus
-                  </span>
+                  <strong>Community Engagement</strong>
+                  <span>Barangay caucus</span>
                 </figcaption>
 
               </figure>
@@ -4137,24 +3343,17 @@
               <figure class="brand-gallery-item brand-gallery-wide">
 
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/mayoral-campaign-community-engagement/03-medical-mission-field-activation.webp"
                     alt="Community medical mission field activation"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
-                  <strong>
-                    Field Activation
-                  </strong>
-
-                  <span>
-                    Medical mission
-                  </span>
+                  <strong>Field Activation</strong>
+                  <span>Medical mission</span>
                 </figcaption>
 
               </figure>
@@ -4163,24 +3362,17 @@
               <figure class="brand-gallery-item">
 
                 <div class="brand-gallery-image">
-
                   <img
                     src="assets/projects/mayoral-campaign-community-engagement/04-public-information-alert-level-1.webp"
                     alt="Public-information material communicating Alert Level 1 guidance"
                     loading="lazy"
                     decoding="async"
                   >
-
                 </div>
 
                 <figcaption class="brand-gallery-caption">
-                  <strong>
-                    Public Information
-                  </strong>
-
-                  <span>
-                    Community communication
-                  </span>
+                  <strong>Public Information</strong>
+                  <span>Community communication</span>
                 </figcaption>
 
               </figure>
@@ -4239,10 +3431,7 @@
           </section>
 
 
-          <section
-            class="report-request"
-            aria-labelledby="project-05-contact-title"
-          >
+          <section class="report-request" aria-labelledby="project-05-contact-title">
 
             <div class="report-request-inner">
 
@@ -4274,10 +3463,7 @@
           </section>
 
 
-          <section
-            class="related-insights"
-            aria-labelledby="project-05-insights-title"
-          >
+          <section class="related-insights" aria-labelledby="project-05-insights-title">
 
             <div class="related-insights-heading">
 
@@ -4288,7 +3474,6 @@
               </div>
 
               <div>
-
                 <h3 id="project-05-insights-title">
                   Insights connected to the campaign work.
                 </h3>
@@ -4296,7 +3481,6 @@
                 <p>
                   Related essays extend the same questions around problem definition, community listening, relationship-building events, and translating field evidence into campaign decisions.
                 </p>
-
               </div>
 
             </div>
@@ -4312,32 +3496,16 @@
                 class="related-insight-link"
                 href="insights/community-listening-is-not-the-same-as-asking-for-feedback.html"
               >
-                <span>
-                  Community Listening Is Not the Same as Asking for Feedback
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Community Listening Is Not the Same as Asking for Feedback</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
               <a
                 class="related-insight-link"
                 href="insights/why-the-problem-matters.html"
               >
-                <span>
-                  Why the Problem Matters
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why the Problem Matters</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -4353,16 +3521,8 @@
                 class="related-insight-link"
                 href="insights/why-community-events-should-solve-a-relationship-problem.html"
               >
-                <span>
-                  Why Community Events Should Solve a Relationship Problem
-                </span>
-
-                <span
-                  class="related-arrow"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <span>Why Community Events Should Solve a Relationship Problem</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
               </a>
 
             </div>
@@ -4389,7 +3549,6 @@
       </div>
 
       <div>
-
         <h2>
           More work from the weave.
         </h2>
@@ -4397,7 +3556,6 @@
         <p>
           Additional campaigns, research, systems, creative work, and selected commissions from across my practice.
         </p>
-
       </div>
 
     </div>
@@ -4406,11 +3564,9 @@
     <div class="archive-list">
 
       <div class="archive-empty">
-
         <p>
           Additional projects will be added here as the portfolio expands.
         </p>
-
       </div>
 
     </div>
@@ -4473,12 +3629,10 @@
             : "Explore project ↓";
 
         if (!willOpen) {
-
           button.scrollIntoView({
             behavior:"smooth",
             block:"center"
           });
-
         }
 
       });
