@@ -138,13 +138,10 @@
 
     .report-request{max-width:1120px;margin:54px auto 0}
     .report-request-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center;padding:38px 40px;border-radius:0 0 26px 26px;background:var(--blue);color:#fff}
-    .project-02-request .report-request-inner{background:var(--coral);color:var(--ink)}
     .report-request .eyebrow{color:inherit;opacity:.76}
     .report-request h3{max-width:760px;margin:0;font-family:"Playfair Display",Georgia,serif;font-size:clamp(2.1rem,3.8vw,4rem);line-height:.98;letter-spacing:-.04em}
     .report-request p:not(.eyebrow){max-width:760px;margin:18px 0 0;color:rgba(255,255,255,.88)}
-    .project-02-request p:not(.eyebrow){color:rgba(23,23,28,.78)}
     .report-request-button{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:14px 20px;border:1px solid #fff;border-radius:999px;background:#fff;color:var(--blue);font-weight:700;text-decoration:none;white-space:nowrap;transition:transform .18s ease}
-    .project-02-request .report-request-button{border-color:var(--ink);background:var(--ink);color:var(--white)}
     .report-request-button:hover,.report-request-button:focus-visible{transform:translateY(-2px)}
 
     .related-insights{max-width:1120px;margin:54px auto 0;padding-top:48px;border-top:1px solid var(--line)}
@@ -236,7 +233,7 @@
 
     <div class="featured-projects">
 
-      <article class="featured-project">
+      <article class="featured-project" id="market-research-word-of-mouth">
         <div class="featured-project-number">01</div>
         <div class="featured-project-body">
           <div class="featured-project-meta">
@@ -271,16 +268,19 @@
                 <p>Identify media habits, content interests, and audience overlaps that could improve a word-of-mouth-led marketing system, then translate those observations into testable decisions rather than fixed audience assumptions.</p>
                 <span class="method-detail">Decision areas: content · channels · search · lifecycle · measurement</span>
               </article>
+
               <article class="research-method-card">
                 <span class="research-method-number">02</span><h4>Sampling and scope</h4>
                 <p>The study used 163 voluntary responses recruited through established relationship networks. Because the sample was non-random, the findings describe the recruited audience and were not treated as representative estimates for a wider population.</p>
                 <span class="method-detail">Voluntary · non-random · relationship-based recruitment</span>
               </article>
+
               <article class="research-method-card">
                 <span class="research-method-number">03</span><h4>Analytical method</h4>
                 <p>Descriptive shares were combined with respondent-level association testing. Multi-select responses were analyzed as overlapping behaviors, with contingency tables used to distinguish high-count combinations from relationships that were stronger than expected by chance.</p>
                 <span class="method-detail">Phi · lift · two-sided Fisher exact tests · Benjamini-Hochberg FDR</span>
               </article>
+
               <article class="research-method-card">
                 <span class="research-method-number">04</span><h4>Validation design</h4>
                 <p>The research produced hypotheses, not permanent rules. Subsequent marketing performance was reviewed across search, content, social, paid media, email, CRM, and related execution to determine what the original strategy got right, what changed, and what still required better evidence.</p>
@@ -330,7 +330,7 @@
           <section class="report-request" aria-labelledby="project-01-report-request-title">
             <div class="report-request-inner">
               <div>
-                <p class="eyebrow">Full Study Available by Request</p>
+                <p class="eyebrow">Want to go deeper?</p>
                 <h3 id="project-01-report-request-title">Interested in the complete research?</h3>
                 <p>To protect proprietary research, analysis, and working methodology, the full study is not publicly posted. For hiring, collaboration, or professional evaluation purposes, contact me to discuss access to the complete anonymized research.</p>
               </div>
@@ -341,25 +341,102 @@
           <section class="related-insights" aria-labelledby="project-01-insights-title">
             <div class="related-insights-heading">
               <div><p class="eyebrow">Related Thinking</p></div>
-              <div><h3 id="project-01-insights-title">Insights connected to the study.</h3><p>Related essays are grouped using the same categories used in the Insights library.</p></div>
+              <div>
+                <h3 id="project-01-insights-title">Insights connected to the study.</h3>
+                <p>Related essays are grouped using the same categories used in the Insights library.</p>
+              </div>
             </div>
-            <div class="insight-group"><p class="insight-group-label">Brand</p><a class="related-insight-link" href="insights/why-a-template-is-not-a-brand.html"><span>Why a template is not a brand</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
-            <div class="insight-group"><p class="insight-group-label">Lifecycle</p><a class="related-insight-link" href="insights/why-the-lead-is-not-the-conversion.html"><span>Why the lead is not the conversion</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
-            <div class="insight-group"><p class="insight-group-label">Content</p><a class="related-insight-link" href="insights/when-more-content-is-not-the-answer.html"><span>When more content is not the answer</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
-            <div class="insight-group"><p class="insight-group-label">Channels</p><a class="related-insight-link" href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html"><span>Why being on every channel is not a channel strategy</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
-            <div class="insight-group"><p class="insight-group-label">Search</p><a class="related-insight-link" href="insights/when-search-becomes-the-verification-layer.html"><span>When search becomes the verification layer</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Brand</p>
+              <a class="related-insight-link" href="insights/why-a-template-is-not-a-brand.html">
+                <span>Why a template is not a brand</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Campaigns</p>
+              <a class="related-insight-link" href="insights/community-listening-is-not-the-same-as-asking-for-feedback.html">
+                <span>Community Listening Is Not the Same as Asking for Feedback</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Lifecycle</p>
+              <a class="related-insight-link" href="insights/why-the-lead-is-not-the-conversion.html">
+                <span>Why the lead is not the conversion</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="related-insight-link" href="insights/is-direct-marketing-irrelevant-in-the-age-of-ai.html">
+                <span>Is Direct Marketing Irrelevant in the Age of AI?</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Content</p>
+              <a class="related-insight-link" href="insights/when-more-content-is-not-the-answer.html">
+                <span>When more content is not the answer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Channels</p>
+              <a class="related-insight-link" href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html">
+                <span>Why being on every channel is not a channel strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Search</p>
+              <a class="related-insight-link" href="insights/when-search-becomes-the-verification-layer.html">
+                <span>When search becomes the verification layer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="related-insight-link" href="insights/why-search-intent-matters-more-than-keyword-volume-alone.html">
+                <span>Why Search Intent Matters More Than Keyword Volume Alone</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+              <a class="related-insight-link" href="insights/why-ranking-is-no-longer-the-whole-search-strategy.html">
+                <span>Why Ranking Is No Longer the Whole Search Strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
           </section>
         </div>
       </article>
 
-      <article class="featured-project">
+
+      <article class="featured-project" id="one-brand-experience">
         <div class="featured-project-number">02</div>
+
         <div class="featured-project-body">
-          <div class="featured-project-meta"><span>2025–Present</span><span>Brand System</span><span>Customer Experience</span><span>Creative Operations</span></div>
+          <div class="featured-project-meta">
+            <span>2025–Present</span>
+            <span>Brand System</span>
+            <span>Customer Experience</span>
+            <span>Creative Operations</span>
+          </div>
+
           <h2>One Brand Experience Project</h2>
+
           <p class="featured-project-description">An ongoing brand-system and customer-experience project for Chris Corzo Injury Attorneys, moving from fragmented marketing expressions toward a connected system for how the Call Corzo identity is expressed across creative, content, communication, conversion, community, and customer touchpoints.</p>
+
           <p class="featured-project-insight">Brand consistency does not require every asset to look identical. It requires every asset to be recognizably connected to the same identity.</p>
-          <div class="featured-project-tags"><span>Brand</span><span>Content</span><span>Channels</span><span>Creative</span><span>Lifecycle</span><span>Operations</span></div>
+
+          <div class="featured-project-tags">
+            <span>Brand</span>
+            <span>Content</span>
+            <span>Channels</span>
+            <span>Creative</span>
+            <span>Lifecycle</span>
+            <span>Operations</span>
+          </div>
+
           <div class="featured-project-footer">
             <p class="featured-project-role">Brand Strategy · Creative Systems · Customer Experience · Governance</p>
             <button class="project-expand-button" type="button" aria-expanded="false" aria-controls="project-02-details">Explore project ↓</button>
@@ -367,12 +444,17 @@
         </div>
 
         <div class="project-expanded" id="project-02-details" hidden>
+
           <section class="project-summary">
             <p class="eyebrow">One Brand Experience</p>
             <h3>From an established digital identity to one connected brand system.</h3>
+
             <p>The One Brand Experience Project began in February 2025 with a question that initially appeared visual: why did the same firm sometimes feel like a different brand depending on where someone encountered it?</p>
+
             <p>Chris Corzo Injury Attorneys already had a recognizable digital identity. Its website established a strong visual and verbal foundation around Chris Corzo, a red, blue, navy, and white palette, prominent service messaging, clear calls to action, and the promise of Maximum Care, Maximum Recovery, and Maximum Speed.</p>
+
             <p>Outside that core digital experience, however, the brand was not always expressed with the same consistency. Social media graphics, campaign materials, email communications, promotional assets, community content, and other creative executions could follow different conventions or communicate the firm in ways that did not clearly reinforce the identity customers encountered elsewhere.</p>
+
             <p>What began as an effort to create greater visual alignment became a broader exercise in understanding how one brand could remain recognizable across many different forms of communication.</p>
 
             <div class="project-at-a-glance">
@@ -383,22 +465,52 @@
             </div>
 
             <div class="research-method-grid">
-              <article class="research-method-card"><span class="research-method-number">01</span><h4>Existing identity</h4><p>The first step was identifying the strongest recognizable characteristics already present in the firm's digital identity and established brand materials rather than assuming the brand needed to be rebuilt from zero.</p><span class="method-detail">Identity · positioning · visual language · service promise</span></article>
-              <article class="research-method-card"><span class="research-method-number">02</span><h4>Fragmentation diagnosis</h4><p>Marketing channels were reviewed for points where visual identity, messaging, structure, or customer experience diverged from the strongest existing expression of the brand.</p><span class="method-detail">Website · social · email · campaigns · community · conversion</span></article>
-              <article class="research-method-card"><span class="research-method-number">03</span><h4>Brand derivatives</h4><p>The parent identity began to be translated into channel-specific expressions for service-line marketing, case results, attorney and team communication, community programs, seasonal campaigns, conversion tools, and other customer-facing formats.</p><span class="method-detail">One identity · many expressions · channel-aware adaptation</span></article>
-              <article class="research-method-card"><span class="research-method-number">04</span><h4>Connected experience</h4><p>The project expanded beyond graphic consistency into the wider customer journey, examining how search, web content, consultation tools, chat, follow-up communication, and other interactions could reinforce the same expectations established by the brand.</p><span class="method-detail">Awareness → search → website → conversion → follow-up → experience</span></article>
+              <article class="research-method-card">
+                <span class="research-method-number">01</span>
+                <h4>Existing identity</h4>
+                <p>The first step was identifying the strongest recognizable characteristics already present in the firm's digital identity and established brand materials rather than assuming the brand needed to be rebuilt from zero.</p>
+                <span class="method-detail">Identity · positioning · visual language · service promise</span>
+              </article>
+
+              <article class="research-method-card">
+                <span class="research-method-number">02</span>
+                <h4>Fragmentation diagnosis</h4>
+                <p>Marketing channels were reviewed for points where visual identity, messaging, structure, or customer experience diverged from the strongest existing expression of the brand.</p>
+                <span class="method-detail">Website · social · email · campaigns · community · conversion</span>
+              </article>
+
+              <article class="research-method-card">
+                <span class="research-method-number">03</span>
+                <h4>Brand derivatives</h4>
+                <p>The parent identity began to be translated into channel-specific expressions for service-line marketing, case results, attorney and team communication, community programs, seasonal campaigns, conversion tools, and other customer-facing formats.</p>
+                <span class="method-detail">One identity · many expressions · channel-aware adaptation</span>
+              </article>
+
+              <article class="research-method-card">
+                <span class="research-method-number">04</span>
+                <h4>Connected experience</h4>
+                <p>The project expanded beyond graphic consistency into the wider customer journey, examining how search, web content, consultation tools, chat, follow-up communication, and other interactions could reinforce the same expectations established by the brand.</p>
+                <span class="method-detail">Awareness → search → website → conversion → follow-up → experience</span>
+              </article>
             </div>
           </section>
 
           <section class="project-findings" aria-labelledby="project-02-development-title">
             <div class="project-findings-heading">
               <div><p class="eyebrow">System Development</p></div>
-              <div><h3 id="project-02-development-title">One identity, adapted to different jobs.</h3><p>The objective is not visual repetition. It is recognizable continuity. Each execution can respond to its own message, audience, channel, and technical requirements while still belonging unmistakably to the same parent brand.</p></div>
+              <div>
+                <h3 id="project-02-development-title">One identity, adapted to different jobs.</h3>
+                <p>The objective is not visual repetition. It is recognizable continuity. Each execution can respond to its own message, audience, channel, and technical requirements while still belonging unmistakably to the same parent brand.</p>
+              </div>
             </div>
 
             <div class="findings-grid">
               <article class="findings-card">
-                <span class="findings-number">01</span><h4>Brand Derivatives</h4><p>Different communication requirements are treated as related derivatives of the same identity rather than isolated creative jobs.</p><span class="findings-label">Developing system</span>
+                <span class="findings-number">01</span>
+                <h4>Brand Derivatives</h4>
+                <p>Different communication requirements are treated as related derivatives of the same identity rather than isolated creative jobs.</p>
+                <span class="findings-label">Developing system</span>
+
                 <ul class="findings-list">
                   <li>The red, blue, navy, and white identity provides a recognizable visual foundation without requiring identical compositions.</li>
                   <li>Service-line, result, authority, community, seasonal, and values-led content can use different visual intensity while remaining connected.</li>
@@ -409,7 +521,11 @@
               </article>
 
               <article class="findings-card">
-                <span class="findings-number">02</span><h4>Connected Customer Experience</h4><p>The project expanded once the brand was understood as something customers experience across multiple interactions rather than only something they see in creative assets.</p><span class="findings-label">Experience principle</span>
+                <span class="findings-number">02</span>
+                <h4>Connected Customer Experience</h4>
+                <p>The project expanded once the brand was understood as something customers experience across multiple interactions rather than only something they see in creative assets.</p>
+                <span class="findings-label">Experience principle</span>
+
                 <ul class="findings-list">
                   <li>A social interaction may become a branded search, website visit, case review, chat interaction, email, or direct conversation.</li>
                   <li>Search, website content, conversion tools, and follow-up should reinforce rather than contradict the expectations created upstream.</li>
@@ -424,26 +540,125 @@
           <section class="brand-gallery" aria-labelledby="project-02-gallery-title">
             <div class="brand-gallery-heading">
               <div><p class="eyebrow">Brand Derivatives in Practice</p></div>
-              <div><h3 id="project-02-gallery-title">One identity across different expressions.</h3><p>Selected examples show how the developing system moves across digital experience, service-line marketing, case results, out-of-home advertising, community and culture, values-led communication, conversion, and adaptive campaign work.</p></div>
+              <div>
+                <h3 id="project-02-gallery-title">One identity across different expressions.</h3>
+                <p>Selected examples show how the developing system moves across digital experience, service-line marketing, case results, out-of-home advertising, community and culture, values-led communication, conversion, and adaptive campaign work.</p>
+              </div>
             </div>
 
             <div class="brand-gallery-grid">
-              <figure class="brand-gallery-item brand-gallery-wide"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/01-parent-digital-experience.webp" alt="Website homepage showing the parent digital expression of the brand" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Parent Digital Experience</strong><span>Website</span></figcaption></figure>
-              <figure class="brand-gallery-item"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/02-service-line-car-wreck.webp" alt="Car wreck service-line marketing creative" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Service-Line Marketing</strong><span>Commercial creative</span></figcaption></figure>
-              <figure class="brand-gallery-item"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/03-case-result-525k.webp" alt="Case-result marketing creative using the brand system" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Performance Communication</strong><span>Case-result creative</span></figcaption></figure>
-              <figure class="brand-gallery-item brand-gallery-wide"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/04-out-of-home-billboard.webp" alt="Roadside billboard extending the brand into out-of-home advertising" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Out-of-Home</strong><span>Billboard</span></figcaption></figure>
-              <figure class="brand-gallery-item"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/05-community-sports-finals-bound.webp" alt="Sports and community-oriented branded social creative" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Community &amp; Culture</strong><span>Sports content</span></figcaption></figure>
-              <figure class="brand-gallery-item"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/06-values-dignity-in-action.webp" alt="Values-led Dignity in Action branded creative" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Purpose &amp; Values</strong><span>Dignity in Action</span></figcaption></figure>
-              <figure class="brand-gallery-item"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/07-community-corzo-cares-bingo.webp" alt="Community event creative for the Corzo Cares program" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Community Programming</strong><span>Corzo Cares</span></figcaption></figure>
-              <figure class="brand-gallery-item"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/08-conversion-quick-answers.webp" alt="Case-review conversion creative inviting people to get quick answers" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Conversion Experience</strong><span>Case review</span></figcaption></figure>
-              <figure class="brand-gallery-item"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/09-conversion-chat-chris.webp" alt="Creative promoting an always-available branded chat experience" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Customer Interaction</strong><span>Chat experience</span></figcaption></figure>
-              <figure class="brand-gallery-item"><div class="brand-gallery-image"><img src="assets/projects/one-brand-experience/10-adaptive-black-friday.webp" alt="Playful seasonal campaign creative adapted to the parent brand" loading="lazy" decoding="async"></div><figcaption class="brand-gallery-caption"><strong>Adaptive Campaign</strong><span>Seasonal content</span></figcaption></figure>
+
+              <figure class="brand-gallery-item brand-gallery-wide">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/01-parent-digital-experience.webp" alt="Website homepage showing the parent digital expression of the brand" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Parent Digital Experience</strong>
+                  <span>Website</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/02-service-line-car-wreck.webp" alt="Car wreck service-line marketing creative" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Service-Line Marketing</strong>
+                  <span>Commercial creative</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/03-case-result-525k.webp" alt="Case-result marketing creative using the brand system" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Performance Communication</strong>
+                  <span>Case-result creative</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item brand-gallery-wide">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/04-out-of-home-billboard.webp" alt="Roadside billboard extending the brand into out-of-home advertising" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Out-of-Home</strong>
+                  <span>Billboard</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/05-community-sports-finals-bound.webp" alt="Sports and community-oriented branded social creative" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Community &amp; Culture</strong>
+                  <span>Sports content</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/06-values-dignity-in-action.webp" alt="Values-led Dignity in Action branded creative" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Purpose &amp; Values</strong>
+                  <span>Dignity in Action</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/07-community-corzo-cares-bingo.webp" alt="Community event creative for the Corzo Cares program" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Community Programming</strong>
+                  <span>Corzo Cares</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/08-conversion-quick-answers.webp" alt="Case-review conversion creative inviting people to get quick answers" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Conversion Experience</strong>
+                  <span>Case review</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/09-conversion-chat-chris.webp" alt="Creative promoting an always-available branded chat experience" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Customer Interaction</strong>
+                  <span>Chat experience</span>
+                </figcaption>
+              </figure>
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/one-brand-experience/10-adaptive-black-friday.webp" alt="Playful seasonal campaign creative adapted to the parent brand" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Adaptive Campaign</strong>
+                  <span>Seasonal content</span>
+                </figcaption>
+              </figure>
+
             </div>
           </section>
 
-          <section class="report-request project-02-request" aria-labelledby="project-02-materials-title">
+          <section class="report-request" aria-labelledby="project-02-materials-title">
             <div class="report-request-inner">
-              <div><p class="eyebrow">Working System</p><h3 id="project-02-materials-title">The public work shows the outputs, not every rule behind them.</h3><p>Internal templates, detailed design rules, production safeguards, and working documentation are not publicly posted. Selected materials can be discussed for hiring, collaboration, or professional evaluation purposes.</p></div>
+              <div>
+                <p class="eyebrow">Want to go deeper?</p>
+                <h3 id="project-02-materials-title">Interested in how the system works behind the public outputs?</h3>
+                <p>Internal templates, detailed design rules, production safeguards, and working documentation are not publicly posted. For hiring, collaboration, or professional evaluation purposes, contact me to discuss selected materials and the thinking behind the system.</p>
+              </div>
+
               <a class="report-request-button" href="mailto:jncristobal.info@gmail.com?subject=Request%20to%20Review%20One%20Brand%20Experience%20Project">Contact me →</a>
             </div>
           </section>
@@ -451,32 +666,88 @@
           <section class="related-insights" aria-labelledby="project-02-insights-title">
             <div class="related-insights-heading">
               <div><p class="eyebrow">Related Thinking</p></div>
-              <div><h3 id="project-02-insights-title">Insights connected to the project.</h3><p>Related essays extend the same questions around brand systems, creative consistency, channels, customer journeys, and the way different touchpoints reinforce one another.</p></div>
+              <div>
+                <h3 id="project-02-insights-title">Insights connected to the project.</h3>
+                <p>Related essays extend the same questions around brand systems, creative consistency, channels, customer journeys, and the way different touchpoints reinforce one another.</p>
+              </div>
             </div>
-            <div class="insight-group"><p class="insight-group-label">Brand</p><a class="related-insight-link" href="insights/why-a-template-is-not-a-brand.html"><span>Why a template is not a brand</span><span class="related-arrow" aria-hidden="true">→</span></a><a class="related-insight-link" href="insights/before-you-rebrand-diagnose-the-brand-problem.html"><span>Before You Rebrand, Diagnose the Brand Problem</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
-            <div class="insight-group"><p class="insight-group-label">Channels</p><a class="related-insight-link" href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html"><span>Why being on every channel is not a channel strategy</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
-            <div class="insight-group"><p class="insight-group-label">Lifecycle</p><a class="related-insight-link" href="insights/why-the-lead-is-not-the-conversion.html"><span>Why the lead is not the conversion</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
-            <div class="insight-group"><p class="insight-group-label">Search</p><a class="related-insight-link" href="insights/when-search-becomes-the-verification-layer.html"><span>When search becomes the verification layer</span><span class="related-arrow" aria-hidden="true">→</span></a></div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Brand</p>
+
+              <a class="related-insight-link" href="insights/why-a-template-is-not-a-brand.html">
+                <span>Why a template is not a brand</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a class="related-insight-link" href="insights/before-you-rebrand-diagnose-the-brand-problem.html">
+                <span>Before You Rebrand, Diagnose the Brand Problem</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a class="related-insight-link" href="insights/what-makes-a-brand-easier-to-remember.html">
+                <span>What Makes a Brand Easier to Remember?</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Channels</p>
+              <a class="related-insight-link" href="insights/why-being-on-every-channel-is-not-a-channel-strategy.html">
+                <span>Why being on every channel is not a channel strategy</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Lifecycle</p>
+
+              <a class="related-insight-link" href="insights/why-the-lead-is-not-the-conversion.html">
+                <span>Why the lead is not the conversion</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a class="related-insight-link" href="insights/why-the-best-call-to-action-depends-on-where-the-customer-is-in-the-journey.html">
+                <span>Why the Best Call to Action Depends on Where the Customer Is in the Journey</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Search</p>
+              <a class="related-insight-link" href="insights/when-search-becomes-the-verification-layer.html">
+                <span>When search becomes the verification layer</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
           </section>
 
           <section class="project-summary">
             <p class="eyebrow">One Brand, Many Expressions</p>
             <h3>Variation is necessary. Disconnection is not.</h3>
+
             <p>A website can be formal and conversion-focused. A social campaign can be playful. A case-result graphic can be forceful. A community initiative can be warm. A values-led message can be reflective. A billboard can be radically simple.</p>
+
             <p>What matters is that each expression reinforces the same underlying identity and contributes to the same customer experience.</p>
+
             <p>The continuing work of the One Brand Experience Project is the discovery, development, and refinement of those relationships: determining how the Call Corzo identity can remain coherent while becoming flexible enough to operate across every meaningful expression of the brand.</p>
+
             <p><strong>One identity. Many expressions. One connected experience.</strong></p>
           </section>
+
         </div>
       </article>
+
+
       <!-- ====================================================
            PROJECT 03
            ==================================================== -->
 
-      <article class="featured-project">
+      <article class="featured-project" id="national-egovernment-rollout">
         <div class="featured-project-number">03</div>
 
         <div class="featured-project-body">
+
           <div class="featured-project-meta">
             <span>2023–2025</span>
             <span>PR &amp; Events</span>
@@ -505,6 +776,7 @@
             <p class="featured-project-role">Implementation Coordination · Stakeholder Management · Contract Review · Government Relations · Events</p>
             <button class="project-expand-button" type="button" aria-expanded="false" aria-controls="project-03-details">Explore project ↓</button>
           </div>
+
         </div>
 
         <div class="project-expanded" id="project-03-details" hidden>
@@ -533,6 +805,7 @@
             </div>
 
             <div class="research-method-grid">
+
               <article class="research-method-card">
                 <span class="research-method-number">01</span>
                 <h4>National Program Engagement</h4>
@@ -560,10 +833,13 @@
                 <p>The implementation caravan involved working across multiple levels of government and engaging dignitaries, politicians, government executives, technical personnel, and public servants involved in launch and implementation activities.</p>
                 <span class="method-detail">Government relations · events · stakeholder coordination · public-sector engagement</span>
               </article>
+
             </div>
           </section>
 
+
           <section class="project-findings" aria-labelledby="project-03-rollout-title">
+
             <div class="project-findings-heading">
               <div><p class="eyebrow">Rollout Progression</p></div>
               <div>
@@ -573,11 +849,13 @@
             </div>
 
             <div class="findings-grid">
+
               <article class="findings-card">
                 <span class="findings-number">2023</span>
                 <h4>Launch &amp; Initial Deployment</h4>
                 <p>The national launch established the implementation context before the system moved into its first provincial deployments.</p>
                 <span class="findings-label">Rollout</span>
+
                 <ul class="findings-list">
                   <li>Nationwide eLGU Kick-off Ceremony and eGovPH Launching.</li>
                   <li>Participation in the Chief Information Officer Conference.</li>
@@ -591,6 +869,7 @@
                 <h4>Continued Provincial Expansion</h4>
                 <p>The rollout continued into another regional context as the implementation model expanded.</p>
                 <span class="findings-label">Rollout</span>
+
                 <ul class="findings-list">
                   <li>Supported the provincial implementation in Ilocos Norte.</li>
                   <li>Continued coordination across national, regional, and provincial government counterparts.</li>
@@ -602,6 +881,7 @@
                 <h4>Broader Provincial Support</h4>
                 <p>Implementation support expanded across five additional provinces in different regional contexts.</p>
                 <span class="findings-label">Provinces supported</span>
+
                 <ul class="findings-list">
                   <li>Masbate</li>
                   <li>Sorsogon</li>
@@ -616,6 +896,7 @@
                 <h4>Implementation Coordination</h4>
                 <p>Across the rollout, the recurring work was to connect program requirements with the people and offices responsible for execution.</p>
                 <span class="findings-label">Selected responsibilities</span>
+
                 <ul class="findings-list">
                   <li>Reviewed the managed-services contract from an implementation and coordination perspective.</li>
                   <li>Coordinated with the Office of the Undersecretary for eGovernment.</li>
@@ -624,10 +905,13 @@
                   <li>Engaged public officials, dignitaries, government personnel, and public servants during rollout activities.</li>
                 </ul>
               </article>
+
             </div>
           </section>
 
+
           <section class="brand-gallery" aria-labelledby="project-03-gallery-title">
+
             <div class="brand-gallery-heading">
               <div><p class="eyebrow">Implementation Evidence</p></div>
               <div>
@@ -637,32 +921,60 @@
             </div>
 
             <div class="brand-gallery-grid">
+
               <figure class="brand-gallery-item brand-gallery-wide">
-                <div class="brand-gallery-image"><img src="assets/projects/national-egovernment-rollout/01-national-elgu-launch-venue.webp" alt="eLGU national launch venue and stage" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>National Program Launch</strong><span>eLGU launch environment</span></figcaption>
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/national-egovernment-rollout/01-national-elgu-launch-venue.webp" alt="eLGU national launch venue and stage" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>National Program Launch</strong>
+                  <span>eLGU launch environment</span>
+                </figcaption>
               </figure>
 
               <figure class="brand-gallery-item brand-gallery-wide">
-                <div class="brand-gallery-image"><img src="assets/projects/national-egovernment-rollout/02-national-elgu-launch-stakeholders.webp" alt="Government and program stakeholders gathered at an eLGU launch event" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>Government Stakeholder Engagement</strong><span>Launch participants</span></figcaption>
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/national-egovernment-rollout/02-national-elgu-launch-stakeholders.webp" alt="Government and program stakeholders gathered at an eLGU launch event" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Government Stakeholder Engagement</strong>
+                  <span>Launch participants</span>
+                </figcaption>
               </figure>
 
               <figure class="brand-gallery-item">
-                <div class="brand-gallery-image"><img src="assets/projects/national-egovernment-rollout/03-provincial-implementation-field-support.webp" alt="Program implementation support during an eLGU activity" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>Implementation in Practice</strong><span>Field support</span></figcaption>
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/national-egovernment-rollout/03-provincial-implementation-field-support.webp" alt="Program implementation support during an eLGU activity" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Implementation in Practice</strong>
+                  <span>Field support</span>
+                </figcaption>
               </figure>
 
               <figure class="brand-gallery-item">
-                <div class="brand-gallery-image"><img src="assets/projects/national-egovernment-rollout/04-elgu-program-coordination.webp" alt="Program coordination during an eLGU event" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>Program Collaboration</strong><span>Coordination</span></figcaption>
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/national-egovernment-rollout/04-elgu-program-coordination.webp" alt="Program coordination during an eLGU event" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Program Collaboration</strong>
+                  <span>Coordination</span>
+                </figcaption>
               </figure>
 
               <figure class="brand-gallery-item brand-gallery-wide">
-                <div class="brand-gallery-image"><img src="assets/projects/national-egovernment-rollout/05-regional-rollout-stakeholders.webp" alt="Regional and government stakeholders during an eLGU rollout activity" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>Regional &amp; Provincial Rollout</strong><span>Stakeholder coordination</span></figcaption>
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/national-egovernment-rollout/05-regional-rollout-stakeholders.webp" alt="Regional and government stakeholders during an eLGU rollout activity" loading="lazy" decoding="async">
+                </div>
+                <figcaption class="brand-gallery-caption">
+                  <strong>Regional &amp; Provincial Rollout</strong>
+                  <span>Stakeholder coordination</span>
+                </figcaption>
               </figure>
+
             </div>
           </section>
+
 
           <section class="project-summary">
             <p class="eyebrow">Implementation Across Levels</p>
@@ -671,17 +983,67 @@
             <p><strong>National program → implementation requirements → regional coordination → provincial rollout.</strong></p>
           </section>
 
+
+          <section class="report-request" aria-labelledby="project-03-contact-title">
+            <div class="report-request-inner">
+
+              <div>
+                <p class="eyebrow">Want to go deeper?</p>
+                <h3 id="project-03-contact-title">Interested in the implementation work behind the rollout?</h3>
+                <p>The public case study presents the scope and selected evidence without exposing non-public contract, technical, procurement, or implementation details. For hiring, collaboration, or professional evaluation purposes, contact me to discuss the engagement in greater depth.</p>
+              </div>
+
+              <a class="report-request-button" href="mailto:jncristobal.info@gmail.com?subject=Request%20to%20Discuss%20National%20eGovernment%20Rollout%20Project">Contact me →</a>
+
+            </div>
+          </section>
+
+
+          <section class="related-insights" aria-labelledby="project-03-insights-title">
+
+            <div class="related-insights-heading">
+              <div><p class="eyebrow">Related Thinking</p></div>
+
+              <div>
+                <h3 id="project-03-insights-title">Insights connected to the implementation work.</h3>
+                <p>Related essays extend the same questions around implementation discipline, stakeholder coordination, consultation, events, and the movement from launch activity into operating reality.</p>
+              </div>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">Operations</p>
+
+              <a class="related-insight-link" href="insights/a-launch-is-not-the-same-as-an-implementation.html">
+                <span>A Launch Is Not the Same as an Implementation</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div class="insight-group">
+              <p class="insight-group-label">PR &amp; Events · Partnerships</p>
+
+              <a class="related-insight-link" href="insights/community-listening-is-not-the-same-as-asking-for-feedback.html">
+                <span>Community Listening Is Not the Same as Asking for Feedback</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+          </section>
+
         </div>
       </article>
+
 
       <!-- ====================================================
            PROJECT 04
            ==================================================== -->
 
-      <article class="featured-project">
+      <article class="featured-project" id="mayoral-campaign-community-engagement">
+
         <div class="featured-project-number">04</div>
 
         <div class="featured-project-body">
+
           <div class="featured-project-meta">
             <span>2022</span>
             <span>Campaigns</span>
@@ -713,12 +1075,16 @@
             <p class="featured-project-role">Research · Campaign Strategy · Production · Field Engagement · Project Management</p>
             <button class="project-expand-button" type="button" aria-expanded="false" aria-controls="project-04-details">Explore project ↓</button>
           </div>
+
         </div>
+
 
         <div class="project-expanded" id="project-04-details" hidden>
 
           <section class="project-summary">
+
             <p class="eyebrow">Campaign System</p>
+
             <h3>From community listening to campaign execution.</h3>
 
             <p>
@@ -740,7 +1106,9 @@
               <div><strong>End-to-end</strong><span>research to post-production</span></div>
             </div>
 
+
             <div class="research-method-grid">
+
               <article class="research-method-card">
                 <span class="research-method-number">01</span>
                 <h4>Research &amp; Listening</h4>
@@ -768,24 +1136,31 @@
                 <p>Campaign materials were developed from research and concept formation through copy, visual production, field documentation, editing, and post-production for public-facing and digital communication.</p>
                 <span class="method-detail">Research → concept → production → field documentation → post-production</span>
               </article>
+
             </div>
           </section>
 
+
           <section class="project-findings" aria-labelledby="project-04-outputs-title">
+
             <div class="project-findings-heading">
               <div><p class="eyebrow">Selected Outputs</p></div>
+
               <div>
                 <h3 id="project-04-outputs-title">Research translated into field and communication work.</h3>
                 <p>The campaign moved repeatedly between listening, production, activation, and documentation rather than treating those activities as separate workstreams.</p>
               </div>
             </div>
 
+
             <div class="findings-grid">
+
               <article class="findings-card">
                 <span class="findings-number">01</span>
                 <h4>Research &amp; Community Consultation</h4>
                 <p>Direct engagement supplied inputs for messaging, advocacy development, and the sequence of campaign activities.</p>
                 <span class="findings-label">Selected work</span>
+
                 <ul class="findings-list">
                   <li>Constituent research and issue identification for campaign messaging.</li>
                   <li>Policy consultation to surface local priorities and concerns.</li>
@@ -800,6 +1175,7 @@
                 <h4>Activation, Production &amp; Documentation</h4>
                 <p>The research layer was connected to public engagement and the materials required to support it.</p>
                 <span class="findings-label">Selected work</span>
+
                 <ul class="findings-list">
                   <li>Staging and communication support for a community medical mission.</li>
                   <li>Motorcade and miting de avance event communication.</li>
@@ -808,53 +1184,154 @@
                   <li>End-to-end production and post-production of campaign communication assets.</li>
                 </ul>
               </article>
+
             </div>
           </section>
 
+
           <section class="brand-gallery" aria-labelledby="project-04-gallery-title">
+
             <div class="brand-gallery-heading">
               <div><p class="eyebrow">Campaign Evidence</p></div>
+
               <div>
                 <h3 id="project-04-gallery-title">From materials to field activity.</h3>
                 <p>Selected evidence shows the project moving between event communication, barangay-level engagement, community service activation, and public-information production.</p>
               </div>
             </div>
 
+
             <div class="brand-gallery-grid">
-              <figure class="brand-gallery-item">
-                <div class="brand-gallery-image"><img src="assets/projects/mayoral-campaign-community-engagement/01-motorcade-miting-de-avance.webp" alt="Motorcade and miting de avance campaign event announcement" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>Campaign Event Communication</strong><span>Motorcade &amp; miting de avance</span></figcaption>
-              </figure>
 
               <figure class="brand-gallery-item">
-                <div class="brand-gallery-image"><img src="assets/projects/mayoral-campaign-community-engagement/02-barangay-caucus-community-engagement.webp" alt="Barangay caucus and community engagement activity" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>Community Engagement</strong><span>Barangay caucus</span></figcaption>
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/mayoral-campaign-community-engagement/01-motorcade-miting-de-avance.webp" alt="Motorcade and miting de avance campaign event announcement" loading="lazy" decoding="async">
+                </div>
+
+                <figcaption class="brand-gallery-caption">
+                  <strong>Campaign Event Communication</strong>
+                  <span>Motorcade &amp; miting de avance</span>
+                </figcaption>
               </figure>
+
+
+              <figure class="brand-gallery-item">
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/mayoral-campaign-community-engagement/02-barangay-caucus-community-engagement.webp" alt="Barangay caucus and community engagement activity" loading="lazy" decoding="async">
+                </div>
+
+                <figcaption class="brand-gallery-caption">
+                  <strong>Community Engagement</strong>
+                  <span>Barangay caucus</span>
+                </figcaption>
+              </figure>
+
 
               <figure class="brand-gallery-item brand-gallery-wide">
-                <div class="brand-gallery-image"><img src="assets/projects/mayoral-campaign-community-engagement/03-medical-mission-field-activation.webp" alt="Community medical mission field activation" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>Field Activation</strong><span>Medical mission</span></figcaption>
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/mayoral-campaign-community-engagement/03-medical-mission-field-activation.webp" alt="Community medical mission field activation" loading="lazy" decoding="async">
+                </div>
+
+                <figcaption class="brand-gallery-caption">
+                  <strong>Field Activation</strong>
+                  <span>Medical mission</span>
+                </figcaption>
               </figure>
 
+
               <figure class="brand-gallery-item">
-                <div class="brand-gallery-image"><img src="assets/projects/mayoral-campaign-community-engagement/04-public-information-alert-level-1.webp" alt="Public-information material communicating Alert Level 1 guidance" loading="lazy" decoding="async"></div>
-                <figcaption class="brand-gallery-caption"><strong>Public Information</strong><span>Community communication</span></figcaption>
+                <div class="brand-gallery-image">
+                  <img src="assets/projects/mayoral-campaign-community-engagement/04-public-information-alert-level-1.webp" alt="Public-information material communicating Alert Level 1 guidance" loading="lazy" decoding="async">
+                </div>
+
+                <figcaption class="brand-gallery-caption">
+                  <strong>Public Information</strong>
+                  <span>Community communication</span>
+                </figcaption>
               </figure>
+
 
               <article class="campaign-video-card">
                 <p class="eyebrow">Campaign Video</p>
                 <h4>Field production and post-production.</h4>
                 <p>The campaign also included video work connecting field activity with digital communication. The public Facebook version remains externally hosted.</p>
-                <a class="project-external-link" href="https://www.facebook.com/share/v/18n87sWqqw/" target="_blank" rel="noopener noreferrer">Watch campaign video ↗</a>
+
+                <a
+                  class="project-external-link"
+                  href="https://www.facebook.com/share/v/18n87sWqqw/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Watch campaign video ↗
+                </a>
               </article>
+
             </div>
           </section>
+
 
           <section class="project-summary">
             <p class="eyebrow">End-to-End Campaign Work</p>
             <h3>Research did not stop when production began.</h3>
+
             <p>The project’s defining feature was the movement between listening and execution. Community engagement informed communication; communication supported field activity; field activity generated further context, documentation, and material for the next stage of the campaign.</p>
+
             <p><strong>Research → advocacy development → campaign strategy → production → field execution → documentation → post-production.</strong></p>
+          </section>
+
+
+          <section class="report-request" aria-labelledby="project-04-contact-title">
+
+            <div class="report-request-inner">
+
+              <div>
+                <p class="eyebrow">Want to go deeper?</p>
+                <h3 id="project-04-contact-title">Interested in the research-to-execution process behind the campaign?</h3>
+                <p>The public case study shows selected research, consultation, production, and field work without publishing the full campaign operating process. For hiring, collaboration, or professional evaluation purposes, contact me to discuss the project in greater depth.</p>
+              </div>
+
+              <a class="report-request-button" href="mailto:jncristobal.info@gmail.com?subject=Request%20to%20Discuss%20Mayoral%20Campaign%20Research%20and%20Community%20Engagement">Contact me →</a>
+
+            </div>
+          </section>
+
+
+          <section class="related-insights" aria-labelledby="project-04-insights-title">
+
+            <div class="related-insights-heading">
+              <div><p class="eyebrow">Related Thinking</p></div>
+
+              <div>
+                <h3 id="project-04-insights-title">Insights connected to the campaign work.</h3>
+                <p>Related essays extend the same questions around problem definition, community listening, relationship-building events, and translating field evidence into campaign decisions.</p>
+              </div>
+            </div>
+
+
+            <div class="insight-group">
+              <p class="insight-group-label">Campaigns</p>
+
+              <a class="related-insight-link" href="insights/community-listening-is-not-the-same-as-asking-for-feedback.html">
+                <span>Community Listening Is Not the Same as Asking for Feedback</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+
+              <a class="related-insight-link" href="insights/why-the-problem-matters.html">
+                <span>Why the Problem Matters</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
+
+            <div class="insight-group">
+              <p class="insight-group-label">PR &amp; Events</p>
+
+              <a class="related-insight-link" href="insights/why-community-events-should-solve-a-relationship-problem.html">
+                <span>Why Community Events Should Solve a Relationship Problem</span>
+                <span class="related-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+
           </section>
 
         </div>
@@ -863,39 +1340,89 @@
     </div>
   </section>
 
+
   <section class="project-archive">
+
     <div class="archive-heading">
       <div><p class="eyebrow">Project Archive</p></div>
-      <div><h2>More work from the weave.</h2><p>Additional campaigns, research, systems, creative work, and selected commissions from across my practice.</p></div>
+
+      <div>
+        <h2>More work from the weave.</h2>
+        <p>Additional campaigns, research, systems, creative work, and selected commissions from across my practice.</p>
+      </div>
     </div>
-    <div class="archive-list"><div class="archive-empty"><p>Additional projects will be added here as the portfolio expands.</p></div></div>
+
+    <div class="archive-list">
+      <div class="archive-empty">
+        <p>Additional projects will be added here as the portfolio expands.</p>
+      </div>
+    </div>
+
   </section>
+
 </main>
+
 
 <footer class="site-footer">
   <p>© <span id="year"></span> The Loom Room by Neri.</p>
   <p>Marketing strategy, creative execution, and applied problem solving.</p>
 </footer>
 
+
 <script>
   (() => {
-    const buttons = document.querySelectorAll(".project-expand-button");
+
+    const buttons =
+      document.querySelectorAll(".project-expand-button");
+
     if (!buttons.length) return;
+
     buttons.forEach((button) => {
-      const targetId = button.getAttribute("aria-controls");
-      const details = document.getElementById(targetId);
+
+      const targetId =
+        button.getAttribute("aria-controls");
+
+      const details =
+        document.getElementById(targetId);
+
       if (!details) return;
+
       button.addEventListener("click", () => {
-        const isOpen = button.getAttribute("aria-expanded") === "true";
-        const willOpen = !isOpen;
-        button.setAttribute("aria-expanded", String(willOpen));
-        details.hidden = !willOpen;
-        button.textContent = willOpen ? "Close project ↑" : "Explore project ↓";
-        if (!willOpen) button.scrollIntoView({behavior:"smooth",block:"center"});
+
+        const isOpen =
+          button.getAttribute("aria-expanded") === "true";
+
+        const willOpen =
+          !isOpen;
+
+        button.setAttribute(
+          "aria-expanded",
+          String(willOpen)
+        );
+
+        details.hidden =
+          !willOpen;
+
+        button.textContent =
+          willOpen
+            ? "Close project ↑"
+            : "Explore project ↓";
+
+        if (!willOpen) {
+          button.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+          });
+        }
+
       });
+
     });
+
   })();
 </script>
+
 <script src="main.js"></script>
+
 </body>
 </html>
