@@ -917,6 +917,123 @@ text-decoration:underline;
 text-underline-offset:4px;
 }
 
+
+/* Backlink audit: compact evidence-led archive case study */
+.archive-backlink-project > h3 {
+  max-width: 880px;
+}
+.archive-backlink-project .archive-backlink-lead {
+  max-width: 930px;
+}
+.archive-backlink-health {
+  margin: 24px 0 28px;
+  padding: 23px 24px 25px;
+  border: 1px solid var(--line);
+  border-radius: 0 0 18px 18px;
+  background: var(--white);
+}
+.archive-backlink-health-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 15px;
+}
+.archive-backlink-health-head strong {
+  font-size: .9rem;
+}
+.archive-backlink-health-head span {
+  color: var(--slate);
+  font-size: .8rem;
+  font-weight: 600;
+}
+.archive-backlink-risk-bar {
+  display: flex;
+  width: 100%;
+  height: 12px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--line);
+}
+.archive-backlink-risk-bar .risk-high { background: #d95c52; width: 58.02%; }
+.archive-backlink-risk-bar .risk-medium { background: #e4b84f; width: 28.04%; }
+.archive-backlink-risk-bar .risk-low { background: #4b987e; width: 13.94%; }
+.archive-backlink-risk-key {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.archive-backlink-risk-key li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .82rem;
+}
+.archive-backlink-risk-key li::before {
+  content: '';
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--slate);
+}
+.archive-backlink-risk-key .high::before { background: #d95c52; }
+.archive-backlink-risk-key .medium::before { background: #e4b84f; }
+.archive-backlink-risk-key .low::before { background: #4b987e; }
+.archive-backlink-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.archive-backlink-actions > li {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 0 0 18px 18px;
+  background: var(--white);
+}
+.archive-backlink-actions .stage {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--slate);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+.archive-backlink-actions h4 {
+  margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+  line-height: 1.13;
+}
+.archive-backlink-actions p {
+  margin: 12px 0 0;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.archive-backlink-decision {
+  max-width: 950px;
+  margin: 20px 0 0;
+  font-size: .88rem;
+  line-height: 1.65;
+}
+@media(max-width:800px) {
+  .archive-backlink-actions { grid-template-columns: 1fr; }
+}
+@media(max-width:620px) {
+  .archive-backlink-health { padding: 21px 18px; }
+  .archive-backlink-actions > li { padding: 21px; }
+}
+
 @media(max-width:800px){
 
 .project-expanded{
@@ -1039,6 +1156,63 @@ content:none;
 align-items:flex-start;
 flex-direction:column;
 }
+}
+
+
+/* Companion case study: Atty. Tony Roman's visual identity transition. */
+.featured-project.roman-brand-transition::before { background:#2526E8; }
+.featured-project.roman-brand-transition .featured-project-insight {
+  border-left-color:#FF7400;
+  background:rgba(255,116,0,.08);
+}
+.featured-project.roman-brand-transition .project-expand-button { color:#2526E8; }
+.roman-brand-transition .roman-palette {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:28px;
+}
+.roman-brand-transition .roman-palette--two {
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.roman-brand-transition .roman-phase-label {
+  margin:34px 0 0;
+  font-size:.77rem;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  color:var(--slate);
+}
+.roman-brand-transition .roman-swatch {
+  padding:12px;
+  border:1px solid var(--line);
+  background:var(--white);
+}
+.roman-brand-transition .roman-swatch-color {
+  min-height:68px;
+  border:1px solid rgba(0,0,0,.09);
+  border-radius:4px;
+}
+.roman-brand-transition .roman-swatch strong,
+.roman-brand-transition .roman-swatch span {
+  display:block;
+  overflow-wrap:anywhere;
+}
+.roman-brand-transition .roman-swatch strong { margin-top:10px; font-size:.9rem; }
+.roman-brand-transition .roman-swatch span { margin-top:3px; color:var(--slate); font-size:.8rem; }
+.roman-brand-transition .brand-gallery-image { background:#fff; }
+.roman-brand-transition .brand-gallery-image img { object-fit:contain; }
+.roman-brand-transition .brand-gallery-item:not(.brand-gallery-wide) .brand-gallery-image { aspect-ratio:16/9; }
+.roman-brand-transition .roman-evidence-note {
+  margin-top:26px;
+  color:var(--slate);
+  font-size:.91rem;
+  line-height:1.65;
+}
+@media(max-width:620px) {
+  .roman-brand-transition .roman-palette,
+  .roman-brand-transition .roman-palette--two { grid-template-columns:1fr; }
+  .roman-brand-transition .roman-swatch-color { min-height:44px; }
 }
 
 </style>
@@ -4162,6 +4336,213 @@ Why Being on Every Channel Is Not a Channel Strategy
 
 </article>
 
+
+<!-- Featured 06: Atty. Tony Roman visual identity transition, earlier green/blue to later blue/orange -->
+<article class="featured-project roman-brand-transition" id="tony-roman-visual-identity-transition">
+  <div class="featured-project-number">06</div>
+  <div class="featured-project-body">
+    <div class="featured-project-meta">
+      <span>Brand Strategy</span>
+      <span>Visual Identity Transition</span>
+      <span>Creative Systems</span>
+    </div>
+
+    <h2>From Green &amp; Blue to Blue &amp; Orange: Atty. Tony Roman's Brand Evolution</h2>
+    <p class="featured-project-description">
+      A visual identity transition for Atty. Tony Roman, tracing an earlier green-and-blue, heart-led brand system from <em>The Comeback of Roman</em> pitch deck to a later blue-and-orange expression built around a prominent name mark, a bolder editorial treatment and community imagery.
+    </p>
+    <p class="featured-project-insight">
+      Brand evolution does not have to erase recognition. The visual vocabulary can shift from a compassionate, heart-led system to a bolder name-led expression while keeping the public figure at its center.
+    </p>
+    <div class="featured-project-tags">
+      <span>Brand</span>
+      <span>Creative</span>
+      <span>Content</span>
+      <span>Channels</span>
+    </div>
+    <div class="featured-project-footer">
+      <p class="featured-project-role">Brand Strategy &middot; Visual Identity &middot; Creative Direction &middot; Social Content</p>
+      <button class="project-expand-button" type="button"
+              aria-expanded="false" aria-controls="project-06-details">
+        Explore project &darr;
+      </button>
+    </div>
+  </div>
+
+  <div class="project-expanded" id="project-06-details" hidden>
+    <section class="project-summary" aria-labelledby="roman-brand-summary-title">
+      <p class="eyebrow">Brand Evolution / Earlier to Later</p>
+      <h3 id="roman-brand-summary-title">From a heart-led system to a stronger name-led identity.</h3>
+      <p>
+        The earlier brand direction is recorded in <em>The Comeback of Roman</em> pitch deck. It used <strong>green, blue and white</strong>, a finger-heart emblem and the message <em>Serbisyong may Puso</em>. The deck organized the public narrative around five roles: family man, brother, son, lawyer and man of Bataan, with design and content working together to make the identity feel more relatable.
+      </p>
+      <p>
+        The <strong>later blue-and-orange</strong> expression is visible in the supplied Tony Roman collage. It uses a large blue name mark with orange outlining, an orange <em>Walang Lawkohan</em> tagline bar and a layered photographic treatment of public appearances and community encounters.
+      </p>
+      <p>
+        This is the visual-identity companion to <a href="#tiktok-lawyer-public-identity">From TikTok Lawyer to a Broader Public Identity</a>. That project explores his wider public-facing positioning; this one documents the order and presentation of the two visual systems.
+      </p>
+
+      <div class="project-at-a-glance">
+        <div><strong>2</strong><span>visual identity phases</span></div>
+        <div><strong>3</strong><span>colors in the earlier palette</span></div>
+        <div><strong>5</strong><span>earlier narrative pillars</span></div>
+        <div class="project-at-a-glance-long"><strong>Blue + Orange</strong><span>later creative expression</span></div>
+      </div>
+
+      <p class="roman-phase-label">01 / Earlier palette &middot; documented in the pitch deck</p>
+      <div class="roman-palette" role="list" aria-label="Earlier green blue and white identity palette">
+        <div class="roman-swatch" role="listitem">
+          <div class="roman-swatch-color" style="background:#1ED761" aria-hidden="true"></div>
+          <strong>Green</strong><span>#1ED761</span>
+        </div>
+        <div class="roman-swatch" role="listitem">
+          <div class="roman-swatch-color" style="background:#2941AB" aria-hidden="true"></div>
+          <strong>Blue</strong><span>#2941AB</span>
+        </div>
+        <div class="roman-swatch" role="listitem">
+          <div class="roman-swatch-color" style="background:#FFFFFF" aria-hidden="true"></div>
+          <strong>White</strong><span>#FFFFFF</span>
+        </div>
+      </div>
+
+      <p class="roman-phase-label">02 / Later palette &middot; visually illustrated in the supplied collage</p>
+      <div class="roman-palette roman-palette--two" role="list" aria-label="Later blue and orange brand colors, illustrative swatches">
+        <div class="roman-swatch" role="listitem">
+          <div class="roman-swatch-color" style="background:#2526E8" aria-hidden="true"></div>
+          <strong>Blue</strong><span>Illustrative only; official hex not supplied</span>
+        </div>
+        <div class="roman-swatch" role="listitem">
+          <div class="roman-swatch-color" style="background:#FF7400" aria-hidden="true"></div>
+          <strong>Orange</strong><span>Illustrative only; official hex not supplied</span>
+        </div>
+      </div>
+
+      <div class="research-method-grid">
+        <article class="research-method-card">
+          <span class="research-method-number">01</span>
+          <h4>Document the earlier green-blue system</h4>
+          <p>The earlier pitch established green, blue and white as the identity colors, with a finger-heart emblem, wordmarks, typography and examples of social and community communication.</p>
+          <span class="method-detail">Earlier deck &middot; Green #1ED761 &middot; Blue #2941AB &middot; White</span>
+        </article>
+        <article class="research-method-card">
+          <span class="research-method-number">02</span>
+          <h4>Connect visuals to the public narrative</h4>
+          <p>The earlier system framed Roman through family, legal education, community and service. Its five narrative pillars gave the graphic language purpose beyond decoration.</p>
+          <span class="method-detail">Family man &middot; Brother &middot; Son &middot; Lawyer &middot; Man of Bataan</span>
+        </article>
+        <article class="research-method-card">
+          <span class="research-method-number">03</span>
+          <h4>Present the later blue-orange expression</h4>
+          <p>The later collage shifts the emphasis to a bold name-led mark, blue-and-orange contrast, a prominent <em>Walang Lawkohan</em> message and photographs showing Roman in public and community settings.</p>
+          <span class="method-detail">Later reference &middot; Blue &middot; Orange &middot; Name mark &middot; Photo collage</span>
+        </article>
+        <article class="research-method-card">
+          <span class="research-method-number">04</span>
+          <h4>Compare the two creative languages</h4>
+          <p>Contrast the earlier heart-led materials with the later name-led collage to examine how logo prominence, storytelling and public recognition evolve across visual treatments.</p>
+          <span class="method-detail">Earlier system &rarr; Later system &middot; Chronological evidence</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="project-findings" aria-labelledby="roman-brand-direction-title">
+      <div class="project-findings-heading">
+        <div><p class="eyebrow">Visual Comparison</p></div>
+        <div>
+          <h3 id="roman-brand-direction-title">What changed between the two expressions.</h3>
+          <p>The provided materials support a visible contrast in palette, logo treatment and visual tone. They do not establish the later identity's official hex codes or the rationale behind every subsequent design decision.</p>
+        </div>
+      </div>
+      <div class="findings-grid">
+        <article class="findings-card">
+          <span class="findings-number">01</span>
+          <h4>Earlier: Green and blue</h4>
+          <p>The pitch deck's identity system associated green with calm and reassurance and blue with stability and inspiration. The finger-heart icon and <em>Serbisyong may Puso</em> message emphasized compassion and approachability.</p>
+          <span class="findings-label">Documented earlier system</span>
+          <ul class="findings-list">
+            <li>Green, blue and white palette with exact colors supplied in the deck.</li>
+            <li>Finger-heart emblem, name lockups and a service-centered tagline.</li>
+            <li>Montserrat and AcuminConcept in the proposed type system.</li>
+            <li>Content examples across public service, community and legal education.</li>
+          </ul>
+        </article>
+        <article class="findings-card">
+          <span class="findings-number">02</span>
+          <h4>Later: Blue and orange</h4>
+          <p>The supplied later visual uses stronger color contrast and a larger, more assertive name treatment, complemented by community photographs and the <em>Walang Lawkohan</em> tagline.</p>
+          <span class="findings-label">Observed later expression</span>
+          <ul class="findings-list">
+            <li>Blue-dominant name mark with orange outlines and an orange tagline strip.</li>
+            <li>Layered photographs connecting the name to public and community encounters.</li>
+            <li>Bold visual treatment distinct from the earlier finger-heart lockups.</li>
+            <li>Final color specifications and campaign performance are not documented in the materials provided.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="brand-gallery" aria-labelledby="roman-brand-gallery-title">
+      <div class="brand-gallery-heading">
+        <div><p class="eyebrow">Visual Evidence &middot; Chronological Order</p></div>
+        <div>
+          <h3 id="roman-brand-gallery-title">Green and blue first. Blue and orange next.</h3>
+          <p>Four visuals from the earlier green-and-blue pitch deck are followed by the later blue-and-orange collage. The pitch deck includes its own template before-and-after comparison, which should not be mistaken for the overall color transition.</p>
+        </div>
+      </div>
+      <div class="brand-gallery-grid">
+        <figure class="brand-gallery-item">
+          <div class="brand-gallery-image">
+            <img src="assets/projects/tony-roman-brand-transition/01-earlier-green-blue-palette.webp"
+                 alt="Earlier brand pitch showing a green blue and white palette with documented colors"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="brand-gallery-caption"><strong>Earlier / Green-Blue Palette</strong><span>Pitch deck, p. 35</span></figcaption>
+        </figure>
+        <figure class="brand-gallery-item">
+          <div class="brand-gallery-image">
+            <img src="assets/projects/tony-roman-brand-transition/02-earlier-heart-logo-lockups.webp"
+                 alt="Earlier green and blue Tony Roman finger-heart logo and name lockups"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="brand-gallery-caption"><strong>Earlier / Heart Identity</strong><span>Pitch deck, p. 29</span></figcaption>
+        </figure>
+        <figure class="brand-gallery-item brand-gallery-wide">
+          <div class="brand-gallery-image">
+            <img src="assets/projects/tony-roman-brand-transition/03-earlier-green-blue-social-applications.webp"
+                 alt="Earlier green and blue Tony Roman branded social graphics for legal information and community content"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="brand-gallery-caption"><strong>Earlier / Social Applications</strong><span>Pitch deck, p. 43</span></figcaption>
+        </figure>
+        <figure class="brand-gallery-item brand-gallery-wide">
+          <div class="brand-gallery-image">
+            <img src="assets/projects/tony-roman-brand-transition/04-earlier-green-blue-template-comparison.webp"
+                 alt="Earlier pitch-deck comparison of an older green template with a revised green-and-blue layout, not the later blue-and-orange transition"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="brand-gallery-caption"><strong>Earlier / Template Iteration</strong><span>Within the earlier pitch deck, p. 41</span></figcaption>
+        </figure>
+        <figure class="brand-gallery-item brand-gallery-wide">
+          <div class="brand-gallery-image">
+            <img src="assets/projects/tony-roman-brand-transition/05-later-blue-orange-brand-identity.webp"
+                 alt="Later Atty Tony Roman identity with bold blue and orange name mark, Walang Lawkohan tagline, and community photograph collage"
+                 loading="lazy" decoding="async">
+          </div>
+          <figcaption class="brand-gallery-caption"><strong>Later / Blue-Orange Identity</strong><span>Supplied brand collage</span></figcaption>
+        </figure>
+      </div>
+      <p class="roman-evidence-note">The earlier pitch deck documents a green-blue visual system and its design rationale; the later collage documents a blue-orange expression. These sources do not by themselves establish a launch date, universal rollout, approved final color codes or measurable awareness results.</p>
+    </section>
+
+    <section class="project-summary">
+      <p class="eyebrow">Strategic Takeaway</p>
+      <h3>Brand recognition can carry forward even when the design language changes.</h3>
+      <p>The visual progression is <strong>green-blue, heart-led identity &rarr; blue-orange, name-led identity</strong>. The two creative systems approach the same public figure differently: one emphasizes service through a symbol, while the other foregrounds the name, message and community imagery.</p>
+    </section>
+  </div>
+</article>
+
 </div>
 
 </section>
@@ -4264,6 +4645,67 @@ Want to learn more about the analysis and prioritization framework?
 <a href="contact.html">
 Get in touch →
 </a>
+</p>
+
+</article>
+
+
+<article class="archive-empty archive-backlink-project" id="backlink-health-community-authority">
+
+<p class="eyebrow">
+Search &middot; Off-Page SEO &middot; Partnerships &middot; Chris Corzo Injury Attorneys
+</p>
+
+<h3>
+Backlink Health Audit &amp; Community-Led Authority Building
+</h3>
+
+<p class="archive-backlink-lead">
+Audited the firm's referring-page backlink profile, built a risk-based health scale and a consolidated disavow review list, then developed a complementary link-earning approach rooted in existing community sponsorship relationships. The aim was to address suspicious links while creating opportunities for relevant, authentic mentions of the firm.
+</p>
+
+<div class="archive-backlink-health" aria-label="Backlink health audit summary">
+  <div class="archive-backlink-health-head">
+    <strong>Backlink health scale</strong>
+    <span>667 referring-page records evaluated &middot; Initial risk classification</span>
+  </div>
+  <div class="archive-backlink-risk-bar" role="img" aria-label="387 high-risk, 187 medium-risk and 93 low-risk backlink records out of 667 evaluated">
+    <span class="risk-high" aria-hidden="true"></span>
+    <span class="risk-medium" aria-hidden="true"></span>
+    <span class="risk-low" aria-hidden="true"></span>
+  </div>
+  <ul class="archive-backlink-risk-key">
+    <li class="high"><strong>387</strong> High risk</li>
+    <li class="medium"><strong>187</strong> Medium risk</li>
+    <li class="low"><strong>93</strong> Low risk</li>
+  </ul>
+</div>
+
+<ol class="archive-backlink-actions">
+  <li>
+    <span class="stage">01 / Diagnosis</span>
+    <h4>Identify toxic-link signals</h4>
+    <p>Reviewed Ahrefs backlink records against referring-page relevance, link type, anchor patterns, spam indicators, duplicates and Search Console visibility. Classified each record by initial risk and a separate Keep, Review or Disavow decision.</p>
+  </li>
+  <li>
+    <span class="stage">02 / Risk response</span>
+    <h4>Consolidate disavow candidates</h4>
+    <p>Consolidated <strong>355 flagged backlink records</strong> into a documented disavow candidate list, with <strong>217 requiring further review</strong> and <strong>95 recommended to keep</strong>. Recorded decision reasons to support careful validation before any submission.</p>
+  </li>
+  <li>
+    <span class="stage">03 / Authority building</span>
+    <h4>Activate community partnerships</h4>
+    <p>Activated partner-led backlink outreach through the firm's existing community sponsorship beneficiaries, encouraging accurate firm mentions and appropriate links in relevant community and partner communications rather than relying on manufactured placements.</p>
+  </li>
+</ol>
+
+<p class="archive-backlink-decision">
+<strong>Project output:</strong> A documented backlink risk baseline, prioritized disavow candidates, and a relationship-led plan to earn stronger local authority signals. The audit does not itself establish that a disavow file was submitted or that backlinks and rankings subsequently increased.
+</p>
+
+<p class="archive-contact-note">
+Interested in the audit methodology and community-led link acquisition approach?
+<a href="contact.html">Get in touch &rarr;</a>
 </p>
 
 </article>
